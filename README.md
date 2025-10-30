@@ -1,6 +1,6 @@
 # SourceSFX - Source Engine Sound Effects Browser
 
-A webpage that lets you browse, download, and play sound effects from multiple Source Engine games,
+A webpage that lets you browse, download, and play sound effects from multiple Source Engine games.
 
 ## Supported Games (20 Total)
 
