@@ -26,6 +26,7 @@ const GAMES = {
 let currentGame = 'hl2';
 let allSounds = [];
 let filteredSounds = [];
+let displayedSounds = [];
 let currentAudioUrl = null;
 let currentAudioBlob = null;
 let currentAudioFileName = null;
@@ -34,6 +35,13 @@ let fuse = null;
 
 let rafId = null;
 let lastTimeDisplayUpdate = 0;
+
+
+let currentPage = 0;
+const ITEMS_PER_PAGE = 50;
+let isLoadingMore = false;
+let hasMoreToLoad = true;
+let isSearching = false;
 
 
 let currentMidiUrl = null;
@@ -49,6 +57,7 @@ const categoryFilter = document.getElementById('categoryFilter');
 const soundList = document.getElementById('soundList');
 const soundCount = document.getElementById('soundCount');
 const loadingMessage = document.getElementById('loadingMessage');
+const loadingMoreIndicator = document.getElementById('loadingMoreIndicator');
 const errorMessage = document.getElementById('errorMessage');
 const audioPlayer = document.getElementById('audioPlayer');
 const audioPlayerContainer = document.getElementById('audioPlayerContainer');
@@ -89,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupEventListeners();
     initializeVolume();
     initMidiPlayer();
+    setupInfiniteScroll();
 });
 
 function setupEventListeners() {
@@ -167,6 +177,11 @@ async function loadSounds() {
         allSounds = await response.json();
         filteredSounds = [...allSounds];
         
+
+        currentPage = 0;
+        displayedSounds = [];
+        hasMoreToLoad = true;
+        isSearching = false;
         
         initializeFuse();
 
@@ -232,12 +247,15 @@ function filterSounds() {
         const fuseResults = fuse.search(searchTerm);
         
         searchResults = fuseResults.map(result => result.item);
+        isSearching = true;
     } else if (searchTerm.length === 0) {
         
         searchResults = [...allSounds];
+        isSearching = false;
     } else {
         
         searchResults = [];
+        isSearching = false;
     }
     
     
@@ -246,27 +264,70 @@ function filterSounds() {
         return matchesCategory;
     });
     
+
+    currentPage = 0;
+    displayedSounds = [];
+    hasMoreToLoad = true;
+    
     displaySounds();
     updateStats();
 }
 
 
 function displaySounds() {
-    soundList.innerHTML = '';
+    if (isSearching) {
+        soundList.innerHTML = '';
+        
+        if (filteredSounds.length === 0) {
+            soundList.innerHTML = `
+                <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #888;">
+                    No sounds found matching your criteria.
+                </div>
+            `;
+            return;
+        }
+        
+        filteredSounds.forEach(sound => {
+            const soundItem = createSoundItem(sound);
+            soundList.appendChild(soundItem);
+        });
+        displayedSounds = [...filteredSounds];
+        hasMoreToLoad = false;
+        return;
+    }
+    
 
+    if (currentPage === 0) {
+        soundList.innerHTML = '';
+        displayedSounds = [];
+    }
+    
     if (filteredSounds.length === 0) {
         soundList.innerHTML = `
             <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #888;">
                 No sounds found matching your criteria.
             </div>
         `;
+        hasMoreToLoad = false;
         return;
     }
-
-    filteredSounds.forEach(sound => {
+    
+    const startIndex = currentPage * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const soundsToDisplay = filteredSounds.slice(startIndex, endIndex);
+    
+    if (soundsToDisplay.length === 0) {
+        hasMoreToLoad = false;
+        return;
+    }
+    
+    soundsToDisplay.forEach(sound => {
         const soundItem = createSoundItem(sound);
         soundList.appendChild(soundItem);
+        displayedSounds.push(sound);
     });
+    
+    hasMoreToLoad = endIndex < filteredSounds.length;
 }
 
 
@@ -562,7 +623,12 @@ function formatTime(seconds) {
 
 function updateStats() {
     const gameName = GAMES[currentGame].name;
-    soundCount.textContent = `${gameName}: Showing ${filteredSounds.length} of ${allSounds.length} sounds`;
+    
+    if (isSearching || filteredSounds.length === allSounds.length) {
+        soundCount.textContent = `${gameName}: Showing ${filteredSounds.length} of ${allSounds.length} sounds`;
+    } else {
+        soundCount.textContent = `${gameName}: Showing ${displayedSounds.length} of ${filteredSounds.length} sounds (${allSounds.length} total)`;
+    }
 }
 
 
@@ -576,6 +642,45 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
+}
+
+
+function setupInfiniteScroll() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && hasMoreToLoad && !isLoadingMore && !isSearching) {
+                loadMoreSounds();
+            }
+        });
+    }, {
+        rootMargin: '200px'
+    });
+    
+    const observeTarget = document.createElement('div');
+    observeTarget.id = 'scroll-sentinel';
+    observeTarget.style.height = '1px';
+    document.querySelector('.container').appendChild(observeTarget);
+    observer.observe(observeTarget);
+}
+
+
+function loadMoreSounds() {
+    if (isLoadingMore || !hasMoreToLoad || isSearching) {
+        return;
+    }
+    
+    isLoadingMore = true;
+    loadingMoreIndicator.style.display = 'block';
+    
+    setTimeout(() => {
+        currentPage++;
+        
+        displaySounds();
+        updateStats();
+        
+        loadingMoreIndicator.style.display = 'none';
+        isLoadingMore = false;
+    }, 100);
 }
 
 

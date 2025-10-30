@@ -920,6 +920,31 @@ midi-visualizer {
 }
 
 
+
+.loading-more {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+}
+
+.loading-more .loading-spinner {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 15px;
+}
+
+.loading-more p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#scroll-sentinel {
+    height: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+
 ::-webkit-scrollbar {
     width: 12px;
 }
