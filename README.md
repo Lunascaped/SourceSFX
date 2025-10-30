@@ -41,6 +41,9 @@ A webpage that lets you browse, download, and play sound effects from multiple S
 ## Credits
 
 Website created by [Lunascape](https://twitter.com/Lunascaped).
+
 Sound effects sourced from the [sourcesounds](https://github.com/sourcesounds) repositories.
+
 Icon by [Blob](https://youtube.com/@blob8556).
+
 Mascot designed by [Linkks](https://youtube.com/@LLinkks).
