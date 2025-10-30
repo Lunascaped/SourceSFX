@@ -759,6 +759,167 @@ header h1 {
 }
 
 
+.midi-controls-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.midi-time-display {
+    color: #ffab70;
+    font-size: 13px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.visualizer-toggle-btn {
+    padding: 10px 12px;
+    background: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visualizer-toggle-btn:hover {
+    background: #ff9447;
+    box-shadow: 0 0 10px rgba(232, 93, 0, 0.4);
+}
+
+.visualizer-toggle-btn.active {
+    background: #ff9447;
+}
+
+
+.midi-visualizer-pane {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(26, 26, 26, 0.98);
+    backdrop-filter: blur(10px);
+    border: 3px solid #ff9447;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    animation: slideUpFade 0.3s ease;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.visualizer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #252525;
+    border-bottom: 2px solid #ff9447;
+}
+
+.visualizer-title {
+    color: #ffab70;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.close-visualizer-btn {
+    background: transparent;
+    border: none;
+    color: #ff9447;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.close-visualizer-btn:hover {
+    background: rgba(255, 148, 71, 0.2);
+    color: #ffab70;
+}
+
+.midi-visualizer-wrapper {
+    background: #ffffff;
+    padding: 20px;
+    min-height: 250px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+
+midi-player {
+    display: block;
+    width: 100%;
+}
+
+midi-visualizer {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+
+midi-visualizer::part(piano-roll) {
+    background-color: #ffffff !important;
+}
+
+midi-visualizer {
+    --background-color: #ffffff;
+    --note-color: #ff9447;
+    --active-note-color: #ff6600;
+    --grid-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .midi-visualizer-pane {
+        width: 95%;
+        bottom: 80px;
+    }
+    
+    .midi-visualizer-wrapper {
+        min-height: 200px;
+        max-height: 300px;
+        padding: 15px;
+    }
+    
+    midi-visualizer {
+        min-height: 200px;
+    }
+    
+    .visualizer-header {
+        padding: 12px 15px;
+    }
+    
+    .visualizer-title {
+        font-size: 14px;
+    }
+}
+
+
 ::-webkit-scrollbar {
     width: 12px;
 }

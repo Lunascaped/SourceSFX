@@ -28,12 +28,19 @@ let allSounds = [];
 let filteredSounds = [];
 let currentAudioUrl = null;
 let currentAudioBlob = null;
-let currentFileName = null;
+let currentAudioFileName = null;
 let isSeeking = false;
 let fuse = null;
 
 let rafId = null;
 let lastTimeDisplayUpdate = 0;
+
+
+let currentMidiUrl = null;
+let currentMidiBlob = null;
+let currentMidiFileName = null;
+let midiPlayer = null;
+let midiVisualizer = null;
 
 
 const gameSelect = document.getElementById('gameSelect');
@@ -61,11 +68,27 @@ const volumeIcon = document.getElementById('volumeIcon');
 const mutedIcon = document.getElementById('mutedIcon');
 
 
+const midiPlayerContainer = document.getElementById('midiPlayerContainer');
+const midiNowPlaying = document.getElementById('midiNowPlaying');
+const closeMidiPlayer = document.getElementById('closeMidiPlayer');
+const downloadMidiBtn = document.getElementById('downloadMidiBtn');
+const midiPlayPauseBtn = document.getElementById('midiPlayPauseBtn');
+const midiPlayIcon = document.getElementById('midiPlayIcon');
+const midiPauseIcon = document.getElementById('midiPauseIcon');
+const midiTimeDisplay = document.getElementById('midiTimeDisplay');
+const toggleVisualizerBtn = document.getElementById('toggleVisualizerBtn');
+const midiVisualizerPane = document.getElementById('midiVisualizerPane');
+const closeVisualizerBtn = document.getElementById('closeVisualizerBtn');
+const midiProgressBar = document.getElementById('midiProgressBar');
+const midiProgressBarContainer = document.getElementById('midiProgressBarContainer');
+
+
 document.addEventListener('DOMContentLoaded', () => {
     initCustomSelects();
     loadSounds();
     setupEventListeners();
     initializeVolume();
+    initMidiPlayer();
 });
 
 function setupEventListeners() {
@@ -102,13 +125,28 @@ function setupEventListeners() {
         
         updateTimeDisplay(true);
     });
+
+    
+    closeMidiPlayer.addEventListener('click', closeMidiAudioPlayer);
+    downloadMidiBtn.addEventListener('click', downloadCurrentMidi);
+    midiPlayPauseBtn.addEventListener('click', toggleMidiPlayPause);
+    toggleVisualizerBtn.addEventListener('click', toggleVisualizer);
+    closeVisualizerBtn.addEventListener('click', hideVisualizer);
+    midiProgressBarContainer.addEventListener('click', seekMidiTo);
 }
 
 
 function onGameChange() {
     currentGame = gameSelect.value;
     closeAudioPlayer();
+    closeMidiAudioPlayer();
     loadSounds();
+}
+
+
+function isMidiFile(fileName) {
+    const extension = fileName.toLowerCase().split('.').pop();
+    return extension === 'mid' || extension === 'midi';
 }
 
 
@@ -251,8 +289,19 @@ function createSoundItem(sound) {
 async function playSound(sound, forcePlay = false) {
     const game = GAMES[currentGame];
     const audioUrl = `https://raw.githubusercontent.com/${game.repo}/refs/heads/master/${sound.path}`;
+
+    
+    if (isMidiFile(sound.fileName)) {
+        playMidiSound(audioUrl, sound, forcePlay);
+        return;
+    }
+
+    
     currentAudioUrl = audioUrl;
-    currentFileName = sound.fileName;
+    currentAudioFileName = sound.fileName;
+
+    
+    closeMidiAudioPlayer();
 
     
     progressBar.style.transform = 'scaleX(0)';
@@ -305,7 +354,7 @@ function closeAudioPlayer() {
     audioPlayerContainer.style.display = 'none';
     currentAudioUrl = null;
     currentAudioBlob = null;
-    currentFileName = null;
+    currentAudioFileName = null;
     progressBar.style.transform = 'scaleX(0)';
     playIcon.style.display = 'block';
     pauseIcon.style.display = 'none';
@@ -314,21 +363,19 @@ function closeAudioPlayer() {
 
 
 function downloadCurrentSound() {
-    if (!currentAudioBlob || !currentFileName) {
+    if (!currentAudioBlob || !currentAudioFileName) {
         console.error('Audio blob not ready yet');
         return;
     }
-    
     
     const blobUrl = URL.createObjectURL(currentAudioBlob);
     
     const link = document.createElement('a');
     link.href = blobUrl;
-    link.download = currentFileName;
+    link.download = currentAudioFileName;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    
     
     setTimeout(() => {
         URL.revokeObjectURL(blobUrl);
@@ -763,4 +810,186 @@ function toggleMute() {
         updateVolumeSliderStyle(previousVolume);
         updateVolumeIcon(previousVolume);
     }
+}
+
+
+
+
+function initMidiPlayer() {
+    
+    if (customElements.get('midi-player') && customElements.get('midi-visualizer')) {
+        midiPlayer = document.getElementById('midiPlayer');
+        midiVisualizer = document.getElementById('midiVisualizer');
+        
+        
+        if (midiPlayer && midiVisualizer) {
+            midiPlayer.addVisualizer(midiVisualizer);
+        }
+
+        
+        if (midiPlayer) {
+            midiPlayer.addEventListener('start', onMidiStart);
+            midiPlayer.addEventListener('stop', onMidiStop);
+            midiPlayer.addEventListener('note', updateMidiTime);
+        }
+    } else {
+        
+        setTimeout(initMidiPlayer, 100);
+    }
+}
+
+function onMidiStart() {
+    midiPlayIcon.style.display = 'none';
+    midiPauseIcon.style.display = 'block';
+    midiPlayPauseBtn.setAttribute('aria-label', 'Pause');
+}
+
+function onMidiStop() {
+    midiPlayIcon.style.display = 'block';
+    midiPauseIcon.style.display = 'none';
+    midiPlayPauseBtn.setAttribute('aria-label', 'Play');
+}
+
+function updateMidiTime() {
+    if (midiPlayer && midiPlayer.currentTime !== undefined && midiPlayer.duration !== undefined) {
+        const current = formatTime(midiPlayer.currentTime);
+        const duration = formatTime(midiPlayer.duration);
+        midiTimeDisplay.textContent = `${current} / ${duration}`;
+        
+        
+        if (midiPlayer.duration > 0) {
+            const progress = midiPlayer.currentTime / midiPlayer.duration;
+            midiProgressBar.style.transform = `scaleX(${progress})`;
+        }
+    }
+}
+
+function seekMidiTo(e) {
+    if (!midiPlayer || !midiPlayer.duration) return;
+    
+    const rect = midiProgressBarContainer.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const percentage = Math.max(0, Math.min(1, x / rect.width));
+    const newTime = percentage * midiPlayer.duration;
+    
+    midiPlayer.currentTime = newTime;
+    midiProgressBar.style.transform = `scaleX(${percentage})`;
+    updateMidiTime();
+}
+
+function toggleMidiPlayPause() {
+    if (!midiPlayer) return;
+    
+    if (midiPlayer.playing) {
+        midiPlayer.stop();
+    } else {
+        midiPlayer.start();
+    }
+}
+
+function toggleVisualizer() {
+    if (midiVisualizerPane.style.display === 'none') {
+        showVisualizer();
+    } else {
+        hideVisualizer();
+    }
+}
+
+function showVisualizer() {
+    midiVisualizerPane.style.display = 'block';
+    toggleVisualizerBtn.classList.add('active');
+}
+
+function hideVisualizer() {
+    midiVisualizerPane.style.display = 'none';
+    toggleVisualizerBtn.classList.remove('active');
+}
+
+async function playMidiSound(midiUrl, sound, forcePlay = false) {
+    currentMidiUrl = midiUrl;
+    currentMidiFileName = sound.fileName;
+
+    
+    closeAudioPlayer();
+
+    
+    midiTimeDisplay.textContent = '0:00 / 0:00';
+    midiProgressBar.style.transform = 'scaleX(0)';
+    midiPlayIcon.style.display = 'block';
+    midiPauseIcon.style.display = 'none';
+
+    
+    try {
+        const response = await fetch(midiUrl);
+        if (!response.ok) {
+            throw new Error('Failed to fetch MIDI file');
+        }
+        currentMidiBlob = await response.blob();
+        
+        
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            if (midiPlayer) {
+                midiPlayer.src = e.target.result;
+                
+                
+                setTimeout(() => {
+                    updateMidiTime();
+                    
+                    const shouldAutoplay = autoplayToggle.checked || forcePlay;
+                    if (shouldAutoplay) {
+                        if (midiPlayer && midiPlayer.start) {
+                            midiPlayer.start();
+                        }
+                    }
+                }, 200);
+            }
+        };
+        reader.readAsDataURL(currentMidiBlob);
+
+        midiNowPlaying.textContent = `Now Playing: ${sound.displayName}`;
+        midiPlayerContainer.style.display = 'block';
+        
+        
+        if (midiVisualizerPane.style.display === 'none') {
+            showVisualizer();
+        }
+
+    } catch (error) {
+        console.error('Error loading MIDI file:', error);
+        alert('Failed to load MIDI file. The file may not exist or may be corrupted.');
+    }
+}
+
+function closeMidiAudioPlayer() {
+    if (midiPlayer && midiPlayer.stop) {
+        midiPlayer.stop();
+    }
+    midiPlayerContainer.style.display = 'none';
+    hideVisualizer();
+    currentMidiUrl = null;
+    currentMidiBlob = null;
+    currentMidiFileName = null;
+    midiTimeDisplay.textContent = '0:00 / 0:00';
+    midiProgressBar.style.transform = 'scaleX(0)';
+}
+
+async function downloadCurrentMidi() {
+    if (!currentMidiBlob || !currentMidiFileName) {
+        console.error('MIDI file not ready yet');
+        return;
+    }
+    
+    const blobUrl = URL.createObjectURL(currentMidiBlob);
+    
+    const link = document.createElement('a');
+    link.href = blobUrl;
+    link.download = currentMidiFileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    setTimeout(() => {
+        URL.revokeObjectURL(blobUrl);
+    }, 100);
 }

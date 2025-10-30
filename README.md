@@ -1,6 +1,6 @@
 # SourceSFX - Source Engine Sound Effects Browser
 
-A webpage that lets you browse, download, and play sound effects from multiple Source Engine games.
+A webpage that lets you browse, download, and play sound effects from multiple Source Engine games. Now with MIDI file support and visualization!
 
 ## Supported Games (20 Total)
 
@@ -47,3 +47,5 @@ Sound effects sourced from the [sourcesounds](https://github.com/sourcesounds) r
 Icon by [Blob](https://youtube.com/@blob8556).
 
 Mascot designed by [Linkks](https://youtube.com/@LLinkks).
+
+MIDI player powered by [html-midi-player](https://github.com/cifkao/html-midi-player).

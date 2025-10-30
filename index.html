@@ -32,6 +32,7 @@
     <link rel="manifest" href="/img/site.webmanifest" />
 	<script defer data-domain="sourcesfx.com" src="https://plausible.gaq9.com/js/script.file-downloads.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
 </head>
 <body>
     <div class="container">
@@ -176,9 +177,66 @@
                 </button>
             </div>
         </div>
+
+        <div id="midiPlayerContainer" class="audio-player-container" style="display: none;">
+            <div class="audio-player">
+                <button id="midiPlayPauseBtn" class="play-pause-btn" aria-label="Play">
+                    <svg id="midiPlayIcon" class="btn-icon" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M8 5v14l11-7z" fill="currentColor"/>
+                    </svg>
+                    <svg id="midiPauseIcon" class="btn-icon" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <div class="player-info">
+                    <div id="midiNowPlaying" class="now-playing-text">Now Playing</div>
+                    <div class="progress-container">
+                        <div class="progress-bar-container" id="midiProgressBarContainer">
+                            <div class="progress-bar" id="midiProgressBar"></div>
+                        </div>
+                        <div class="midi-time-display" id="midiTimeDisplay">0:00 / 0:00</div>
+                    </div>
+                </div>
+                <div class="midi-controls-group">
+                    <button id="toggleVisualizerBtn" class="visualizer-toggle-btn" title="Toggle Visualizer">
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18">
+                            <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <button id="downloadMidiBtn" class="download-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+                        </svg>
+                        Download
+                    </button>
+                    <button id="closeMidiPlayer" class="close-btn" aria-label="Close">
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="midiVisualizerPane" class="midi-visualizer-pane" style="display: none;">
+            <div class="visualizer-header">
+                <span class="visualizer-title">MIDI Visualizer</span>
+                <button id="closeVisualizerBtn" class="close-visualizer-btn" aria-label="Close Visualizer">
+                    <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="midi-visualizer-wrapper">
+                <midi-visualizer type="piano-roll" id="midiVisualizer"></midi-visualizer>
+            </div>
+        </div>
+
+
+        <midi-player id="midiPlayer" sound-font style="display: none;"></midi-player>
     </div>
 
-    <script src="js/script.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
 
