@@ -1,0 +1,4994 @@
+[
+  {
+    "path": "sound\\ambience\\chainlink.wav",
+    "fileName": "chainlink.wav",
+    "category": "ambience",
+    "displayName": "chainlink.wav"
+  },
+  {
+    "path": "sound\\ambience\\dist_traffic1.wav",
+    "fileName": "dist_traffic1.wav",
+    "category": "ambience",
+    "displayName": "dist_traffic1.wav"
+  },
+  {
+    "path": "sound\\ambience\\dist_traffic2.wav",
+    "fileName": "dist_traffic2.wav",
+    "category": "ambience",
+    "displayName": "dist_traffic2.wav"
+  },
+  {
+    "path": "sound\\ambience\\forest_amb1.wav",
+    "fileName": "forest_amb1.wav",
+    "category": "ambience",
+    "displayName": "forest_amb1.wav"
+  },
+  {
+    "path": "sound\\ambience\\forest_amb2.wav",
+    "fileName": "forest_amb2.wav",
+    "category": "ambience",
+    "displayName": "forest_amb2.wav"
+  },
+  {
+    "path": "sound\\ambience\\forest_amb6_verb.wav",
+    "fileName": "forest_amb6_verb.wav",
+    "category": "ambience",
+    "displayName": "forest_amb6_verb.wav"
+  },
+  {
+    "path": "sound\\ambience\\mine_jungleamb_loop.wav",
+    "fileName": "mine_jungleamb_loop.wav",
+    "category": "ambience",
+    "displayName": "mine_jungleamb_loop.wav"
+  },
+  {
+    "path": "sound\\ambience\\trailer_wndinsidepark_loop.wav",
+    "fileName": "trailer_wndinsidepark_loop.wav",
+    "category": "ambience",
+    "displayName": "trailer_wndinsidepark_loop.wav"
+  },
+  {
+    "path": "sound\\ambience\\waterfall4.wav",
+    "fileName": "waterfall4.wav",
+    "category": "ambience",
+    "displayName": "waterfall4.wav"
+  },
+  {
+    "path": "sound\\ambience\\wind_litegust.wav",
+    "fileName": "wind_litegust.wav",
+    "category": "ambience",
+    "displayName": "wind_litegust.wav"
+  },
+  {
+    "path": "sound\\common\\wpn_select.wav",
+    "fileName": "wpn_select.wav",
+    "category": "common",
+    "displayName": "wpn_select.wav"
+  },
+  {
+    "path": "sound\\hostage\\hctwin\\alldead.wav",
+    "fileName": "alldead.wav",
+    "category": "hostage",
+    "displayName": "alldead.wav"
+  },
+  {
+    "path": "sound\\hostage\\hctwin\\goodnews.wav",
+    "fileName": "goodnews.wav",
+    "category": "hostage",
+    "displayName": "goodnews.wav"
+  },
+  {
+    "path": "sound\\hostage\\hctwin\\outtahere.wav",
+    "fileName": "outtahere.wav",
+    "category": "hostage",
+    "displayName": "outtahere.wav"
+  },
+  {
+    "path": "sound\\hostage\\hctwin\\over1.wav",
+    "fileName": "over1.wav",
+    "category": "hostage",
+    "displayName": "over1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hctwin\\over2.wav",
+    "fileName": "over2.wav",
+    "category": "hostage",
+    "displayName": "over2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hctwin\\over3.wav",
+    "fileName": "over3.wav",
+    "category": "hostage",
+    "displayName": "over3.wav"
+  },
+  {
+    "path": "sound\\hostage\\hctwin\\over4.wav",
+    "fileName": "over4.wav",
+    "category": "hostage",
+    "displayName": "over4.wav"
+  },
+  {
+    "path": "sound\\hostage\\hctwin\\over5.wav",
+    "fileName": "over5.wav",
+    "category": "hostage",
+    "displayName": "over5.wav"
+  },
+  {
+    "path": "sound\\hostage\\hctwin\\relief.wav",
+    "fileName": "relief.wav",
+    "category": "hostage",
+    "displayName": "relief.wav"
+  },
+  {
+    "path": "sound\\hostage\\hdie\\hdeath1.wav",
+    "fileName": "hdeath1.wav",
+    "category": "hostage",
+    "displayName": "hdeath1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hdie\\hdeath2.wav",
+    "fileName": "hdeath2.wav",
+    "category": "hostage",
+    "displayName": "hdeath2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hdie\\hdeath3.wav",
+    "fileName": "hdeath3.wav",
+    "category": "hostage",
+    "displayName": "hdeath3.wav"
+  },
+  {
+    "path": "sound\\hostage\\hflash\\cantsee.wav",
+    "fileName": "cantsee.wav",
+    "category": "hostage",
+    "displayName": "cantsee.wav"
+  },
+  {
+    "path": "sound\\hostage\\hflash\\myeyes.wav",
+    "fileName": "myeyes.wav",
+    "category": "hostage",
+    "displayName": "myeyes.wav"
+  },
+  {
+    "path": "sound\\hostage\\hgrenade\\grenade1.wav",
+    "fileName": "grenade1.wav",
+    "category": "hostage",
+    "displayName": "grenade1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hgrenade\\grenade2.wav",
+    "fileName": "grenade2.wav",
+    "category": "hostage",
+    "displayName": "grenade2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hgrenade\\run.wav",
+    "fileName": "run.wav",
+    "category": "hostage",
+    "displayName": "run.wav"
+  },
+  {
+    "path": "sound\\hostage\\hgrenade\\watchout.wav",
+    "fileName": "watchout.wav",
+    "category": "hostage",
+    "displayName": "watchout.wav"
+  },
+  {
+    "path": "sound\\hostage\\hpain\\hpain1.wav",
+    "fileName": "hpain1.wav",
+    "category": "hostage",
+    "displayName": "hpain1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hpain\\hpain2.wav",
+    "fileName": "hpain2.wav",
+    "category": "hostage",
+    "displayName": "hpain2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hpain\\hpain3.wav",
+    "fileName": "hpain3.wav",
+    "category": "hostage",
+    "displayName": "hpain3.wav"
+  },
+  {
+    "path": "sound\\hostage\\hpain\\hpain4.wav",
+    "fileName": "hpain4.wav",
+    "category": "hostage",
+    "displayName": "hpain4.wav"
+  },
+  {
+    "path": "sound\\hostage\\hpain\\hpain5.wav",
+    "fileName": "hpain5.wav",
+    "category": "hostage",
+    "displayName": "hpain5.wav"
+  },
+  {
+    "path": "sound\\hostage\\hpain\\hpain6.wav",
+    "fileName": "hpain6.wav",
+    "category": "hostage",
+    "displayName": "hpain6.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\awwcrap1.wav",
+    "fileName": "awwcrap1.wav",
+    "category": "hostage",
+    "displayName": "awwcrap1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\awwcrap2.wav",
+    "fileName": "awwcrap2.wav",
+    "category": "hostage",
+    "displayName": "awwcrap2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\awww1.wav",
+    "fileName": "awww1.wav",
+    "category": "hostage",
+    "displayName": "awww1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\awww2.wav",
+    "fileName": "awww2.wav",
+    "category": "hostage",
+    "displayName": "awww2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\awww3.wav",
+    "fileName": "awww3.wav",
+    "category": "hostage",
+    "displayName": "awww3.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\awww4.wav",
+    "fileName": "awww4.wav",
+    "category": "hostage",
+    "displayName": "awww4.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\deargod1.wav",
+    "fileName": "deargod1.wav",
+    "category": "hostage",
+    "displayName": "deargod1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\deargod2.wav",
+    "fileName": "deargod2.wav",
+    "category": "hostage",
+    "displayName": "deargod2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\deargod3.wav",
+    "fileName": "deargod3.wav",
+    "category": "hostage",
+    "displayName": "deargod3.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\getdown1.wav",
+    "fileName": "getdown1.wav",
+    "category": "hostage",
+    "displayName": "getdown1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\getdown2.wav",
+    "fileName": "getdown2.wav",
+    "category": "hostage",
+    "displayName": "getdown2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\getdown3.wav",
+    "fileName": "getdown3.wav",
+    "category": "hostage",
+    "displayName": "getdown3.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\lookout1.wav",
+    "fileName": "lookout1.wav",
+    "category": "hostage",
+    "displayName": "lookout1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\lookout2.wav",
+    "fileName": "lookout2.wav",
+    "category": "hostage",
+    "displayName": "lookout2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\lookshooting1.wav",
+    "fileName": "lookshooting1.wav",
+    "category": "hostage",
+    "displayName": "lookshooting1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\lookshooting2.wav",
+    "fileName": "lookshooting2.wav",
+    "category": "hostage",
+    "displayName": "lookshooting2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\lookshooting3.wav",
+    "fileName": "lookshooting3.wav",
+    "category": "hostage",
+    "displayName": "lookshooting3.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\nervous1.wav",
+    "fileName": "nervous1.wav",
+    "category": "hostage",
+    "displayName": "nervous1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\nervous2.wav",
+    "fileName": "nervous2.wav",
+    "category": "hostage",
+    "displayName": "nervous2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\nervous3.wav",
+    "fileName": "nervous3.wav",
+    "category": "hostage",
+    "displayName": "nervous3.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\ohgod1.wav",
+    "fileName": "ohgod1.wav",
+    "category": "hostage",
+    "displayName": "ohgod1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\ohgod2.wav",
+    "fileName": "ohgod2.wav",
+    "category": "hostage",
+    "displayName": "ohgod2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\ohno1.wav",
+    "fileName": "ohno1.wav",
+    "category": "hostage",
+    "displayName": "ohno1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\ohno2.wav",
+    "fileName": "ohno2.wav",
+    "category": "hostage",
+    "displayName": "ohno2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\startle1.wav",
+    "fileName": "startle1.wav",
+    "category": "hostage",
+    "displayName": "startle1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\startle2.wav",
+    "fileName": "startle2.wav",
+    "category": "hostage",
+    "displayName": "startle2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hreactions\\startle3.wav",
+    "fileName": "startle3.wav",
+    "category": "hostage",
+    "displayName": "startle3.wav"
+  },
+  {
+    "path": "sound\\hostage\\hrescued\\finally.wav",
+    "fileName": "finally.wav",
+    "category": "hostage",
+    "displayName": "finally.wav"
+  },
+  {
+    "path": "sound\\hostage\\hrescued\\finallysafe.wav",
+    "fileName": "finallysafe.wav",
+    "category": "hostage",
+    "displayName": "finallysafe.wav"
+  },
+  {
+    "path": "sound\\hostage\\hrescued\\thankyou.wav",
+    "fileName": "thankyou.wav",
+    "category": "hostage",
+    "displayName": "thankyou.wav"
+  },
+  {
+    "path": "sound\\hostage\\hrescued\\wemadeit1.wav",
+    "fileName": "wemadeit1.wav",
+    "category": "hostage",
+    "displayName": "wemadeit1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hrescued\\wemadeit2.wav",
+    "fileName": "wemadeit2.wav",
+    "category": "hostage",
+    "displayName": "wemadeit2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hrescued\\wemadeit3.wav",
+    "fileName": "wemadeit3.wav",
+    "category": "hostage",
+    "displayName": "wemadeit3.wav"
+  },
+  {
+    "path": "sound\\hostage\\hretreat\\illgoback1.wav",
+    "fileName": "illgoback1.wav",
+    "category": "hostage",
+    "displayName": "illgoback1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hretreat\\illgoback2.wav",
+    "fileName": "illgoback2.wav",
+    "category": "hostage",
+    "displayName": "illgoback2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hretreat\\okokgoing.wav",
+    "fileName": "okokgoing.wav",
+    "category": "hostage",
+    "displayName": "okokgoing.wav"
+  },
+  {
+    "path": "sound\\hostage\\hretreat\\okokgoing2.wav",
+    "fileName": "okokgoing2.wav",
+    "category": "hostage",
+    "displayName": "okokgoing2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hretreat\\sorry1.wav",
+    "fileName": "sorry1.wav",
+    "category": "hostage",
+    "displayName": "sorry1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hretreat\\sorry2.wav",
+    "fileName": "sorry2.wav",
+    "category": "hostage",
+    "displayName": "sorry2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hretreat\\sorry3.wav",
+    "fileName": "sorry3.wav",
+    "category": "hostage",
+    "displayName": "sorry3.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyct\\areyousave.wav",
+    "fileName": "areyousave.wav",
+    "category": "hostage",
+    "displayName": "areyousave.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyct\\finallyhere.wav",
+    "fileName": "finallyhere.wav",
+    "category": "hostage",
+    "displayName": "finallyhere.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyct\\getmeoutta1.wav",
+    "fileName": "getmeoutta1.wav",
+    "category": "hostage",
+    "displayName": "getmeoutta1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyct\\getmeoutta2.wav",
+    "fileName": "getmeoutta2.wav",
+    "category": "hostage",
+    "displayName": "getmeoutta2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyct\\imahostage.wav",
+    "fileName": "imahostage.wav",
+    "category": "hostage",
+    "displayName": "imahostage.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyct\\rescueme1.wav",
+    "fileName": "rescueme1.wav",
+    "category": "hostage",
+    "displayName": "rescueme1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyct\\rescueme2.wav",
+    "fileName": "rescueme2.wav",
+    "category": "hostage",
+    "displayName": "rescueme2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyct\\theyregonna.wav",
+    "fileName": "theyregonna.wav",
+    "category": "hostage",
+    "displayName": "theyregonna.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyt\\donthurtme1.wav",
+    "fileName": "donthurtme1.wav",
+    "category": "hostage",
+    "displayName": "donthurtme1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyt\\donthurtme2.wav",
+    "fileName": "donthurtme2.wav",
+    "category": "hostage",
+    "displayName": "donthurtme2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyt\\dontkill.wav",
+    "fileName": "dontkill.wav",
+    "category": "hostage",
+    "displayName": "dontkill.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyt\\endpeace.wav",
+    "fileName": "endpeace.wav",
+    "category": "hostage",
+    "displayName": "endpeace.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyt\\nevernegotiate.wav",
+    "fileName": "nevernegotiate.wav",
+    "category": "hostage",
+    "displayName": "nevernegotiate.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyt\\nottellanything.wav",
+    "fileName": "nottellanything.wav",
+    "category": "hostage",
+    "displayName": "nottellanything.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyt\\surrender.wav",
+    "fileName": "surrender.wav",
+    "category": "hostage",
+    "displayName": "surrender.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyt\\whatdoyou.wav",
+    "fileName": "whatdoyou.wav",
+    "category": "hostage",
+    "displayName": "whatdoyou.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseenbyt\\whyareyou.wav",
+    "fileName": "whyareyou.wav",
+    "category": "hostage",
+    "displayName": "whyareyou.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseezone\\almostouttahere.wav",
+    "fileName": "almostouttahere.wav",
+    "category": "hostage",
+    "displayName": "almostouttahere.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseezone\\almostthere.wav",
+    "fileName": "almostthere.wav",
+    "category": "hostage",
+    "displayName": "almostthere.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseezone\\keepgoing.wav",
+    "fileName": "keepgoing.wav",
+    "category": "hostage",
+    "displayName": "keepgoing.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseezone\\notfar.wav",
+    "fileName": "notfar.wav",
+    "category": "hostage",
+    "displayName": "notfar.wav"
+  },
+  {
+    "path": "sound\\hostage\\hseezone\\thereitis.wav",
+    "fileName": "thereitis.wav",
+    "category": "hostage",
+    "displayName": "thereitis.wav"
+  },
+  {
+    "path": "sound\\hostage\\hsmoke\\cough1.wav",
+    "fileName": "cough1.wav",
+    "category": "hostage",
+    "displayName": "cough1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hsmoke\\cough2.wav",
+    "fileName": "cough2.wav",
+    "category": "hostage",
+    "displayName": "cough2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hsmoke\\cough3.wav",
+    "fileName": "cough3.wav",
+    "category": "hostage",
+    "displayName": "cough3.wav"
+  },
+  {
+    "path": "sound\\hostage\\hsmoke\\cough4.wav",
+    "fileName": "cough4.wav",
+    "category": "hostage",
+    "displayName": "cough4.wav"
+  },
+  {
+    "path": "sound\\hostage\\hsmoke\\cough5.wav",
+    "fileName": "cough5.wav",
+    "category": "hostage",
+    "displayName": "cough5.wav"
+  },
+  {
+    "path": "sound\\hostage\\hsmoke\\cough6.wav",
+    "fileName": "cough6.wav",
+    "category": "hostage",
+    "displayName": "cough6.wav"
+  },
+  {
+    "path": "sound\\hostage\\htwin\\doomed.wav",
+    "fileName": "doomed.wav",
+    "category": "hostage",
+    "displayName": "doomed.wav"
+  },
+  {
+    "path": "sound\\hostage\\htwin\\godno.wav",
+    "fileName": "godno.wav",
+    "category": "hostage",
+    "displayName": "godno.wav"
+  },
+  {
+    "path": "sound\\hostage\\htwin\\nowwhat.wav",
+    "fileName": "nowwhat.wav",
+    "category": "hostage",
+    "displayName": "nowwhat.wav"
+  },
+  {
+    "path": "sound\\hostage\\htwin\\ohman.wav",
+    "fileName": "ohman.wav",
+    "category": "hostage",
+    "displayName": "ohman.wav"
+  },
+  {
+    "path": "sound\\hostage\\htwin\\ohno.wav",
+    "fileName": "ohno.wav",
+    "category": "hostage",
+    "displayName": "ohno.wav"
+  },
+  {
+    "path": "sound\\hostage\\hunuse\\comeback.wav",
+    "fileName": "comeback.wav",
+    "category": "hostage",
+    "displayName": "comeback.wav"
+  },
+  {
+    "path": "sound\\hostage\\hunuse\\dontleaveme.wav",
+    "fileName": "dontleaveme.wav",
+    "category": "hostage",
+    "displayName": "dontleaveme.wav"
+  },
+  {
+    "path": "sound\\hostage\\hunuse\\illstayhere.wav",
+    "fileName": "illstayhere.wav",
+    "category": "hostage",
+    "displayName": "illstayhere.wav"
+  },
+  {
+    "path": "sound\\hostage\\hunuse\\notleaveme.wav",
+    "fileName": "notleaveme.wav",
+    "category": "hostage",
+    "displayName": "notleaveme.wav"
+  },
+  {
+    "path": "sound\\hostage\\hunuse\\yeahillstay.wav",
+    "fileName": "yeahillstay.wav",
+    "category": "hostage",
+    "displayName": "yeahillstay.wav"
+  },
+  {
+    "path": "sound\\hostage\\huse\\getouttahere.wav",
+    "fileName": "getouttahere.wav",
+    "category": "hostage",
+    "displayName": "getouttahere.wav"
+  },
+  {
+    "path": "sound\\hostage\\huse\\illfollow.wav",
+    "fileName": "illfollow.wav",
+    "category": "hostage",
+    "displayName": "illfollow.wav"
+  },
+  {
+    "path": "sound\\hostage\\huse\\letsdoit.wav",
+    "fileName": "letsdoit.wav",
+    "category": "hostage",
+    "displayName": "letsdoit.wav"
+  },
+  {
+    "path": "sound\\hostage\\huse\\letsgo.wav",
+    "fileName": "letsgo.wav",
+    "category": "hostage",
+    "displayName": "letsgo.wav"
+  },
+  {
+    "path": "sound\\hostage\\huse\\letshurry.wav",
+    "fileName": "letshurry.wav",
+    "category": "hostage",
+    "displayName": "letshurry.wav"
+  },
+  {
+    "path": "sound\\hostage\\huse\\letsmove.wav",
+    "fileName": "letsmove.wav",
+    "category": "hostage",
+    "displayName": "letsmove.wav"
+  },
+  {
+    "path": "sound\\hostage\\huse\\okletsgo.wav",
+    "fileName": "okletsgo.wav",
+    "category": "hostage",
+    "displayName": "okletsgo.wav"
+  },
+  {
+    "path": "sound\\hostage\\huse\\youlead.wav",
+    "fileName": "youlead.wav",
+    "category": "hostage",
+    "displayName": "youlead.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwarn\\becareful1.wav",
+    "fileName": "becareful1.wav",
+    "category": "hostage",
+    "displayName": "becareful1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwarn\\becareful2.wav",
+    "fileName": "becareful2.wav",
+    "category": "hostage",
+    "displayName": "becareful2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwarn\\behindyou1.wav",
+    "fileName": "behindyou1.wav",
+    "category": "hostage",
+    "displayName": "behindyou1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwarn\\behindyou2.wav",
+    "fileName": "behindyou2.wav",
+    "category": "hostage",
+    "displayName": "behindyou2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwarn\\lookout1.wav",
+    "fileName": "lookout1.wav",
+    "category": "hostage",
+    "displayName": "lookout1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwarn\\lookout2.wav",
+    "fileName": "lookout2.wav",
+    "category": "hostage",
+    "displayName": "lookout2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwarn\\overthere1.wav",
+    "fileName": "overthere1.wav",
+    "category": "hostage",
+    "displayName": "overthere1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwarn\\overthere2.wav",
+    "fileName": "overthere2.wav",
+    "category": "hostage",
+    "displayName": "overthere2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwarn\\stillaround1.wav",
+    "fileName": "stillaround1.wav",
+    "category": "hostage",
+    "displayName": "stillaround1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwarn\\stillaround2.wav",
+    "fileName": "stillaround2.wav",
+    "category": "hostage",
+    "displayName": "stillaround2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwavect\\helpme1.wav",
+    "fileName": "helpme1.wav",
+    "category": "hostage",
+    "displayName": "helpme1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwavect\\helpme2.wav",
+    "fileName": "helpme2.wav",
+    "category": "hostage",
+    "displayName": "helpme2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwavect\\hey1.wav",
+    "fileName": "hey1.wav",
+    "category": "hostage",
+    "displayName": "hey1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwavect\\hey2.wav",
+    "fileName": "hey2.wav",
+    "category": "hostage",
+    "displayName": "hey2.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwavect\\overhere1.wav",
+    "fileName": "overhere1.wav",
+    "category": "hostage",
+    "displayName": "overhere1.wav"
+  },
+  {
+    "path": "sound\\hostage\\hwavect\\overhere2.wav",
+    "fileName": "overhere2.wav",
+    "category": "hostage",
+    "displayName": "overhere2.wav"
+  },
+  {
+    "path": "sound\\items\\9mmclip1.wav",
+    "fileName": "9mmclip1.wav",
+    "category": "items",
+    "displayName": "9mmclip1.wav"
+  },
+  {
+    "path": "sound\\items\\9mmclip2.wav",
+    "fileName": "9mmclip2.wav",
+    "category": "items",
+    "displayName": "9mmclip2.wav"
+  },
+  {
+    "path": "sound\\items\\ammopickup1.wav",
+    "fileName": "ammopickup1.wav",
+    "category": "items",
+    "displayName": "ammopickup1.wav"
+  },
+  {
+    "path": "sound\\items\\ammopickup2.wav",
+    "fileName": "ammopickup2.wav",
+    "category": "items",
+    "displayName": "ammopickup2.wav"
+  },
+  {
+    "path": "sound\\items\\clipinsert1.wav",
+    "fileName": "clipinsert1.wav",
+    "category": "items",
+    "displayName": "clipinsert1.wav"
+  },
+  {
+    "path": "sound\\items\\cliprelease1.wav",
+    "fileName": "cliprelease1.wav",
+    "category": "items",
+    "displayName": "cliprelease1.wav"
+  },
+  {
+    "path": "sound\\items\\flashlight1.wav",
+    "fileName": "flashlight1.wav",
+    "category": "items",
+    "displayName": "flashlight1.wav"
+  },
+  {
+    "path": "sound\\items\\guncock1.wav",
+    "fileName": "guncock1.wav",
+    "category": "items",
+    "displayName": "guncock1.wav"
+  },
+  {
+    "path": "sound\\items\\gunpickup2.wav",
+    "fileName": "gunpickup2.wav",
+    "category": "items",
+    "displayName": "gunpickup2.wav"
+  },
+  {
+    "path": "sound\\items\\kevlar.wav",
+    "fileName": "kevlar.wav",
+    "category": "items",
+    "displayName": "kevlar.wav"
+  },
+  {
+    "path": "sound\\items\\nvg_off.wav",
+    "fileName": "nvg_off.wav",
+    "category": "items",
+    "displayName": "nvg_off.wav"
+  },
+  {
+    "path": "sound\\items\\nvg_on.wav",
+    "fileName": "nvg_on.wav",
+    "category": "items",
+    "displayName": "nvg_on.wav"
+  },
+  {
+    "path": "sound\\music\\downed_intro.mp3",
+    "fileName": "downed_intro.mp3",
+    "category": "music",
+    "displayName": "downed_intro.mp3"
+  },
+  {
+    "path": "sound\\music\\motor_intro.mp3",
+    "fileName": "motor_intro.mp3",
+    "category": "music",
+    "displayName": "motor_intro.mp3"
+  },
+  {
+    "path": "sound\\music\\thinice_success.mp3",
+    "fileName": "thinice_success.mp3",
+    "category": "music",
+    "displayName": "thinice_success.mp3"
+  },
+  {
+    "path": "sound\\music\\train_failure.mp3",
+    "fileName": "train_failure.mp3",
+    "category": "music",
+    "displayName": "train_failure.mp3"
+  },
+  {
+    "path": "sound\\music\\train_work1.mp3",
+    "fileName": "train_work1.mp3",
+    "category": "music",
+    "displayName": "train_work1.mp3"
+  },
+  {
+    "path": "sound\\music\\turncrank_flash.mp3",
+    "fileName": "turncrank_flash.mp3",
+    "category": "music",
+    "displayName": "turncrank_flash.mp3"
+  },
+  {
+    "path": "sound\\music\\turncrank_success.mp3",
+    "fileName": "turncrank_success.mp3",
+    "category": "music",
+    "displayName": "turncrank_success.mp3"
+  },
+  {
+    "path": "sound\\player\\death6.wav",
+    "fileName": "death6.wav",
+    "category": "player",
+    "displayName": "death6.wav"
+  },
+  {
+    "path": "sound\\player\\die1.wav",
+    "fileName": "die1.wav",
+    "category": "player",
+    "displayName": "die1.wav"
+  },
+  {
+    "path": "sound\\player\\die2.wav",
+    "fileName": "die2.wav",
+    "category": "player",
+    "displayName": "die2.wav"
+  },
+  {
+    "path": "sound\\player\\die3.wav",
+    "fileName": "die3.wav",
+    "category": "player",
+    "displayName": "die3.wav"
+  },
+  {
+    "path": "sound\\player\\headshot1.wav",
+    "fileName": "headshot1.wav",
+    "category": "player",
+    "displayName": "headshot1.wav"
+  },
+  {
+    "path": "sound\\player\\headshot2.wav",
+    "fileName": "headshot2.wav",
+    "category": "player",
+    "displayName": "headshot2.wav"
+  },
+  {
+    "path": "sound\\player\\headshot3.wav",
+    "fileName": "headshot3.wav",
+    "category": "player",
+    "displayName": "headshot3.wav"
+  },
+  {
+    "path": "sound\\player\\pl_dirt1.wav",
+    "fileName": "pl_dirt1.wav",
+    "category": "player",
+    "displayName": "pl_dirt1.wav"
+  },
+  {
+    "path": "sound\\player\\pl_dirt2.wav",
+    "fileName": "pl_dirt2.wav",
+    "category": "player",
+    "displayName": "pl_dirt2.wav"
+  },
+  {
+    "path": "sound\\player\\pl_dirt3.wav",
+    "fileName": "pl_dirt3.wav",
+    "category": "player",
+    "displayName": "pl_dirt3.wav"
+  },
+  {
+    "path": "sound\\player\\pl_dirt4.wav",
+    "fileName": "pl_dirt4.wav",
+    "category": "player",
+    "displayName": "pl_dirt4.wav"
+  },
+  {
+    "path": "sound\\player\\pl_fallpain1.wav",
+    "fileName": "pl_fallpain1.wav",
+    "category": "player",
+    "displayName": "pl_fallpain1.wav"
+  },
+  {
+    "path": "sound\\player\\pl_fallpain2.wav",
+    "fileName": "pl_fallpain2.wav",
+    "category": "player",
+    "displayName": "pl_fallpain2.wav"
+  },
+  {
+    "path": "sound\\player\\pl_fallpain3.wav",
+    "fileName": "pl_fallpain3.wav",
+    "category": "player",
+    "displayName": "pl_fallpain3.wav"
+  },
+  {
+    "path": "sound\\player\\pl_jump1.wav",
+    "fileName": "pl_jump1.wav",
+    "category": "player",
+    "displayName": "pl_jump1.wav"
+  },
+  {
+    "path": "sound\\player\\pl_jump2.wav",
+    "fileName": "pl_jump2.wav",
+    "category": "player",
+    "displayName": "pl_jump2.wav"
+  },
+  {
+    "path": "sound\\player\\pl_ladder1.wav",
+    "fileName": "pl_ladder1.wav",
+    "category": "player",
+    "displayName": "pl_ladder1.wav"
+  },
+  {
+    "path": "sound\\player\\pl_ladder2.wav",
+    "fileName": "pl_ladder2.wav",
+    "category": "player",
+    "displayName": "pl_ladder2.wav"
+  },
+  {
+    "path": "sound\\player\\pl_ladder3.wav",
+    "fileName": "pl_ladder3.wav",
+    "category": "player",
+    "displayName": "pl_ladder3.wav"
+  },
+  {
+    "path": "sound\\player\\pl_ladder4.wav",
+    "fileName": "pl_ladder4.wav",
+    "category": "player",
+    "displayName": "pl_ladder4.wav"
+  },
+  {
+    "path": "sound\\player\\pl_shell1.wav",
+    "fileName": "pl_shell1.wav",
+    "category": "player",
+    "displayName": "pl_shell1.wav"
+  },
+  {
+    "path": "sound\\player\\pl_shell2.wav",
+    "fileName": "pl_shell2.wav",
+    "category": "player",
+    "displayName": "pl_shell2.wav"
+  },
+  {
+    "path": "sound\\player\\pl_shell3.wav",
+    "fileName": "pl_shell3.wav",
+    "category": "player",
+    "displayName": "pl_shell3.wav"
+  },
+  {
+    "path": "sound\\player\\pl_shot1.wav",
+    "fileName": "pl_shot1.wav",
+    "category": "player",
+    "displayName": "pl_shot1.wav"
+  },
+  {
+    "path": "sound\\player\\pl_snow1.wav",
+    "fileName": "pl_snow1.wav",
+    "category": "player",
+    "displayName": "pl_snow1.wav"
+  },
+  {
+    "path": "sound\\player\\pl_snow2.wav",
+    "fileName": "pl_snow2.wav",
+    "category": "player",
+    "displayName": "pl_snow2.wav"
+  },
+  {
+    "path": "sound\\player\\pl_snow3.wav",
+    "fileName": "pl_snow3.wav",
+    "category": "player",
+    "displayName": "pl_snow3.wav"
+  },
+  {
+    "path": "sound\\player\\pl_snow4.wav",
+    "fileName": "pl_snow4.wav",
+    "category": "player",
+    "displayName": "pl_snow4.wav"
+  },
+  {
+    "path": "sound\\player\\pl_snow5.wav",
+    "fileName": "pl_snow5.wav",
+    "category": "player",
+    "displayName": "pl_snow5.wav"
+  },
+  {
+    "path": "sound\\player\\pl_snow6.wav",
+    "fileName": "pl_snow6.wav",
+    "category": "player",
+    "displayName": "pl_snow6.wav"
+  },
+  {
+    "path": "sound\\player\\sprayer.wav",
+    "fileName": "sprayer.wav",
+    "category": "player",
+    "displayName": "sprayer.wav"
+  },
+  {
+    "path": "sound\\radio\\escaped.wav",
+    "fileName": "escaped.wav",
+    "category": "radio",
+    "displayName": "escaped.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\a.wav",
+    "fileName": "a.wav",
+    "category": "radio",
+    "displayName": "a.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\aah.wav",
+    "fileName": "aah.wav",
+    "category": "radio",
+    "displayName": "aah.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\affirmative.wav",
+    "fileName": "affirmative.wav",
+    "category": "radio",
+    "displayName": "affirmative.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ahh_negative.wav",
+    "fileName": "ahh_negative.wav",
+    "category": "radio",
+    "displayName": "ahh_negative.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\airplane.wav",
+    "fileName": "airplane.wav",
+    "category": "radio",
+    "displayName": "airplane.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\alley.wav",
+    "fileName": "alley.wav",
+    "category": "radio",
+    "displayName": "alley.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\all_clear_here.wav",
+    "fileName": "all_clear_here.wav",
+    "category": "radio",
+    "displayName": "all_clear_here.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\all_quiet.wav",
+    "fileName": "all_quiet.wav",
+    "category": "radio",
+    "displayName": "all_quiet.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\alright.wav",
+    "fileName": "alright.wav",
+    "category": "radio",
+    "displayName": "alright.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\alright2.wav",
+    "fileName": "alright2.wav",
+    "category": "radio",
+    "displayName": "alright2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\alright_lets_do_this.wav",
+    "fileName": "alright_lets_do_this.wav",
+    "category": "radio",
+    "displayName": "alright_lets_do_this.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\and_thats_how_its_done.wav",
+    "fileName": "and_thats_how_its_done.wav",
+    "category": "radio",
+    "displayName": "and_thats_how_its_done.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\anyone_see_anything.wav",
+    "fileName": "anyone_see_anything.wav",
+    "category": "radio",
+    "displayName": "anyone_see_anything.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\anyone_see_them.wav",
+    "fileName": "anyone_see_them.wav",
+    "category": "radio",
+    "displayName": "anyone_see_them.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\apartment.wav",
+    "fileName": "apartment.wav",
+    "category": "radio",
+    "displayName": "apartment.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\apartments.wav",
+    "fileName": "apartments.wav",
+    "category": "radio",
+    "displayName": "apartments.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\area_clear.wav",
+    "fileName": "area_clear.wav",
+    "category": "radio",
+    "displayName": "area_clear.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\area_secure.wav",
+    "fileName": "area_secure.wav",
+    "category": "radio",
+    "displayName": "area_secure.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\atrium.wav",
+    "fileName": "atrium.wav",
+    "category": "radio",
+    "displayName": "atrium.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\attacking.wav",
+    "fileName": "attacking.wav",
+    "category": "radio",
+    "displayName": "attacking.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\attacking_enemies.wav",
+    "fileName": "attacking_enemies.wav",
+    "category": "radio",
+    "displayName": "attacking_enemies.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\attic.wav",
+    "fileName": "attic.wav",
+    "category": "radio",
+    "displayName": "attic.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\aww_man.wav",
+    "fileName": "aww_man.wav",
+    "category": "radio",
+    "displayName": "aww_man.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\aw_hell.wav",
+    "fileName": "aw_hell.wav",
+    "category": "radio",
+    "displayName": "aw_hell.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\a_bunch_of_them.wav",
+    "fileName": "a_bunch_of_them.wav",
+    "category": "radio",
+    "displayName": "a_bunch_of_them.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\b.wav",
+    "fileName": "b.wav",
+    "category": "radio",
+    "displayName": "b.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\back.wav",
+    "fileName": "back.wav",
+    "category": "radio",
+    "displayName": "back.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\back_alley.wav",
+    "fileName": "back_alley.wav",
+    "category": "radio",
+    "displayName": "back_alley.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\back_door.wav",
+    "fileName": "back_door.wav",
+    "category": "radio",
+    "displayName": "back_door.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\back_hall.wav",
+    "fileName": "back_hall.wav",
+    "category": "radio",
+    "displayName": "back_hall.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\back_room.wav",
+    "fileName": "back_room.wav",
+    "category": "radio",
+    "displayName": "back_room.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\back_way.wav",
+    "fileName": "back_way.wav",
+    "category": "radio",
+    "displayName": "back_way.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\back_yard.wav",
+    "fileName": "back_yard.wav",
+    "category": "radio",
+    "displayName": "back_yard.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\balcony.wav",
+    "fileName": "balcony.wav",
+    "category": "radio",
+    "displayName": "balcony.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\basement.wav",
+    "fileName": "basement.wav",
+    "category": "radio",
+    "displayName": "basement.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bathroom.wav",
+    "fileName": "bathroom.wav",
+    "category": "radio",
+    "displayName": "bathroom.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bathroom2.wav",
+    "fileName": "bathroom2.wav",
+    "category": "radio",
+    "displayName": "bathroom2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bedroom.wav",
+    "fileName": "bedroom.wav",
+    "category": "radio",
+    "displayName": "bedroom.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bedroom2.wav",
+    "fileName": "bedroom2.wav",
+    "category": "radio",
+    "displayName": "bedroom2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\be_right_there.wav",
+    "fileName": "be_right_there.wav",
+    "category": "radio",
+    "displayName": "be_right_there.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\big_office.wav",
+    "fileName": "big_office.wav",
+    "category": "radio",
+    "displayName": "big_office.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bombsite.wav",
+    "fileName": "bombsite.wav",
+    "category": "radio",
+    "displayName": "bombsite.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bombsite2.wav",
+    "fileName": "bombsite2.wav",
+    "category": "radio",
+    "displayName": "bombsite2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bombsite_secure.wav",
+    "fileName": "bombsite_secure.wav",
+    "category": "radio",
+    "displayName": "bombsite_secure.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bombsite_secured.wav",
+    "fileName": "bombsite_secured.wav",
+    "category": "radio",
+    "displayName": "bombsite_secured.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bombsite_secure_ready_for_you.wav",
+    "fileName": "bombsite_secure_ready_for_you.wav",
+    "category": "radio",
+    "displayName": "bombsite_secure_ready_for_you.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bombsite_under_control.wav",
+    "fileName": "bombsite_under_control.wav",
+    "category": "radio",
+    "displayName": "bombsite_under_control.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bombs_on_the_ground.wav",
+    "fileName": "bombs_on_the_ground.wav",
+    "category": "radio",
+    "displayName": "bombs_on_the_ground.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bombs_on_the_ground_here.wav",
+    "fileName": "bombs_on_the_ground_here.wav",
+    "category": "radio",
+    "displayName": "bombs_on_the_ground_here.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bridge.wav",
+    "fileName": "bridge.wav",
+    "category": "radio",
+    "displayName": "bridge.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\bunker.wav",
+    "fileName": "bunker.wav",
+    "category": "radio",
+    "displayName": "bunker.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\c.wav",
+    "fileName": "c.wav",
+    "category": "radio",
+    "displayName": "c.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\camping_hostages.wav",
+    "fileName": "camping_hostages.wav",
+    "category": "radio",
+    "displayName": "camping_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\clear.wav",
+    "fileName": "clear.wav",
+    "category": "radio",
+    "displayName": "clear.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\clear2.wav",
+    "fileName": "clear2.wav",
+    "category": "radio",
+    "displayName": "clear2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\clear3.wav",
+    "fileName": "clear3.wav",
+    "category": "radio",
+    "displayName": "clear3.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\clear4.wav",
+    "fileName": "clear4.wav",
+    "category": "radio",
+    "displayName": "clear4.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\come_out_and_fight_like_a_man.wav",
+    "fileName": "come_out_and_fight_like_a_man.wav",
+    "category": "radio",
+    "displayName": "come_out_and_fight_like_a_man.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\come_out_wherever_you_are.wav",
+    "fileName": "come_out_wherever_you_are.wav",
+    "category": "radio",
+    "displayName": "come_out_wherever_you_are.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\come_to_papa.wav",
+    "fileName": "come_to_papa.wav",
+    "category": "radio",
+    "displayName": "come_to_papa.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\computer_room.wav",
+    "fileName": "computer_room.wav",
+    "category": "radio",
+    "displayName": "computer_room.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\conference_room.wav",
+    "fileName": "conference_room.wav",
+    "category": "radio",
+    "displayName": "conference_room.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\courtyard.wav",
+    "fileName": "courtyard.wav",
+    "category": "radio",
+    "displayName": "courtyard.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\cover_me.wav",
+    "fileName": "cover_me.wav",
+    "category": "radio",
+    "displayName": "cover_me.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\cover_me2.wav",
+    "fileName": "cover_me2.wav",
+    "category": "radio",
+    "displayName": "cover_me2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\crates.wav",
+    "fileName": "crates.wav",
+    "category": "radio",
+    "displayName": "crates.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\crawlspace.wav",
+    "fileName": "crawlspace.wav",
+    "category": "radio",
+    "displayName": "crawlspace.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ct_spawn.wav",
+    "fileName": "ct_spawn.wav",
+    "category": "radio",
+    "displayName": "ct_spawn.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\cut_it_out.wav",
+    "fileName": "cut_it_out.wav",
+    "category": "radio",
+    "displayName": "cut_it_out.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\deck.wav",
+    "fileName": "deck.wav",
+    "category": "radio",
+    "displayName": "deck.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\defusing.wav",
+    "fileName": "defusing.wav",
+    "category": "radio",
+    "displayName": "defusing.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\defusing_bomb.wav",
+    "fileName": "defusing_bomb.wav",
+    "category": "radio",
+    "displayName": "defusing_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\defusing_bomb_now.wav",
+    "fileName": "defusing_bomb_now.wav",
+    "category": "radio",
+    "displayName": "defusing_bomb_now.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\den.wav",
+    "fileName": "den.wav",
+    "category": "radio",
+    "displayName": "den.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\dont_worry_hell_get_it.wav",
+    "fileName": "dont_worry_hell_get_it.wav",
+    "category": "radio",
+    "displayName": "dont_worry_hell_get_it.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\double_doors.wav",
+    "fileName": "double_doors.wav",
+    "category": "radio",
+    "displayName": "double_doors.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\downstairs.wav",
+    "fileName": "downstairs.wav",
+    "category": "radio",
+    "displayName": "downstairs.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\do_not_mess_with_me.wav",
+    "fileName": "do_not_mess_with_me.wav",
+    "category": "radio",
+    "displayName": "do_not_mess_with_me.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\dropped_him.wav",
+    "fileName": "dropped_him.wav",
+    "category": "radio",
+    "displayName": "dropped_him.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\dumpster.wav",
+    "fileName": "dumpster.wav",
+    "category": "radio",
+    "displayName": "dumpster.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\elevator.wav",
+    "fileName": "elevator.wav",
+    "category": "radio",
+    "displayName": "elevator.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\elevator2.wav",
+    "fileName": "elevator2.wav",
+    "category": "radio",
+    "displayName": "elevator2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\enemy_down.wav",
+    "fileName": "enemy_down.wav",
+    "category": "radio",
+    "displayName": "enemy_down.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\enemy_down2.wav",
+    "fileName": "enemy_down2.wav",
+    "category": "radio",
+    "displayName": "enemy_down2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\engaging_enemies.wav",
+    "fileName": "engaging_enemies.wav",
+    "category": "radio",
+    "displayName": "engaging_enemies.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\entrance.wav",
+    "fileName": "entrance.wav",
+    "category": "radio",
+    "displayName": "entrance.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\entryway.wav",
+    "fileName": "entryway.wav",
+    "category": "radio",
+    "displayName": "entryway.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\family_room.wav",
+    "fileName": "family_room.wav",
+    "category": "radio",
+    "displayName": "family_room.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\far_side.wav",
+    "fileName": "far_side.wav",
+    "category": "radio",
+    "displayName": "far_side.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\fence.wav",
+    "fileName": "fence.wav",
+    "category": "radio",
+    "displayName": "fence.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\foyer.wav",
+    "fileName": "foyer.wav",
+    "category": "radio",
+    "displayName": "foyer.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\front.wav",
+    "fileName": "front.wav",
+    "category": "radio",
+    "displayName": "front.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\front_door.wav",
+    "fileName": "front_door.wav",
+    "category": "radio",
+    "displayName": "front_door.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\front_door2.wav",
+    "fileName": "front_door2.wav",
+    "category": "radio",
+    "displayName": "front_door2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\front_hall.wav",
+    "fileName": "front_hall.wav",
+    "category": "radio",
+    "displayName": "front_hall.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\front_room.wav",
+    "fileName": "front_room.wav",
+    "category": "radio",
+    "displayName": "front_room.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\front_yard.wav",
+    "fileName": "front_yard.wav",
+    "category": "radio",
+    "displayName": "front_yard.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\garage.wav",
+    "fileName": "garage.wav",
+    "category": "radio",
+    "displayName": "garage.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\gate.wav",
+    "fileName": "gate.wav",
+    "category": "radio",
+    "displayName": "gate.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\gatehouse.wav",
+    "fileName": "gatehouse.wav",
+    "category": "radio",
+    "displayName": "gatehouse.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\going_to_plant_the_bomb_at_b.wav",
+    "fileName": "going_to_plant_the_bomb_at_b.wav",
+    "category": "radio",
+    "displayName": "going_to_plant_the_bomb_at_b.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\good_idea.wav",
+    "fileName": "good_idea.wav",
+    "category": "radio",
+    "displayName": "good_idea.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\good_job_team.wav",
+    "fileName": "good_job_team.wav",
+    "category": "radio",
+    "displayName": "good_job_team.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\good_one.wav",
+    "fileName": "good_one.wav",
+    "category": "radio",
+    "displayName": "good_one.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\good_one2.wav",
+    "fileName": "good_one2.wav",
+    "category": "radio",
+    "displayName": "good_one2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\good_one_sir.wav",
+    "fileName": "good_one_sir.wav",
+    "category": "radio",
+    "displayName": "good_one_sir.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\good_one_sir2.wav",
+    "fileName": "good_one_sir2.wav",
+    "category": "radio",
+    "displayName": "good_one_sir2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\good_shot.wav",
+    "fileName": "good_shot.wav",
+    "category": "radio",
+    "displayName": "good_shot.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\good_shot2.wav",
+    "fileName": "good_shot2.wav",
+    "category": "radio",
+    "displayName": "good_shot2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\good_shot_commander.wav",
+    "fileName": "good_shot_commander.wav",
+    "category": "radio",
+    "displayName": "good_shot_commander.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\good_shot_commander2.wav",
+    "fileName": "good_shot_commander2.wav",
+    "category": "radio",
+    "displayName": "good_shot_commander2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\got_him.wav",
+    "fileName": "got_him.wav",
+    "category": "radio",
+    "displayName": "got_him.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\got_the_sniper.wav",
+    "fileName": "got_the_sniper.wav",
+    "category": "radio",
+    "displayName": "got_the_sniper.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\got_the_sniper2.wav",
+    "fileName": "got_the_sniper2.wav",
+    "category": "radio",
+    "displayName": "got_the_sniper2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\great.wav",
+    "fileName": "great.wav",
+    "category": "radio",
+    "displayName": "great.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\guardhouse.wav",
+    "fileName": "guardhouse.wav",
+    "category": "radio",
+    "displayName": "guardhouse.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\guarding_a.wav",
+    "fileName": "guarding_a.wav",
+    "category": "radio",
+    "displayName": "guarding_a.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\guarding_b.wav",
+    "fileName": "guarding_b.wav",
+    "category": "radio",
+    "displayName": "guarding_b.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\guarding_c.wav",
+    "fileName": "guarding_c.wav",
+    "category": "radio",
+    "displayName": "guarding_c.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\guarding_hostages.wav",
+    "fileName": "guarding_hostages.wav",
+    "category": "radio",
+    "displayName": "guarding_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\guarding_the_dropped_bomb.wav",
+    "fileName": "guarding_the_dropped_bomb.wav",
+    "category": "radio",
+    "displayName": "guarding_the_dropped_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\guarding_the_escape_zone.wav",
+    "fileName": "guarding_the_escape_zone.wav",
+    "category": "radio",
+    "displayName": "guarding_the_escape_zone.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\guarding_the_escape_zone2.wav",
+    "fileName": "guarding_the_escape_zone2.wav",
+    "category": "radio",
+    "displayName": "guarding_the_escape_zone2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\guarding_the_hostages.wav",
+    "fileName": "guarding_the_hostages.wav",
+    "category": "radio",
+    "displayName": "guarding_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hang_on_im_coming.wav",
+    "fileName": "hang_on_im_coming.wav",
+    "category": "radio",
+    "displayName": "hang_on_im_coming.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hang_on_i_heard_something.wav",
+    "fileName": "hang_on_i_heard_something.wav",
+    "category": "radio",
+    "displayName": "hang_on_i_heard_something.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\heading_to_a.wav",
+    "fileName": "heading_to_a.wav",
+    "category": "radio",
+    "displayName": "heading_to_a.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\heading_to_b.wav",
+    "fileName": "heading_to_b.wav",
+    "category": "radio",
+    "displayName": "heading_to_b.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\heading_to_c.wav",
+    "fileName": "heading_to_c.wav",
+    "category": "radio",
+    "displayName": "heading_to_c.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\heading_to_the_escape_zone.wav",
+    "fileName": "heading_to_the_escape_zone.wav",
+    "category": "radio",
+    "displayName": "heading_to_the_escape_zone.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\heading_to_the_rescue_zone.wav",
+    "fileName": "heading_to_the_rescue_zone.wav",
+    "category": "radio",
+    "displayName": "heading_to_the_rescue_zone.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\help.wav",
+    "fileName": "help.wav",
+    "category": "radio",
+    "displayName": "help.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hes_broken.wav",
+    "fileName": "hes_broken.wav",
+    "category": "radio",
+    "displayName": "hes_broken.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hes_dead.wav",
+    "fileName": "hes_dead.wav",
+    "category": "radio",
+    "displayName": "hes_dead.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hes_done.wav",
+    "fileName": "hes_done.wav",
+    "category": "radio",
+    "displayName": "hes_done.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hes_down.wav",
+    "fileName": "hes_down.wav",
+    "category": "radio",
+    "displayName": "hes_down.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hes_got_the_bomb.wav",
+    "fileName": "hes_got_the_bomb.wav",
+    "category": "radio",
+    "displayName": "hes_got_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hes_got_the_bomb2.wav",
+    "fileName": "hes_got_the_bomb2.wav",
+    "category": "radio",
+    "displayName": "hes_got_the_bomb2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hes_got_the_package.wav",
+    "fileName": "hes_got_the_package.wav",
+    "category": "radio",
+    "displayName": "hes_got_the_package.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hey.wav",
+    "fileName": "hey.wav",
+    "category": "radio",
+    "displayName": "hey.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hey2.wav",
+    "fileName": "hey2.wav",
+    "category": "radio",
+    "displayName": "hey2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\he_got_away.wav",
+    "fileName": "he_got_away.wav",
+    "category": "radio",
+    "displayName": "he_got_away.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\he_got_away2.wav",
+    "fileName": "he_got_away2.wav",
+    "category": "radio",
+    "displayName": "he_got_away2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hold_your_fire.wav",
+    "fileName": "hold_your_fire.wav",
+    "category": "radio",
+    "displayName": "hold_your_fire.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hostages.wav",
+    "fileName": "hostages.wav",
+    "category": "radio",
+    "displayName": "hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hostages2.wav",
+    "fileName": "hostages2.wav",
+    "category": "radio",
+    "displayName": "hostages2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hostages_secure_ready_for_you.wav",
+    "fileName": "hostages_secure_ready_for_you.wav",
+    "category": "radio",
+    "displayName": "hostages_secure_ready_for_you.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\hostage_down.wav",
+    "fileName": "hostage_down.wav",
+    "category": "radio",
+    "displayName": "hostage_down.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\house.wav",
+    "fileName": "house.wav",
+    "category": "radio",
+    "displayName": "house.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ill_come_with_you.wav",
+    "fileName": "ill_come_with_you.wav",
+    "category": "radio",
+    "displayName": "ill_come_with_you.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ill_go_too.wav",
+    "fileName": "ill_go_too.wav",
+    "category": "radio",
+    "displayName": "ill_go_too.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ill_go_with_you.wav",
+    "fileName": "ill_go_with_you.wav",
+    "category": "radio",
+    "displayName": "ill_go_with_you.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_at_the_escape_zone.wav",
+    "fileName": "im_at_the_escape_zone.wav",
+    "category": "radio",
+    "displayName": "im_at_the_escape_zone.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_at_the_hostages.wav",
+    "fileName": "im_at_the_hostages.wav",
+    "category": "radio",
+    "displayName": "im_at_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_blind.wav",
+    "fileName": "im_blind.wav",
+    "category": "radio",
+    "displayName": "im_blind.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_camping_a.wav",
+    "fileName": "im_camping_a.wav",
+    "category": "radio",
+    "displayName": "im_camping_a.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_camping_b.wav",
+    "fileName": "im_camping_b.wav",
+    "category": "radio",
+    "displayName": "im_camping_b.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_camping_c.wav",
+    "fileName": "im_camping_c.wav",
+    "category": "radio",
+    "displayName": "im_camping_c.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_coming.wav",
+    "fileName": "im_coming.wav",
+    "category": "radio",
+    "displayName": "im_coming.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_camp.wav",
+    "fileName": "im_going_to_camp.wav",
+    "category": "radio",
+    "displayName": "im_going_to_camp.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_camp_a.wav",
+    "fileName": "im_going_to_camp_a.wav",
+    "category": "radio",
+    "displayName": "im_going_to_camp_a.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_camp_b.wav",
+    "fileName": "im_going_to_camp_b.wav",
+    "category": "radio",
+    "displayName": "im_going_to_camp_b.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_camp_c.wav",
+    "fileName": "im_going_to_camp_c.wav",
+    "category": "radio",
+    "displayName": "im_going_to_camp_c.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_camp_the_hostages.wav",
+    "fileName": "im_going_to_camp_the_hostages.wav",
+    "category": "radio",
+    "displayName": "im_going_to_camp_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_cover_the_escape_zone.wav",
+    "fileName": "im_going_to_cover_the_escape_zone.wav",
+    "category": "radio",
+    "displayName": "im_going_to_cover_the_escape_zone.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_guard_bombsite_a.wav",
+    "fileName": "im_going_to_guard_bombsite_a.wav",
+    "category": "radio",
+    "displayName": "im_going_to_guard_bombsite_a.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_guard_bombsite_b.wav",
+    "fileName": "im_going_to_guard_bombsite_b.wav",
+    "category": "radio",
+    "displayName": "im_going_to_guard_bombsite_b.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_guard_bombsite_c.wav",
+    "fileName": "im_going_to_guard_bombsite_c.wav",
+    "category": "radio",
+    "displayName": "im_going_to_guard_bombsite_c.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_guard_the_bomb.wav",
+    "fileName": "im_going_to_guard_the_bomb.wav",
+    "category": "radio",
+    "displayName": "im_going_to_guard_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_guard_the_bomb2.wav",
+    "fileName": "im_going_to_guard_the_bomb2.wav",
+    "category": "radio",
+    "displayName": "im_going_to_guard_the_bomb2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_guard_the_hostages.wav",
+    "fileName": "im_going_to_guard_the_hostages.wav",
+    "category": "radio",
+    "displayName": "im_going_to_guard_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_guard_the_hostages2.wav",
+    "fileName": "im_going_to_guard_the_hostages2.wav",
+    "category": "radio",
+    "displayName": "im_going_to_guard_the_hostages2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_keep_an_eye_on_the_bomb.wav",
+    "fileName": "im_going_to_keep_an_eye_on_the_bomb.wav",
+    "category": "radio",
+    "displayName": "im_going_to_keep_an_eye_on_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_keep_an_eye_on_the_escape.wav",
+    "fileName": "im_going_to_keep_an_eye_on_the_escape.wav",
+    "category": "radio",
+    "displayName": "im_going_to_keep_an_eye_on_the_escape.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_keep_an_eye_on_the_rescue.wav",
+    "fileName": "im_going_to_keep_an_eye_on_the_rescue.wav",
+    "category": "radio",
+    "displayName": "im_going_to_keep_an_eye_on_the_rescue.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_wait_here.wav",
+    "fileName": "im_going_to_wait_here.wav",
+    "category": "radio",
+    "displayName": "im_going_to_wait_here.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_watch_the_bomb.wav",
+    "fileName": "im_going_to_watch_the_bomb.wav",
+    "category": "radio",
+    "displayName": "im_going_to_watch_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_watch_the_escape_zone.wav",
+    "fileName": "im_going_to_watch_the_escape_zone.wav",
+    "category": "radio",
+    "displayName": "im_going_to_watch_the_escape_zone.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_going_to_watch_the_rescue_zone.wav",
+    "fileName": "im_going_to_watch_the_rescue_zone.wav",
+    "category": "radio",
+    "displayName": "im_going_to_watch_the_rescue_zone.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_gonna_go_plant.wav",
+    "fileName": "im_gonna_go_plant.wav",
+    "category": "radio",
+    "displayName": "im_gonna_go_plant.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_gonna_go_plant_the_bomb.wav",
+    "fileName": "im_gonna_go_plant_the_bomb.wav",
+    "category": "radio",
+    "displayName": "im_gonna_go_plant_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_gonna_hang_back.wav",
+    "fileName": "im_gonna_hang_back.wav",
+    "category": "radio",
+    "displayName": "im_gonna_hang_back.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_gonna_plant_the_bomb_at_a.wav",
+    "fileName": "im_gonna_plant_the_bomb_at_a.wav",
+    "category": "radio",
+    "displayName": "im_gonna_plant_the_bomb_at_a.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_gonna_plant_the_bomb_at_b.wav",
+    "fileName": "im_gonna_plant_the_bomb_at_b.wav",
+    "category": "radio",
+    "displayName": "im_gonna_plant_the_bomb_at_b.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_gonna_plant_the_bomb_at_c.wav",
+    "fileName": "im_gonna_plant_the_bomb_at_c.wav",
+    "category": "radio",
+    "displayName": "im_gonna_plant_the_bomb_at_c.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_gonna_plant_the_bomb_at_c2.wav",
+    "fileName": "im_gonna_plant_the_bomb_at_c2.wav",
+    "category": "radio",
+    "displayName": "im_gonna_plant_the_bomb_at_c2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_in_trouble.wav",
+    "fileName": "im_in_trouble.wav",
+    "category": "radio",
+    "displayName": "im_in_trouble.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_on_your_side.wav",
+    "fileName": "im_on_your_side.wav",
+    "category": "radio",
+    "displayName": "im_on_your_side.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_pinned_down.wav",
+    "fileName": "im_pinned_down.wav",
+    "category": "radio",
+    "displayName": "im_pinned_down.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_waiting_here.wav",
+    "fileName": "im_waiting_here.wav",
+    "category": "radio",
+    "displayName": "im_waiting_here.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_with_the_hostages.wav",
+    "fileName": "im_with_the_hostages.wav",
+    "category": "radio",
+    "displayName": "im_with_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_with_the_hostages2.wav",
+    "fileName": "im_with_the_hostages2.wav",
+    "category": "radio",
+    "displayName": "im_with_the_hostages2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\im_with_you.wav",
+    "fileName": "im_with_you.wav",
+    "category": "radio",
+    "displayName": "im_with_you.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\inside.wav",
+    "fileName": "inside.wav",
+    "category": "radio",
+    "displayName": "inside.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\in_combat.wav",
+    "fileName": "in_combat.wav",
+    "category": "radio",
+    "displayName": "in_combat.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\in_combat2.wav",
+    "fileName": "in_combat2.wav",
+    "category": "radio",
+    "displayName": "in_combat2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\its_all_up_to_you_sir.wav",
+    "fileName": "its_all_up_to_you_sir.wav",
+    "category": "radio",
+    "displayName": "its_all_up_to_you_sir.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\its_a_party.wav",
+    "fileName": "its_a_party.wav",
+    "category": "radio",
+    "displayName": "its_a_party.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ive_been_blinded.wav",
+    "fileName": "ive_been_blinded.wav",
+    "category": "radio",
+    "displayName": "ive_been_blinded.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ive_got_the_bomb.wav",
+    "fileName": "ive_got_the_bomb.wav",
+    "category": "radio",
+    "displayName": "ive_got_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ive_got_the_bomb_here.wav",
+    "fileName": "ive_got_the_bomb_here.wav",
+    "category": "radio",
+    "displayName": "ive_got_the_bomb_here.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ive_got_the_hostages.wav",
+    "fileName": "ive_got_the_hostages.wav",
+    "category": "radio",
+    "displayName": "ive_got_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_am_dangerous.wav",
+    "fileName": "i_am_dangerous.wav",
+    "category": "radio",
+    "displayName": "i_am_dangerous.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_am_on_fire.wav",
+    "fileName": "i_am_on_fire.wav",
+    "category": "radio",
+    "displayName": "i_am_on_fire.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_cant_see.wav",
+    "fileName": "i_cant_see.wav",
+    "category": "radio",
+    "displayName": "i_cant_see.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_could_use_some_help.wav",
+    "fileName": "i_could_use_some_help.wav",
+    "category": "radio",
+    "displayName": "i_could_use_some_help.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_could_use_some_help_over_here.wav",
+    "fileName": "i_could_use_some_help_over_here.wav",
+    "category": "radio",
+    "displayName": "i_could_use_some_help_over_here.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_dont_know_where_he_went.wav",
+    "fileName": "i_dont_know_where_he_went.wav",
+    "category": "radio",
+    "displayName": "i_dont_know_where_he_went.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_dont_think_so.wav",
+    "fileName": "i_dont_think_so.wav",
+    "category": "radio",
+    "displayName": "i_dont_think_so.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_got_a_covered.wav",
+    "fileName": "i_got_a_covered.wav",
+    "category": "radio",
+    "displayName": "i_got_a_covered.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_got_b_covered.wav",
+    "fileName": "i_got_b_covered.wav",
+    "category": "radio",
+    "displayName": "i_got_b_covered.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_got_c_covered.wav",
+    "fileName": "i_got_c_covered.wav",
+    "category": "radio",
+    "displayName": "i_got_c_covered.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_got_more_where_that_came_from.wav",
+    "fileName": "i_got_more_where_that_came_from.wav",
+    "category": "radio",
+    "displayName": "i_got_more_where_that_came_from.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_got_nothing.wav",
+    "fileName": "i_got_nothing.wav",
+    "category": "radio",
+    "displayName": "i_got_nothing.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_got_your_back.wav",
+    "fileName": "i_got_your_back.wav",
+    "category": "radio",
+    "displayName": "i_got_your_back.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_got_your_back2.wav",
+    "fileName": "i_got_your_back2.wav",
+    "category": "radio",
+    "displayName": "i_got_your_back2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_have_the_hostages.wav",
+    "fileName": "i_have_the_hostages.wav",
+    "category": "radio",
+    "displayName": "i_have_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_heard_something_over_there.wav",
+    "fileName": "i_heard_something_over_there.wav",
+    "category": "radio",
+    "displayName": "i_heard_something_over_there.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_heard_them.wav",
+    "fileName": "i_heard_them.wav",
+    "category": "radio",
+    "displayName": "i_heard_them.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_hear_something.wav",
+    "fileName": "i_hear_something.wav",
+    "category": "radio",
+    "displayName": "i_hear_something.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_hear_them.wav",
+    "fileName": "i_hear_them.wav",
+    "category": "radio",
+    "displayName": "i_hear_them.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_lost_him.wav",
+    "fileName": "i_lost_him.wav",
+    "category": "radio",
+    "displayName": "i_lost_him.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_see_our_target.wav",
+    "fileName": "i_see_our_target.wav",
+    "category": "radio",
+    "displayName": "i_see_our_target.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_see_the_bomber.wav",
+    "fileName": "i_see_the_bomber.wav",
+    "category": "radio",
+    "displayName": "i_see_the_bomber.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\i_wasnt_worried_for_a_minute.wav",
+    "fileName": "i_wasnt_worried_for_a_minute.wav",
+    "category": "radio",
+    "displayName": "i_wasnt_worried_for_a_minute.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\keeping_an_eye_on_the_hostages.wav",
+    "fileName": "keeping_an_eye_on_the_hostages.wav",
+    "category": "radio",
+    "displayName": "keeping_an_eye_on_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\killed_him.wav",
+    "fileName": "killed_him.wav",
+    "category": "radio",
+    "displayName": "killed_him.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\kitchen.wav",
+    "fileName": "kitchen.wav",
+    "category": "radio",
+    "displayName": "kitchen.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\kitchen2.wav",
+    "fileName": "kitchen2.wav",
+    "category": "radio",
+    "displayName": "kitchen2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ladder.wav",
+    "fileName": "ladder.wav",
+    "category": "radio",
+    "displayName": "ladder.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\lead_on_commander.wav",
+    "fileName": "lead_on_commander.wav",
+    "category": "radio",
+    "displayName": "lead_on_commander.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\lead_on_sir.wav",
+    "fileName": "lead_on_sir.wav",
+    "category": "radio",
+    "displayName": "lead_on_sir.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\lead_the_way.wav",
+    "fileName": "lead_the_way.wav",
+    "category": "radio",
+    "displayName": "lead_the_way.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\lead_the_way_commander.wav",
+    "fileName": "lead_the_way_commander.wav",
+    "category": "radio",
+    "displayName": "lead_the_way_commander.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\lead_the_way_sir.wav",
+    "fileName": "lead_the_way_sir.wav",
+    "category": "radio",
+    "displayName": "lead_the_way_sir.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\lets_hold_up_here_for_a_minute.wav",
+    "fileName": "lets_hold_up_here_for_a_minute.wav",
+    "category": "radio",
+    "displayName": "lets_hold_up_here_for_a_minute.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\lets_wait_here.wav",
+    "fileName": "lets_wait_here.wav",
+    "category": "radio",
+    "displayName": "lets_wait_here.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\little_office.wav",
+    "fileName": "little_office.wav",
+    "category": "radio",
+    "displayName": "little_office.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\living_room.wav",
+    "fileName": "living_room.wav",
+    "category": "radio",
+    "displayName": "living_room.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\loading_dock.wav",
+    "fileName": "loading_dock.wav",
+    "category": "radio",
+    "displayName": "loading_dock.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\lobby.wav",
+    "fileName": "lobby.wav",
+    "category": "radio",
+    "displayName": "lobby.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\loft.wav",
+    "fileName": "loft.wav",
+    "category": "radio",
+    "displayName": "loft.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\long_hall.wav",
+    "fileName": "long_hall.wav",
+    "category": "radio",
+    "displayName": "long_hall.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\look_out_brag.wav",
+    "fileName": "look_out_brag.wav",
+    "category": "radio",
+    "displayName": "look_out_brag.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\made_him_cry.wav",
+    "fileName": "made_him_cry.wav",
+    "category": "radio",
+    "displayName": "made_him_cry.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\main_hall.wav",
+    "fileName": "main_hall.wav",
+    "category": "radio",
+    "displayName": "main_hall.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\market.wav",
+    "fileName": "market.wav",
+    "category": "radio",
+    "displayName": "market.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\market2.wav",
+    "fileName": "market2.wav",
+    "category": "radio",
+    "displayName": "market2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\meeting_room.wav",
+    "fileName": "meeting_room.wav",
+    "category": "radio",
+    "displayName": "meeting_room.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\me_too.wav",
+    "fileName": "me_too.wav",
+    "category": "radio",
+    "displayName": "me_too.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\middle.wav",
+    "fileName": "middle.wav",
+    "category": "radio",
+    "displayName": "middle.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\mines.wav",
+    "fileName": "mines.wav",
+    "category": "radio",
+    "displayName": "mines.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\my_eyes.wav",
+    "fileName": "my_eyes.wav",
+    "category": "radio",
+    "displayName": "my_eyes.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\naa.wav",
+    "fileName": "naa.wav",
+    "category": "radio",
+    "displayName": "naa.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\need_help.wav",
+    "fileName": "need_help.wav",
+    "category": "radio",
+    "displayName": "need_help.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\need_help2.wav",
+    "fileName": "need_help2.wav",
+    "category": "radio",
+    "displayName": "need_help2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\negative.wav",
+    "fileName": "negative.wav",
+    "category": "radio",
+    "displayName": "negative.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\negative2.wav",
+    "fileName": "negative2.wav",
+    "category": "radio",
+    "displayName": "negative2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\neutralized.wav",
+    "fileName": "neutralized.wav",
+    "category": "radio",
+    "displayName": "neutralized.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nice.wav",
+    "fileName": "nice.wav",
+    "category": "radio",
+    "displayName": "nice.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nice2.wav",
+    "fileName": "nice2.wav",
+    "category": "radio",
+    "displayName": "nice2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nice_one_commander.wav",
+    "fileName": "nice_one_commander.wav",
+    "category": "radio",
+    "displayName": "nice_one_commander.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nice_one_sir.wav",
+    "fileName": "nice_one_sir.wav",
+    "category": "radio",
+    "displayName": "nice_one_sir.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nice_shot.wav",
+    "fileName": "nice_shot.wav",
+    "category": "radio",
+    "displayName": "nice_shot.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nice_shot2.wav",
+    "fileName": "nice_shot2.wav",
+    "category": "radio",
+    "displayName": "nice_shot2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nice_shot_commander.wav",
+    "fileName": "nice_shot_commander.wav",
+    "category": "radio",
+    "displayName": "nice_shot_commander.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nice_shot_commander2.wav",
+    "fileName": "nice_shot_commander2.wav",
+    "category": "radio",
+    "displayName": "nice_shot_commander2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nice_shot_sir.wav",
+    "fileName": "nice_shot_sir.wav",
+    "category": "radio",
+    "displayName": "nice_shot_sir.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nice_work_team.wav",
+    "fileName": "nice_work_team.wav",
+    "category": "radio",
+    "displayName": "nice_work_team.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nnno_sir.wav",
+    "fileName": "nnno_sir.wav",
+    "category": "radio",
+    "displayName": "nnno_sir.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\no.wav",
+    "fileName": "no.wav",
+    "category": "radio",
+    "displayName": "no.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\no2.wav",
+    "fileName": "no2.wav",
+    "category": "radio",
+    "displayName": "no2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\noo.wav",
+    "fileName": "noo.wav",
+    "category": "radio",
+    "displayName": "noo.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nothing.wav",
+    "fileName": "nothing.wav",
+    "category": "radio",
+    "displayName": "nothing.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nothing_happening_over_here.wav",
+    "fileName": "nothing_happening_over_here.wav",
+    "category": "radio",
+    "displayName": "nothing_happening_over_here.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nothing_here.wav",
+    "fileName": "nothing_here.wav",
+    "category": "radio",
+    "displayName": "nothing_here.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\nothing_moving_over_here.wav",
+    "fileName": "nothing_moving_over_here.wav",
+    "category": "radio",
+    "displayName": "nothing_moving_over_here.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\no_sir.wav",
+    "fileName": "no_sir.wav",
+    "category": "radio",
+    "displayName": "no_sir.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\no_thanks.wav",
+    "fileName": "no_thanks.wav",
+    "category": "radio",
+    "displayName": "no_thanks.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\office.wav",
+    "fileName": "office.wav",
+    "category": "radio",
+    "displayName": "office.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\oh.wav",
+    "fileName": "oh.wav",
+    "category": "radio",
+    "displayName": "oh.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\oh_boy.wav",
+    "fileName": "oh_boy.wav",
+    "category": "radio",
+    "displayName": "oh_boy.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\oh_boy2.wav",
+    "fileName": "oh_boy2.wav",
+    "category": "radio",
+    "displayName": "oh_boy2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\oh_man.wav",
+    "fileName": "oh_man.wav",
+    "category": "radio",
+    "displayName": "oh_man.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\oh_my_god.wav",
+    "fileName": "oh_my_god.wav",
+    "category": "radio",
+    "displayName": "oh_my_god.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\oh_no.wav",
+    "fileName": "oh_no.wav",
+    "category": "radio",
+    "displayName": "oh_no.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\oh_no_sad.wav",
+    "fileName": "oh_no_sad.wav",
+    "category": "radio",
+    "displayName": "oh_no_sad.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\oh_yea.wav",
+    "fileName": "oh_yea.wav",
+    "category": "radio",
+    "displayName": "oh_yea.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\oh_yea2.wav",
+    "fileName": "oh_yea2.wav",
+    "category": "radio",
+    "displayName": "oh_yea2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ok.wav",
+    "fileName": "ok.wav",
+    "category": "radio",
+    "displayName": "ok.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ok2.wav",
+    "fileName": "ok2.wav",
+    "category": "radio",
+    "displayName": "ok2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ok_cmdr_lets_go.wav",
+    "fileName": "ok_cmdr_lets_go.wav",
+    "category": "radio",
+    "displayName": "ok_cmdr_lets_go.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ok_sir_lets_go.wav",
+    "fileName": "ok_sir_lets_go.wav",
+    "category": "radio",
+    "displayName": "ok_sir_lets_go.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\old_mines.wav",
+    "fileName": "old_mines.wav",
+    "category": "radio",
+    "displayName": "old_mines.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\one_guy.wav",
+    "fileName": "one_guy.wav",
+    "category": "radio",
+    "displayName": "one_guy.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\one_guy_left.wav",
+    "fileName": "one_guy_left.wav",
+    "category": "radio",
+    "displayName": "one_guy_left.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\on_my_way.wav",
+    "fileName": "on_my_way.wav",
+    "category": "radio",
+    "displayName": "on_my_way.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\on_my_way2.wav",
+    "fileName": "on_my_way2.wav",
+    "category": "radio",
+    "displayName": "on_my_way2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ouch.wav",
+    "fileName": "ouch.wav",
+    "category": "radio",
+    "displayName": "ouch.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\outside.wav",
+    "fileName": "outside.wav",
+    "category": "radio",
+    "displayName": "outside.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\overpass.wav",
+    "fileName": "overpass.wav",
+    "category": "radio",
+    "displayName": "overpass.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ow.wav",
+    "fileName": "ow.wav",
+    "category": "radio",
+    "displayName": "ow.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\owned.wav",
+    "fileName": "owned.wav",
+    "category": "radio",
+    "displayName": "owned.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ow_its_me.wav",
+    "fileName": "ow_its_me.wav",
+    "category": "radio",
+    "displayName": "ow_its_me.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\pain10.wav",
+    "fileName": "pain10.wav",
+    "category": "radio",
+    "displayName": "pain10.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\pain2.wav",
+    "fileName": "pain2.wav",
+    "category": "radio",
+    "displayName": "pain2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\pain4.wav",
+    "fileName": "pain4.wav",
+    "category": "radio",
+    "displayName": "pain4.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\pain5.wav",
+    "fileName": "pain5.wav",
+    "category": "radio",
+    "displayName": "pain5.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\pain8.wav",
+    "fileName": "pain8.wav",
+    "category": "radio",
+    "displayName": "pain8.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\pain9.wav",
+    "fileName": "pain9.wav",
+    "category": "radio",
+    "displayName": "pain9.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\patio.wav",
+    "fileName": "patio.wav",
+    "category": "radio",
+    "displayName": "patio.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\planting.wav",
+    "fileName": "planting.wav",
+    "category": "radio",
+    "displayName": "planting.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\planting_at_a.wav",
+    "fileName": "planting_at_a.wav",
+    "category": "radio",
+    "displayName": "planting_at_a.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\planting_at_b.wav",
+    "fileName": "planting_at_b.wav",
+    "category": "radio",
+    "displayName": "planting_at_b.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\planting_at_c.wav",
+    "fileName": "planting_at_c.wav",
+    "category": "radio",
+    "displayName": "planting_at_c.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\planting_the_bomb.wav",
+    "fileName": "planting_the_bomb.wav",
+    "category": "radio",
+    "displayName": "planting_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\please_defuse_the_bomb_sir.wav",
+    "fileName": "please_defuse_the_bomb_sir.wav",
+    "category": "radio",
+    "displayName": "please_defuse_the_bomb_sir.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\porch.wav",
+    "fileName": "porch.wav",
+    "category": "radio",
+    "displayName": "porch.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\projector_room.wav",
+    "fileName": "projector_room.wav",
+    "category": "radio",
+    "displayName": "projector_room.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ramp.wav",
+    "fileName": "ramp.wav",
+    "category": "radio",
+    "displayName": "ramp.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ramp2.wav",
+    "fileName": "ramp2.wav",
+    "category": "radio",
+    "displayName": "ramp2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\rear.wav",
+    "fileName": "rear.wav",
+    "category": "radio",
+    "displayName": "rear.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\reporting_in.wav",
+    "fileName": "reporting_in.wav",
+    "category": "radio",
+    "displayName": "reporting_in.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\report_in_team.wav",
+    "fileName": "report_in_team.wav",
+    "category": "radio",
+    "displayName": "report_in_team.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\rescue_zone.wav",
+    "fileName": "rescue_zone.wav",
+    "category": "radio",
+    "displayName": "rescue_zone.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\rescue_zone2.wav",
+    "fileName": "rescue_zone2.wav",
+    "category": "radio",
+    "displayName": "rescue_zone2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\rescuing_hostages.wav",
+    "fileName": "rescuing_hostages.wav",
+    "category": "radio",
+    "displayName": "rescuing_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\returning_fire.wav",
+    "fileName": "returning_fire.wav",
+    "category": "radio",
+    "displayName": "returning_fire.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\roger.wav",
+    "fileName": "roger.wav",
+    "category": "radio",
+    "displayName": "roger.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\roger_that.wav",
+    "fileName": "roger_that.wav",
+    "category": "radio",
+    "displayName": "roger_that.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\roof.wav",
+    "fileName": "roof.wav",
+    "category": "radio",
+    "displayName": "roof.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ruined_his_day.wav",
+    "fileName": "ruined_his_day.wav",
+    "category": "radio",
+    "displayName": "ruined_his_day.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\security_doors.wav",
+    "fileName": "security_doors.wav",
+    "category": "radio",
+    "displayName": "security_doors.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\sewers.wav",
+    "fileName": "sewers.wav",
+    "category": "radio",
+    "displayName": "sewers.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\sewers2.wav",
+    "fileName": "sewers2.wav",
+    "category": "radio",
+    "displayName": "sewers2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\side.wav",
+    "fileName": "side.wav",
+    "category": "radio",
+    "displayName": "side.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\side_alley.wav",
+    "fileName": "side_alley.wav",
+    "category": "radio",
+    "displayName": "side_alley.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\side_door.wav",
+    "fileName": "side_door.wav",
+    "category": "radio",
+    "displayName": "side_door.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\side_hall.wav",
+    "fileName": "side_hall.wav",
+    "category": "radio",
+    "displayName": "side_hall.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\side_room.wav",
+    "fileName": "side_room.wav",
+    "category": "radio",
+    "displayName": "side_room.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\side_yard.wav",
+    "fileName": "side_yard.wav",
+    "category": "radio",
+    "displayName": "side_yard.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\sir_defuse_the_bomb.wav",
+    "fileName": "sir_defuse_the_bomb.wav",
+    "category": "radio",
+    "displayName": "sir_defuse_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\sniper.wav",
+    "fileName": "sniper.wav",
+    "category": "radio",
+    "displayName": "sniper.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\sniper2.wav",
+    "fileName": "sniper2.wav",
+    "category": "radio",
+    "displayName": "sniper2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\sniper_down.wav",
+    "fileName": "sniper_down.wav",
+    "category": "radio",
+    "displayName": "sniper_down.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\sounds_like_a_plan.wav",
+    "fileName": "sounds_like_a_plan.wav",
+    "category": "radio",
+    "displayName": "sounds_like_a_plan.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\spotted_the_delivery_boy.wav",
+    "fileName": "spotted_the_delivery_boy.wav",
+    "category": "radio",
+    "displayName": "spotted_the_delivery_boy.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\stairs.wav",
+    "fileName": "stairs.wav",
+    "category": "radio",
+    "displayName": "stairs.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\stairwell.wav",
+    "fileName": "stairwell.wav",
+    "category": "radio",
+    "displayName": "stairwell.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\stop_it.wav",
+    "fileName": "stop_it.wav",
+    "category": "radio",
+    "displayName": "stop_it.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\storage_room.wav",
+    "fileName": "storage_room.wav",
+    "category": "radio",
+    "displayName": "storage_room.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\tag_them_and_bag_them.wav",
+    "fileName": "tag_them_and_bag_them.wav",
+    "category": "radio",
+    "displayName": "tag_them_and_bag_them.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\taking_fire_need_assistance2.wav",
+    "fileName": "taking_fire_need_assistance2.wav",
+    "category": "radio",
+    "displayName": "taking_fire_need_assistance2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\taking_the_bomb_to_a.wav",
+    "fileName": "taking_the_bomb_to_a.wav",
+    "category": "radio",
+    "displayName": "taking_the_bomb_to_a.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\taking_the_bomb_to_b.wav",
+    "fileName": "taking_the_bomb_to_b.wav",
+    "category": "radio",
+    "displayName": "taking_the_bomb_to_b.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\taking_the_bomb_to_c.wav",
+    "fileName": "taking_the_bomb_to_c.wav",
+    "category": "radio",
+    "displayName": "taking_the_bomb_to_c.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\taking_the_hostages_to_safety.wav",
+    "fileName": "taking_the_hostages_to_safety.wav",
+    "category": "radio",
+    "displayName": "taking_the_hostages_to_safety.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\talking_to_hostages.wav",
+    "fileName": "talking_to_hostages.wav",
+    "category": "radio",
+    "displayName": "talking_to_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\target_acquired.wav",
+    "fileName": "target_acquired.wav",
+    "category": "radio",
+    "displayName": "target_acquired.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\target_spotted.wav",
+    "fileName": "target_spotted.wav",
+    "category": "radio",
+    "displayName": "target_spotted.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\thats_not_good.wav",
+    "fileName": "thats_not_good.wav",
+    "category": "radio",
+    "displayName": "thats_not_good.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\thats_right.wav",
+    "fileName": "thats_right.wav",
+    "category": "radio",
+    "displayName": "thats_right.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\thats_the_way_this_is_done.wav",
+    "fileName": "thats_the_way_this_is_done.wav",
+    "category": "radio",
+    "displayName": "thats_the_way_this_is_done.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\that_was_a_close_one.wav",
+    "fileName": "that_was_a_close_one.wav",
+    "category": "radio",
+    "displayName": "that_was_a_close_one.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\that_was_it.wav",
+    "fileName": "that_was_it.wav",
+    "category": "radio",
+    "displayName": "that_was_it.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\that_was_the_last_guy.wav",
+    "fileName": "that_was_the_last_guy.wav",
+    "category": "radio",
+    "displayName": "that_was_the_last_guy.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\that_was_the_last_one.wav",
+    "fileName": "that_was_the_last_one.wav",
+    "category": "radio",
+    "displayName": "that_was_the_last_one.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theres_nobody_home.wav",
+    "fileName": "theres_nobody_home.wav",
+    "category": "radio",
+    "displayName": "theres_nobody_home.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theres_not_much_time_left.wav",
+    "fileName": "theres_not_much_time_left.wav",
+    "category": "radio",
+    "displayName": "theres_not_much_time_left.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theres_one_left.wav",
+    "fileName": "theres_one_left.wav",
+    "category": "radio",
+    "displayName": "theres_one_left.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theres_the_bomb.wav",
+    "fileName": "theres_the_bomb.wav",
+    "category": "radio",
+    "displayName": "theres_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theres_the_bomb2.wav",
+    "fileName": "theres_the_bomb2.wav",
+    "category": "radio",
+    "displayName": "theres_the_bomb2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theres_the_bomber.wav",
+    "fileName": "theres_the_bomber.wav",
+    "category": "radio",
+    "displayName": "theres_the_bomber.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theres_too_many.wav",
+    "fileName": "theres_too_many.wav",
+    "category": "radio",
+    "displayName": "theres_too_many.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theres_too_many_of_them.wav",
+    "fileName": "theres_too_many_of_them.wav",
+    "category": "radio",
+    "displayName": "theres_too_many_of_them.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theyre_all_over_the_place2.wav",
+    "fileName": "theyre_all_over_the_place2.wav",
+    "category": "radio",
+    "displayName": "theyre_all_over_the_place2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theyre_everywhere2.wav",
+    "fileName": "theyre_everywhere2.wav",
+    "category": "radio",
+    "displayName": "theyre_everywhere2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theyre_rescuing_the_hostages.wav",
+    "fileName": "theyre_rescuing_the_hostages.wav",
+    "category": "radio",
+    "displayName": "theyre_rescuing_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theyre_taking_the_hostages.wav",
+    "fileName": "theyre_taking_the_hostages.wav",
+    "category": "radio",
+    "displayName": "theyre_taking_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theyre_with_the_hostages.wav",
+    "fileName": "theyre_with_the_hostages.wav",
+    "category": "radio",
+    "displayName": "theyre_with_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\theyve_got_the_hostages.wav",
+    "fileName": "theyve_got_the_hostages.wav",
+    "category": "radio",
+    "displayName": "theyve_got_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\they_dropped_the_bomb.wav",
+    "fileName": "they_dropped_the_bomb.wav",
+    "category": "radio",
+    "displayName": "they_dropped_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\they_got_me_pinned_down_here.wav",
+    "fileName": "they_got_me_pinned_down_here.wav",
+    "category": "radio",
+    "displayName": "they_got_me_pinned_down_here.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\they_got_the_bomb.wav",
+    "fileName": "they_got_the_bomb.wav",
+    "category": "radio",
+    "displayName": "they_got_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\they_never_knew_what_hit_them.wav",
+    "fileName": "they_never_knew_what_hit_them.wav",
+    "category": "radio",
+    "displayName": "they_never_knew_what_hit_them.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\they_picked_up_the_bomb.wav",
+    "fileName": "they_picked_up_the_bomb.wav",
+    "category": "radio",
+    "displayName": "they_picked_up_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\they_took_the_bomb.wav",
+    "fileName": "they_took_the_bomb.wav",
+    "category": "radio",
+    "displayName": "they_took_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\they_took_the_bomb2.wav",
+    "fileName": "they_took_the_bomb2.wav",
+    "category": "radio",
+    "displayName": "they_took_the_bomb2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\they_took_the_hostages.wav",
+    "fileName": "they_took_the_hostages.wav",
+    "category": "radio",
+    "displayName": "they_took_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\they_will_not_escape.wav",
+    "fileName": "they_will_not_escape.wav",
+    "category": "radio",
+    "displayName": "they_will_not_escape.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\they_wont_get_away.wav",
+    "fileName": "they_wont_get_away.wav",
+    "category": "radio",
+    "displayName": "they_wont_get_away.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\they_wont_get_away2.wav",
+    "fileName": "they_wont_get_away2.wav",
+    "category": "radio",
+    "displayName": "they_wont_get_away2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_actions_hot_here.wav",
+    "fileName": "the_actions_hot_here.wav",
+    "category": "radio",
+    "displayName": "the_actions_hot_here.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_bombs_at_a.wav",
+    "fileName": "the_bombs_at_a.wav",
+    "category": "radio",
+    "displayName": "the_bombs_at_a.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_bombs_at_b.wav",
+    "fileName": "the_bombs_at_b.wav",
+    "category": "radio",
+    "displayName": "the_bombs_at_b.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_bombs_at_c.wav",
+    "fileName": "the_bombs_at_c.wav",
+    "category": "radio",
+    "displayName": "the_bombs_at_c.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_bombs_here.wav",
+    "fileName": "the_bombs_here.wav",
+    "category": "radio",
+    "displayName": "the_bombs_here.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_bombs_here_on_the_ground.wav",
+    "fileName": "the_bombs_here_on_the_ground.wav",
+    "category": "radio",
+    "displayName": "the_bombs_here_on_the_ground.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_bombs_ticking_at_a.wav",
+    "fileName": "the_bombs_ticking_at_a.wav",
+    "category": "radio",
+    "displayName": "the_bombs_ticking_at_a.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_bombs_ticking_at_b.wav",
+    "fileName": "the_bombs_ticking_at_b.wav",
+    "category": "radio",
+    "displayName": "the_bombs_ticking_at_b.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_bombs_ticking_at_c.wav",
+    "fileName": "the_bombs_ticking_at_c.wav",
+    "category": "radio",
+    "displayName": "the_bombs_ticking_at_c.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_bomb_is_down.wav",
+    "fileName": "the_bomb_is_down.wav",
+    "category": "radio",
+    "displayName": "the_bomb_is_down.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_bomb_is_on_the_ground.wav",
+    "fileName": "the_bomb_is_on_the_ground.wav",
+    "category": "radio",
+    "displayName": "the_bomb_is_on_the_ground.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_commander_is_down.wav",
+    "fileName": "the_commander_is_down.wav",
+    "category": "radio",
+    "displayName": "the_commander_is_down.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_commander_is_down_repeat.wav",
+    "fileName": "the_commander_is_down_repeat.wav",
+    "category": "radio",
+    "displayName": "the_commander_is_down_repeat.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_hostages_are_eager.wav",
+    "fileName": "the_hostages_are_eager.wav",
+    "category": "radio",
+    "displayName": "the_hostages_are_eager.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_hostages_are_gone.wav",
+    "fileName": "the_hostages_are_gone.wav",
+    "category": "radio",
+    "displayName": "the_hostages_are_gone.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_hostages_are_ready.wav",
+    "fileName": "the_hostages_are_ready.wav",
+    "category": "radio",
+    "displayName": "the_hostages_are_ready.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_hostages_are_waiting.wav",
+    "fileName": "the_hostages_are_waiting.wav",
+    "category": "radio",
+    "displayName": "the_hostages_are_waiting.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_hostages_are_with_me.wav",
+    "fileName": "the_hostages_are_with_me.wav",
+    "category": "radio",
+    "displayName": "the_hostages_are_with_me.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\the_sniper_is_dead.wav",
+    "fileName": "the_sniper_is_dead.wav",
+    "category": "radio",
+    "displayName": "the_sniper_is_dead.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\this_is_my_house.wav",
+    "fileName": "this_is_my_house.wav",
+    "category": "radio",
+    "displayName": "this_is_my_house.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\three.wav",
+    "fileName": "three.wav",
+    "category": "radio",
+    "displayName": "three.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\three_left.wav",
+    "fileName": "three_left.wav",
+    "category": "radio",
+    "displayName": "three_left.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\three_of_them.wav",
+    "fileName": "three_of_them.wav",
+    "category": "radio",
+    "displayName": "three_of_them.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\three_to_go.wav",
+    "fileName": "three_to_go.wav",
+    "category": "radio",
+    "displayName": "three_to_go.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\three_to_go2.wav",
+    "fileName": "three_to_go2.wav",
+    "category": "radio",
+    "displayName": "three_to_go2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\time_is_running_out.wav",
+    "fileName": "time_is_running_out.wav",
+    "category": "radio",
+    "displayName": "time_is_running_out.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\time_is_running_out2.wav",
+    "fileName": "time_is_running_out2.wav",
+    "category": "radio",
+    "displayName": "time_is_running_out2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\took_him_down.wav",
+    "fileName": "took_him_down.wav",
+    "category": "radio",
+    "displayName": "took_him_down.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\took_him_out.wav",
+    "fileName": "took_him_out.wav",
+    "category": "radio",
+    "displayName": "took_him_out.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\took_him_out2.wav",
+    "fileName": "took_him_out2.wav",
+    "category": "radio",
+    "displayName": "took_him_out2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\took_out_the_sniper.wav",
+    "fileName": "took_out_the_sniper.wav",
+    "category": "radio",
+    "displayName": "took_out_the_sniper.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\too_many2.wav",
+    "fileName": "too_many2.wav",
+    "category": "radio",
+    "displayName": "too_many2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\tower.wav",
+    "fileName": "tower.wav",
+    "category": "radio",
+    "displayName": "tower.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\truck.wav",
+    "fileName": "truck.wav",
+    "category": "radio",
+    "displayName": "truck.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\tunnel.wav",
+    "fileName": "tunnel.wav",
+    "category": "radio",
+    "displayName": "tunnel.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\tunnel2.wav",
+    "fileName": "tunnel2.wav",
+    "category": "radio",
+    "displayName": "tunnel2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\two_enemies_left.wav",
+    "fileName": "two_enemies_left.wav",
+    "category": "radio",
+    "displayName": "two_enemies_left.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\two_of_them.wav",
+    "fileName": "two_of_them.wav",
+    "category": "radio",
+    "displayName": "two_of_them.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\two_to_go.wav",
+    "fileName": "two_to_go.wav",
+    "category": "radio",
+    "displayName": "two_to_go.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\t_spawn.wav",
+    "fileName": "t_spawn.wav",
+    "category": "radio",
+    "displayName": "t_spawn.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\uh_oh.wav",
+    "fileName": "uh_oh.wav",
+    "category": "radio",
+    "displayName": "uh_oh.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\uh_sir_the_bomb.wav",
+    "fileName": "uh_sir_the_bomb.wav",
+    "category": "radio",
+    "displayName": "uh_sir_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\underground.wav",
+    "fileName": "underground.wav",
+    "category": "radio",
+    "displayName": "underground.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\underpass.wav",
+    "fileName": "underpass.wav",
+    "category": "radio",
+    "displayName": "underpass.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\upstairs.wav",
+    "fileName": "upstairs.wav",
+    "category": "radio",
+    "displayName": "upstairs.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\vault.wav",
+    "fileName": "vault.wav",
+    "category": "radio",
+    "displayName": "vault.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\vending_machines.wav",
+    "fileName": "vending_machines.wav",
+    "category": "radio",
+    "displayName": "vending_machines.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\vending_machines2.wav",
+    "fileName": "vending_machines2.wav",
+    "category": "radio",
+    "displayName": "vending_machines2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\ventilation_system.wav",
+    "fileName": "ventilation_system.wav",
+    "category": "radio",
+    "displayName": "ventilation_system.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\vents.wav",
+    "fileName": "vents.wav",
+    "category": "radio",
+    "displayName": "vents.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\vents2.wav",
+    "fileName": "vents2.wav",
+    "category": "radio",
+    "displayName": "vents2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\very_nice.wav",
+    "fileName": "very_nice.wav",
+    "category": "radio",
+    "displayName": "very_nice.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\villiage.wav",
+    "fileName": "villiage.wav",
+    "category": "radio",
+    "displayName": "villiage.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\wall.wav",
+    "fileName": "wall.wav",
+    "category": "radio",
+    "displayName": "wall.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\wasted_him.wav",
+    "fileName": "wasted_him.wav",
+    "category": "radio",
+    "displayName": "wasted_him.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\watching_the_escape_route.wav",
+    "fileName": "watching_the_escape_route.wav",
+    "category": "radio",
+    "displayName": "watching_the_escape_route.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\watching_the_escape_zone.wav",
+    "fileName": "watching_the_escape_zone.wav",
+    "category": "radio",
+    "displayName": "watching_the_escape_zone.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\watching_the_hostages.wav",
+    "fileName": "watching_the_hostages.wav",
+    "category": "radio",
+    "displayName": "watching_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\watch_it_theres_a_sniper.wav",
+    "fileName": "watch_it_theres_a_sniper.wav",
+    "category": "radio",
+    "displayName": "watch_it_theres_a_sniper.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\water.wav",
+    "fileName": "water.wav",
+    "category": "radio",
+    "displayName": "water.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\way_to_be_team.wav",
+    "fileName": "way_to_be_team.wav",
+    "category": "radio",
+    "displayName": "way_to_be_team.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\well_cover_you_while_you_defuse.wav",
+    "fileName": "well_cover_you_while_you_defuse.wav",
+    "category": "radio",
+    "displayName": "well_cover_you_while_you_defuse.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\well_cover_you_you_defuse.wav",
+    "fileName": "well_cover_you_you_defuse.wav",
+    "category": "radio",
+    "displayName": "well_cover_you_you_defuse.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\well_done.wav",
+    "fileName": "well_done.wav",
+    "category": "radio",
+    "displayName": "well_done.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\weve_got_the_situation.wav",
+    "fileName": "weve_got_the_situation.wav",
+    "category": "radio",
+    "displayName": "weve_got_the_situation.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\weve_lost_the_commander.wav",
+    "fileName": "weve_lost_the_commander.wav",
+    "category": "radio",
+    "displayName": "weve_lost_the_commander.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\we_gotta_find_that_bomb.wav",
+    "fileName": "we_gotta_find_that_bomb.wav",
+    "category": "radio",
+    "displayName": "we_gotta_find_that_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\we_need_you_to_defuse_that_bomb_sir.wav",
+    "fileName": "we_need_you_to_defuse_that_bomb_sir.wav",
+    "category": "radio",
+    "displayName": "we_need_you_to_defuse_that_bomb_sir.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\we_owned_them.wav",
+    "fileName": "we_owned_them.wav",
+    "category": "radio",
+    "displayName": "we_owned_them.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\what_are_you_doing.wav",
+    "fileName": "what_are_you_doing.wav",
+    "category": "radio",
+    "displayName": "what_are_you_doing.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\what_happened.wav",
+    "fileName": "what_happened.wav",
+    "category": "radio",
+    "displayName": "what_happened.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\what_have_you_done.wav",
+    "fileName": "what_have_you_done.wav",
+    "category": "radio",
+    "displayName": "what_have_you_done.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\wheres_the_bomb.wav",
+    "fileName": "wheres_the_bomb.wav",
+    "category": "radio",
+    "displayName": "wheres_the_bomb.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\wheres_the_bomb2.wav",
+    "fileName": "wheres_the_bomb2.wav",
+    "category": "radio",
+    "displayName": "wheres_the_bomb2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\wheres_the_bomb3.wav",
+    "fileName": "wheres_the_bomb3.wav",
+    "category": "radio",
+    "displayName": "wheres_the_bomb3.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\where_are_they.wav",
+    "fileName": "where_are_they.wav",
+    "category": "radio",
+    "displayName": "where_are_they.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\where_are_the_hostages.wav",
+    "fileName": "where_are_the_hostages.wav",
+    "category": "radio",
+    "displayName": "where_are_the_hostages.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\where_are_you_hiding.wav",
+    "fileName": "where_are_you_hiding.wav",
+    "category": "radio",
+    "displayName": "where_are_you_hiding.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\where_could_they_be.wav",
+    "fileName": "where_could_they_be.wav",
+    "category": "radio",
+    "displayName": "where_could_they_be.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\where_is_it.wav",
+    "fileName": "where_is_it.wav",
+    "category": "radio",
+    "displayName": "where_is_it.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\whew_that_was_close.wav",
+    "fileName": "whew_that_was_close.wav",
+    "category": "radio",
+    "displayName": "whew_that_was_close.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\whoa.wav",
+    "fileName": "whoa.wav",
+    "category": "radio",
+    "displayName": "whoa.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\whoo.wav",
+    "fileName": "whoo.wav",
+    "category": "radio",
+    "displayName": "whoo.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\whoo2.wav",
+    "fileName": "whoo2.wav",
+    "category": "radio",
+    "displayName": "whoo2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\whos_the_man.wav",
+    "fileName": "whos_the_man.wav",
+    "category": "radio",
+    "displayName": "whos_the_man.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\who_wants_some_more.wav",
+    "fileName": "who_wants_some_more.wav",
+    "category": "radio",
+    "displayName": "who_wants_some_more.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\window.wav",
+    "fileName": "window.wav",
+    "category": "radio",
+    "displayName": "window.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\windows.wav",
+    "fileName": "windows.wav",
+    "category": "radio",
+    "displayName": "windows.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\wine_cellar.wav",
+    "fileName": "wine_cellar.wav",
+    "category": "radio",
+    "displayName": "wine_cellar.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\yea_baby.wav",
+    "fileName": "yea_baby.wav",
+    "category": "radio",
+    "displayName": "yea_baby.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\yea_ok.wav",
+    "fileName": "yea_ok.wav",
+    "category": "radio",
+    "displayName": "yea_ok.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\yesss.wav",
+    "fileName": "yesss.wav",
+    "category": "radio",
+    "displayName": "yesss.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\yesss2.wav",
+    "fileName": "yesss2.wav",
+    "category": "radio",
+    "displayName": "yesss2.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\yikes.wav",
+    "fileName": "yikes.wav",
+    "category": "radio",
+    "displayName": "yikes.wav"
+  },
+  {
+    "path": "sound\\radio\\bot\\you_heard_the_man_lets_go.wav",
+    "fileName": "you_heard_the_man_lets_go.wav",
+    "category": "radio",
+    "displayName": "you_heard_the_man_lets_go.wav"
+  },
+  {
+    "path": "sound\\ui\\buttonclick.wav",
+    "fileName": "buttonclick.wav",
+    "category": "ui",
+    "displayName": "buttonclick.wav"
+  },
+  {
+    "path": "sound\\ui\\buttonclickrelease.wav",
+    "fileName": "buttonclickrelease.wav",
+    "category": "ui",
+    "displayName": "buttonclickrelease.wav"
+  },
+  {
+    "path": "sound\\ui\\buttonrollover.wav",
+    "fileName": "buttonrollover.wav",
+    "category": "ui",
+    "displayName": "buttonrollover.wav"
+  },
+  {
+    "path": "sound\\weapons\\ak47-1.wav",
+    "fileName": "ak47-1.wav",
+    "category": "weapons",
+    "displayName": "ak47-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\ak47-2.wav",
+    "fileName": "ak47-2.wav",
+    "category": "weapons",
+    "displayName": "ak47-2.wav"
+  },
+  {
+    "path": "sound\\weapons\\ak47_boltpull.wav",
+    "fileName": "ak47_boltpull.wav",
+    "category": "weapons",
+    "displayName": "ak47_boltpull.wav"
+  },
+  {
+    "path": "sound\\weapons\\ak47_clipin.wav",
+    "fileName": "ak47_clipin.wav",
+    "category": "weapons",
+    "displayName": "ak47_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\ak47_clipout.wav",
+    "fileName": "ak47_clipout.wav",
+    "category": "weapons",
+    "displayName": "ak47_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\aug-1.wav",
+    "fileName": "aug-1.wav",
+    "category": "weapons",
+    "displayName": "aug-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\aug_boltpull.wav",
+    "fileName": "aug_boltpull.wav",
+    "category": "weapons",
+    "displayName": "aug_boltpull.wav"
+  },
+  {
+    "path": "sound\\weapons\\aug_boltslap.wav",
+    "fileName": "aug_boltslap.wav",
+    "category": "weapons",
+    "displayName": "aug_boltslap.wav"
+  },
+  {
+    "path": "sound\\weapons\\aug_clipin.wav",
+    "fileName": "aug_clipin.wav",
+    "category": "weapons",
+    "displayName": "aug_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\aug_clipout.wav",
+    "fileName": "aug_clipout.wav",
+    "category": "weapons",
+    "displayName": "aug_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\aug_forearm.wav",
+    "fileName": "aug_forearm.wav",
+    "category": "weapons",
+    "displayName": "aug_forearm.wav"
+  },
+  {
+    "path": "sound\\weapons\\awp1.wav",
+    "fileName": "awp1.wav",
+    "category": "weapons",
+    "displayName": "awp1.wav"
+  },
+  {
+    "path": "sound\\weapons\\awp_clipin.wav",
+    "fileName": "awp_clipin.wav",
+    "category": "weapons",
+    "displayName": "awp_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\awp_clipout.wav",
+    "fileName": "awp_clipout.wav",
+    "category": "weapons",
+    "displayName": "awp_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\awp_deploy.wav",
+    "fileName": "awp_deploy.wav",
+    "category": "weapons",
+    "displayName": "awp_deploy.wav"
+  },
+  {
+    "path": "sound\\weapons\\boltdown.wav",
+    "fileName": "boltdown.wav",
+    "category": "weapons",
+    "displayName": "boltdown.wav"
+  },
+  {
+    "path": "sound\\weapons\\boltpull1.wav",
+    "fileName": "boltpull1.wav",
+    "category": "weapons",
+    "displayName": "boltpull1.wav"
+  },
+  {
+    "path": "sound\\weapons\\boltup.wav",
+    "fileName": "boltup.wav",
+    "category": "weapons",
+    "displayName": "boltup.wav"
+  },
+  {
+    "path": "sound\\weapons\\c4_beep1.wav",
+    "fileName": "c4_beep1.wav",
+    "category": "weapons",
+    "displayName": "c4_beep1.wav"
+  },
+  {
+    "path": "sound\\weapons\\c4_beep2.wav",
+    "fileName": "c4_beep2.wav",
+    "category": "weapons",
+    "displayName": "c4_beep2.wav"
+  },
+  {
+    "path": "sound\\weapons\\c4_beep3.wav",
+    "fileName": "c4_beep3.wav",
+    "category": "weapons",
+    "displayName": "c4_beep3.wav"
+  },
+  {
+    "path": "sound\\weapons\\c4_beep4.wav",
+    "fileName": "c4_beep4.wav",
+    "category": "weapons",
+    "displayName": "c4_beep4.wav"
+  },
+  {
+    "path": "sound\\weapons\\c4_beep5.wav",
+    "fileName": "c4_beep5.wav",
+    "category": "weapons",
+    "displayName": "c4_beep5.wav"
+  },
+  {
+    "path": "sound\\weapons\\c4_click.wav",
+    "fileName": "c4_click.wav",
+    "category": "weapons",
+    "displayName": "c4_click.wav"
+  },
+  {
+    "path": "sound\\weapons\\c4_disarm.wav",
+    "fileName": "c4_disarm.wav",
+    "category": "weapons",
+    "displayName": "c4_disarm.wav"
+  },
+  {
+    "path": "sound\\weapons\\c4_disarmed.wav",
+    "fileName": "c4_disarmed.wav",
+    "category": "weapons",
+    "displayName": "c4_disarmed.wav"
+  },
+  {
+    "path": "sound\\weapons\\c4_plant.wav",
+    "fileName": "c4_plant.wav",
+    "category": "weapons",
+    "displayName": "c4_plant.wav"
+  },
+  {
+    "path": "sound\\weapons\\clipin1.wav",
+    "fileName": "clipin1.wav",
+    "category": "weapons",
+    "displayName": "clipin1.wav"
+  },
+  {
+    "path": "sound\\weapons\\clipout1.wav",
+    "fileName": "clipout1.wav",
+    "category": "weapons",
+    "displayName": "clipout1.wav"
+  },
+  {
+    "path": "sound\\weapons\\deagle-1.wav",
+    "fileName": "deagle-1.wav",
+    "category": "weapons",
+    "displayName": "deagle-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\deagle-2.wav",
+    "fileName": "deagle-2.wav",
+    "category": "weapons",
+    "displayName": "deagle-2.wav"
+  },
+  {
+    "path": "sound\\weapons\\debris1.wav",
+    "fileName": "debris1.wav",
+    "category": "weapons",
+    "displayName": "debris1.wav"
+  },
+  {
+    "path": "sound\\weapons\\debris2.wav",
+    "fileName": "debris2.wav",
+    "category": "weapons",
+    "displayName": "debris2.wav"
+  },
+  {
+    "path": "sound\\weapons\\debris3.wav",
+    "fileName": "debris3.wav",
+    "category": "weapons",
+    "displayName": "debris3.wav"
+  },
+  {
+    "path": "sound\\weapons\\de_clipin.wav",
+    "fileName": "de_clipin.wav",
+    "category": "weapons",
+    "displayName": "de_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\de_clipout.wav",
+    "fileName": "de_clipout.wav",
+    "category": "weapons",
+    "displayName": "de_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\de_deploy.wav",
+    "fileName": "de_deploy.wav",
+    "category": "weapons",
+    "displayName": "de_deploy.wav"
+  },
+  {
+    "path": "sound\\weapons\\dryfire_rifle.wav",
+    "fileName": "dryfire_rifle.wav",
+    "category": "weapons",
+    "displayName": "dryfire_rifle.wav"
+  },
+  {
+    "path": "sound\\weapons\\elite_clipout.wav",
+    "fileName": "elite_clipout.wav",
+    "category": "weapons",
+    "displayName": "elite_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\elite_deploy.wav",
+    "fileName": "elite_deploy.wav",
+    "category": "weapons",
+    "displayName": "elite_deploy.wav"
+  },
+  {
+    "path": "sound\\weapons\\elite_fire.wav",
+    "fileName": "elite_fire.wav",
+    "category": "weapons",
+    "displayName": "elite_fire.wav"
+  },
+  {
+    "path": "sound\\weapons\\elite_leftclipin.wav",
+    "fileName": "elite_leftclipin.wav",
+    "category": "weapons",
+    "displayName": "elite_leftclipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\elite_reloadstart.wav",
+    "fileName": "elite_reloadstart.wav",
+    "category": "weapons",
+    "displayName": "elite_reloadstart.wav"
+  },
+  {
+    "path": "sound\\weapons\\elite_rightclipin.wav",
+    "fileName": "elite_rightclipin.wav",
+    "category": "weapons",
+    "displayName": "elite_rightclipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\elite_sliderelease.wav",
+    "fileName": "elite_sliderelease.wav",
+    "category": "weapons",
+    "displayName": "elite_sliderelease.wav"
+  },
+  {
+    "path": "sound\\weapons\\elite_twirl.wav",
+    "fileName": "elite_twirl.wav",
+    "category": "weapons",
+    "displayName": "elite_twirl.wav"
+  },
+  {
+    "path": "sound\\weapons\\explode3.wav",
+    "fileName": "explode3.wav",
+    "category": "weapons",
+    "displayName": "explode3.wav"
+  },
+  {
+    "path": "sound\\weapons\\explode4.wav",
+    "fileName": "explode4.wav",
+    "category": "weapons",
+    "displayName": "explode4.wav"
+  },
+  {
+    "path": "sound\\weapons\\explode5.wav",
+    "fileName": "explode5.wav",
+    "category": "weapons",
+    "displayName": "explode5.wav"
+  },
+  {
+    "path": "sound\\weapons\\famas_boltpull.wav",
+    "fileName": "famas_boltpull.wav",
+    "category": "weapons",
+    "displayName": "famas_boltpull.wav"
+  },
+  {
+    "path": "sound\\weapons\\famas_boltslap.wav",
+    "fileName": "famas_boltslap.wav",
+    "category": "weapons",
+    "displayName": "famas_boltslap.wav"
+  },
+  {
+    "path": "sound\\weapons\\famas_clipin.wav",
+    "fileName": "famas_clipin.wav",
+    "category": "weapons",
+    "displayName": "famas_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\famas_clipout.wav",
+    "fileName": "famas_clipout.wav",
+    "category": "weapons",
+    "displayName": "famas_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\famas_forearm.wav",
+    "fileName": "famas_forearm.wav",
+    "category": "weapons",
+    "displayName": "famas_forearm.wav"
+  },
+  {
+    "path": "sound\\weapons\\fiveseven-1.wav",
+    "fileName": "fiveseven-1.wav",
+    "category": "weapons",
+    "displayName": "fiveseven-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\fiveseven_clipin.wav",
+    "fileName": "fiveseven_clipin.wav",
+    "category": "weapons",
+    "displayName": "fiveseven_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\fiveseven_clipout.wav",
+    "fileName": "fiveseven_clipout.wav",
+    "category": "weapons",
+    "displayName": "fiveseven_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\fiveseven_slidepull.wav",
+    "fileName": "fiveseven_slidepull.wav",
+    "category": "weapons",
+    "displayName": "fiveseven_slidepull.wav"
+  },
+  {
+    "path": "sound\\weapons\\fiveseven_sliderelease.wav",
+    "fileName": "fiveseven_sliderelease.wav",
+    "category": "weapons",
+    "displayName": "fiveseven_sliderelease.wav"
+  },
+  {
+    "path": "sound\\weapons\\flashbang-1.wav",
+    "fileName": "flashbang-1.wav",
+    "category": "weapons",
+    "displayName": "flashbang-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\flashbang-2.wav",
+    "fileName": "flashbang-2.wav",
+    "category": "weapons",
+    "displayName": "flashbang-2.wav"
+  },
+  {
+    "path": "sound\\weapons\\g3sg1-1.wav",
+    "fileName": "g3sg1-1.wav",
+    "category": "weapons",
+    "displayName": "g3sg1-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\g3sg1_clipin.wav",
+    "fileName": "g3sg1_clipin.wav",
+    "category": "weapons",
+    "displayName": "g3sg1_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\g3sg1_clipout.wav",
+    "fileName": "g3sg1_clipout.wav",
+    "category": "weapons",
+    "displayName": "g3sg1_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\g3sg1_slide.wav",
+    "fileName": "g3sg1_slide.wav",
+    "category": "weapons",
+    "displayName": "g3sg1_slide.wav"
+  },
+  {
+    "path": "sound\\weapons\\galil_boltpull.wav",
+    "fileName": "galil_boltpull.wav",
+    "category": "weapons",
+    "displayName": "galil_boltpull.wav"
+  },
+  {
+    "path": "sound\\weapons\\galil_clipin.wav",
+    "fileName": "galil_clipin.wav",
+    "category": "weapons",
+    "displayName": "galil_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\galil_clipout.wav",
+    "fileName": "galil_clipout.wav",
+    "category": "weapons",
+    "displayName": "galil_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\generic_reload.wav",
+    "fileName": "generic_reload.wav",
+    "category": "weapons",
+    "displayName": "generic_reload.wav"
+  },
+  {
+    "path": "sound\\weapons\\generic_shot_reload.wav",
+    "fileName": "generic_shot_reload.wav",
+    "category": "weapons",
+    "displayName": "generic_shot_reload.wav"
+  },
+  {
+    "path": "sound\\weapons\\glock18-2.wav",
+    "fileName": "glock18-2.wav",
+    "category": "weapons",
+    "displayName": "glock18-2.wav"
+  },
+  {
+    "path": "sound\\weapons\\grenade_hit1.wav",
+    "fileName": "grenade_hit1.wav",
+    "category": "weapons",
+    "displayName": "grenade_hit1.wav"
+  },
+  {
+    "path": "sound\\weapons\\grenade_hit2.wav",
+    "fileName": "grenade_hit2.wav",
+    "category": "weapons",
+    "displayName": "grenade_hit2.wav"
+  },
+  {
+    "path": "sound\\weapons\\grenade_hit3.wav",
+    "fileName": "grenade_hit3.wav",
+    "category": "weapons",
+    "displayName": "grenade_hit3.wav"
+  },
+  {
+    "path": "sound\\weapons\\g_pinpull1.wav",
+    "fileName": "g_pinpull1.wav",
+    "category": "weapons",
+    "displayName": "g_pinpull1.wav"
+  },
+  {
+    "path": "sound\\weapons\\headshot2.wav",
+    "fileName": "headshot2.wav",
+    "category": "weapons",
+    "displayName": "headshot2.wav"
+  },
+  {
+    "path": "sound\\weapons\\he_bounce-1.wav",
+    "fileName": "he_bounce-1.wav",
+    "category": "weapons",
+    "displayName": "he_bounce-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\knife_deploy1.wav",
+    "fileName": "knife_deploy1.wav",
+    "category": "weapons",
+    "displayName": "knife_deploy1.wav"
+  },
+  {
+    "path": "sound\\weapons\\knife_hit1.wav",
+    "fileName": "knife_hit1.wav",
+    "category": "weapons",
+    "displayName": "knife_hit1.wav"
+  },
+  {
+    "path": "sound\\weapons\\knife_hit2.wav",
+    "fileName": "knife_hit2.wav",
+    "category": "weapons",
+    "displayName": "knife_hit2.wav"
+  },
+  {
+    "path": "sound\\weapons\\knife_hit3.wav",
+    "fileName": "knife_hit3.wav",
+    "category": "weapons",
+    "displayName": "knife_hit3.wav"
+  },
+  {
+    "path": "sound\\weapons\\knife_hit4.wav",
+    "fileName": "knife_hit4.wav",
+    "category": "weapons",
+    "displayName": "knife_hit4.wav"
+  },
+  {
+    "path": "sound\\weapons\\knife_hitwall1.wav",
+    "fileName": "knife_hitwall1.wav",
+    "category": "weapons",
+    "displayName": "knife_hitwall1.wav"
+  },
+  {
+    "path": "sound\\weapons\\knife_stab.wav",
+    "fileName": "knife_stab.wav",
+    "category": "weapons",
+    "displayName": "knife_stab.wav"
+  },
+  {
+    "path": "sound\\weapons\\m249-1.wav",
+    "fileName": "m249-1.wav",
+    "category": "weapons",
+    "displayName": "m249-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\m249-2.wav",
+    "fileName": "m249-2.wav",
+    "category": "weapons",
+    "displayName": "m249-2.wav"
+  },
+  {
+    "path": "sound\\weapons\\m249_boxin.wav",
+    "fileName": "m249_boxin.wav",
+    "category": "weapons",
+    "displayName": "m249_boxin.wav"
+  },
+  {
+    "path": "sound\\weapons\\m249_boxout.wav",
+    "fileName": "m249_boxout.wav",
+    "category": "weapons",
+    "displayName": "m249_boxout.wav"
+  },
+  {
+    "path": "sound\\weapons\\m249_chain.wav",
+    "fileName": "m249_chain.wav",
+    "category": "weapons",
+    "displayName": "m249_chain.wav"
+  },
+  {
+    "path": "sound\\weapons\\m249_coverdown.wav",
+    "fileName": "m249_coverdown.wav",
+    "category": "weapons",
+    "displayName": "m249_coverdown.wav"
+  },
+  {
+    "path": "sound\\weapons\\m249_coverup.wav",
+    "fileName": "m249_coverup.wav",
+    "category": "weapons",
+    "displayName": "m249_coverup.wav"
+  },
+  {
+    "path": "sound\\weapons\\m3-1.wav",
+    "fileName": "m3-1.wav",
+    "category": "weapons",
+    "displayName": "m3-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\m3_insertshell.wav",
+    "fileName": "m3_insertshell.wav",
+    "category": "weapons",
+    "displayName": "m3_insertshell.wav"
+  },
+  {
+    "path": "sound\\weapons\\m3_pump.wav",
+    "fileName": "m3_pump.wav",
+    "category": "weapons",
+    "displayName": "m3_pump.wav"
+  },
+  {
+    "path": "sound\\weapons\\m4a1-1.wav",
+    "fileName": "m4a1-1.wav",
+    "category": "weapons",
+    "displayName": "m4a1-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\m4a1_clipin.wav",
+    "fileName": "m4a1_clipin.wav",
+    "category": "weapons",
+    "displayName": "m4a1_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\m4a1_clipout.wav",
+    "fileName": "m4a1_clipout.wav",
+    "category": "weapons",
+    "displayName": "m4a1_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\m4a1_deploy.wav",
+    "fileName": "m4a1_deploy.wav",
+    "category": "weapons",
+    "displayName": "m4a1_deploy.wav"
+  },
+  {
+    "path": "sound\\weapons\\m4a1_silencer_off.wav",
+    "fileName": "m4a1_silencer_off.wav",
+    "category": "weapons",
+    "displayName": "m4a1_silencer_off.wav"
+  },
+  {
+    "path": "sound\\weapons\\m4a1_silencer_on.wav",
+    "fileName": "m4a1_silencer_on.wav",
+    "category": "weapons",
+    "displayName": "m4a1_silencer_on.wav"
+  },
+  {
+    "path": "sound\\weapons\\m4a1_unsil-1.wav",
+    "fileName": "m4a1_unsil-1.wav",
+    "category": "weapons",
+    "displayName": "m4a1_unsil-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\m4a1_unsil-2.wav",
+    "fileName": "m4a1_unsil-2.wav",
+    "category": "weapons",
+    "displayName": "m4a1_unsil-2.wav"
+  },
+  {
+    "path": "sound\\weapons\\mac10-1.wav",
+    "fileName": "mac10-1.wav",
+    "category": "weapons",
+    "displayName": "mac10-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\mac10_boltpull.wav",
+    "fileName": "mac10_boltpull.wav",
+    "category": "weapons",
+    "displayName": "mac10_boltpull.wav"
+  },
+  {
+    "path": "sound\\weapons\\mac10_clipin.wav",
+    "fileName": "mac10_clipin.wav",
+    "category": "weapons",
+    "displayName": "mac10_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\mac10_clipout.wav",
+    "fileName": "mac10_clipout.wav",
+    "category": "weapons",
+    "displayName": "mac10_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\mp5-1.wav",
+    "fileName": "mp5-1.wav",
+    "category": "weapons",
+    "displayName": "mp5-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\mp5-2.wav",
+    "fileName": "mp5-2.wav",
+    "category": "weapons",
+    "displayName": "mp5-2.wav"
+  },
+  {
+    "path": "sound\\weapons\\mp5_clipin.wav",
+    "fileName": "mp5_clipin.wav",
+    "category": "weapons",
+    "displayName": "mp5_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\mp5_clipout.wav",
+    "fileName": "mp5_clipout.wav",
+    "category": "weapons",
+    "displayName": "mp5_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\mp5_slideback.wav",
+    "fileName": "mp5_slideback.wav",
+    "category": "weapons",
+    "displayName": "mp5_slideback.wav"
+  },
+  {
+    "path": "sound\\weapons\\p228-1.wav",
+    "fileName": "p228-1.wav",
+    "category": "weapons",
+    "displayName": "p228-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\p228_clipin.wav",
+    "fileName": "p228_clipin.wav",
+    "category": "weapons",
+    "displayName": "p228_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\p228_clipout.wav",
+    "fileName": "p228_clipout.wav",
+    "category": "weapons",
+    "displayName": "p228_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\p228_slidepull.wav",
+    "fileName": "p228_slidepull.wav",
+    "category": "weapons",
+    "displayName": "p228_slidepull.wav"
+  },
+  {
+    "path": "sound\\weapons\\p228_sliderelease.wav",
+    "fileName": "p228_sliderelease.wav",
+    "category": "weapons",
+    "displayName": "p228_sliderelease.wav"
+  },
+  {
+    "path": "sound\\weapons\\p90-1.wav",
+    "fileName": "p90-1.wav",
+    "category": "weapons",
+    "displayName": "p90-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\p90_boltpull.wav",
+    "fileName": "p90_boltpull.wav",
+    "category": "weapons",
+    "displayName": "p90_boltpull.wav"
+  },
+  {
+    "path": "sound\\weapons\\p90_clipin.wav",
+    "fileName": "p90_clipin.wav",
+    "category": "weapons",
+    "displayName": "p90_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\p90_clipout.wav",
+    "fileName": "p90_clipout.wav",
+    "category": "weapons",
+    "displayName": "p90_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\p90_cliprelease.wav",
+    "fileName": "p90_cliprelease.wav",
+    "category": "weapons",
+    "displayName": "p90_cliprelease.wav"
+  },
+  {
+    "path": "sound\\weapons\\pinpull.wav",
+    "fileName": "pinpull.wav",
+    "category": "weapons",
+    "displayName": "pinpull.wav"
+  },
+  {
+    "path": "sound\\weapons\\ric_metal-1.wav",
+    "fileName": "ric_metal-1.wav",
+    "category": "weapons",
+    "displayName": "ric_metal-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\ric_metal-2.wav",
+    "fileName": "ric_metal-2.wav",
+    "category": "weapons",
+    "displayName": "ric_metal-2.wav"
+  },
+  {
+    "path": "sound\\weapons\\scout_bolt.wav",
+    "fileName": "scout_bolt.wav",
+    "category": "weapons",
+    "displayName": "scout_bolt.wav"
+  },
+  {
+    "path": "sound\\weapons\\scout_clipin.wav",
+    "fileName": "scout_clipin.wav",
+    "category": "weapons",
+    "displayName": "scout_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\scout_clipout.wav",
+    "fileName": "scout_clipout.wav",
+    "category": "weapons",
+    "displayName": "scout_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\scout_fire-1.wav",
+    "fileName": "scout_fire-1.wav",
+    "category": "weapons",
+    "displayName": "scout_fire-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\sg550-1.wav",
+    "fileName": "sg550-1.wav",
+    "category": "weapons",
+    "displayName": "sg550-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\sg550_clipin.wav",
+    "fileName": "sg550_clipin.wav",
+    "category": "weapons",
+    "displayName": "sg550_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\sg550_clipout.wav",
+    "fileName": "sg550_clipout.wav",
+    "category": "weapons",
+    "displayName": "sg550_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\sg552-1.wav",
+    "fileName": "sg552-1.wav",
+    "category": "weapons",
+    "displayName": "sg552-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\sg552_boltpull.wav",
+    "fileName": "sg552_boltpull.wav",
+    "category": "weapons",
+    "displayName": "sg552_boltpull.wav"
+  },
+  {
+    "path": "sound\\weapons\\sg552_clipin.wav",
+    "fileName": "sg552_clipin.wav",
+    "category": "weapons",
+    "displayName": "sg552_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\sg552_clipout.wav",
+    "fileName": "sg552_clipout.wav",
+    "category": "weapons",
+    "displayName": "sg552_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\sg_explode.wav",
+    "fileName": "sg_explode.wav",
+    "category": "weapons",
+    "displayName": "sg_explode.wav"
+  },
+  {
+    "path": "sound\\weapons\\slideback1.wav",
+    "fileName": "slideback1.wav",
+    "category": "weapons",
+    "displayName": "slideback1.wav"
+  },
+  {
+    "path": "sound\\weapons\\sliderelease1.wav",
+    "fileName": "sliderelease1.wav",
+    "category": "weapons",
+    "displayName": "sliderelease1.wav"
+  },
+  {
+    "path": "sound\\weapons\\sshell1.wav",
+    "fileName": "sshell1.wav",
+    "category": "weapons",
+    "displayName": "sshell1.wav"
+  },
+  {
+    "path": "sound\\weapons\\sshell2.wav",
+    "fileName": "sshell2.wav",
+    "category": "weapons",
+    "displayName": "sshell2.wav"
+  },
+  {
+    "path": "sound\\weapons\\sshell3.wav",
+    "fileName": "sshell3.wav",
+    "category": "weapons",
+    "displayName": "sshell3.wav"
+  },
+  {
+    "path": "sound\\weapons\\ump45-1.wav",
+    "fileName": "ump45-1.wav",
+    "category": "weapons",
+    "displayName": "ump45-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\ump45_boltslap.wav",
+    "fileName": "ump45_boltslap.wav",
+    "category": "weapons",
+    "displayName": "ump45_boltslap.wav"
+  },
+  {
+    "path": "sound\\weapons\\ump45_clipin.wav",
+    "fileName": "ump45_clipin.wav",
+    "category": "weapons",
+    "displayName": "ump45_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\ump45_clipout.wav",
+    "fileName": "ump45_clipout.wav",
+    "category": "weapons",
+    "displayName": "ump45_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\usp_clipin.wav",
+    "fileName": "usp_clipin.wav",
+    "category": "weapons",
+    "displayName": "usp_clipin.wav"
+  },
+  {
+    "path": "sound\\weapons\\usp_clipout.wav",
+    "fileName": "usp_clipout.wav",
+    "category": "weapons",
+    "displayName": "usp_clipout.wav"
+  },
+  {
+    "path": "sound\\weapons\\usp_silencer_off.wav",
+    "fileName": "usp_silencer_off.wav",
+    "category": "weapons",
+    "displayName": "usp_silencer_off.wav"
+  },
+  {
+    "path": "sound\\weapons\\usp_silencer_on.wav",
+    "fileName": "usp_silencer_on.wav",
+    "category": "weapons",
+    "displayName": "usp_silencer_on.wav"
+  },
+  {
+    "path": "sound\\weapons\\usp_slideback.wav",
+    "fileName": "usp_slideback.wav",
+    "category": "weapons",
+    "displayName": "usp_slideback.wav"
+  },
+  {
+    "path": "sound\\weapons\\usp_sliderelease.wav",
+    "fileName": "usp_sliderelease.wav",
+    "category": "weapons",
+    "displayName": "usp_sliderelease.wav"
+  },
+  {
+    "path": "sound\\weapons\\usp_unsil-1.wav",
+    "fileName": "usp_unsil-1.wav",
+    "category": "weapons",
+    "displayName": "usp_unsil-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\xm1014-1.wav",
+    "fileName": "xm1014-1.wav",
+    "category": "weapons",
+    "displayName": "xm1014-1.wav"
+  },
+  {
+    "path": "sound\\weapons\\zoom.wav",
+    "fileName": "zoom.wav",
+    "category": "weapons",
+    "displayName": "zoom.wav"
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "path": "sound\\ambient\\construct_tone.wav",
+    "fileName": "construct_tone.wav",
+    "category": "ambient",
+    "displayName": "construct_tone.wav"
+  },
+  {
+    "path": "sound\\ambient\\forest_day.wav",
+    "fileName": "forest_day.wav",
+    "category": "ambient",
+    "displayName": "forest_day.wav"
+  },
+  {
+    "path": "sound\\ambient\\forest_night.wav",
+    "fileName": "forest_night.wav",
+    "category": "ambient",
+    "displayName": "forest_night.wav"
+  },
+  {
+    "path": "sound\\garrysmod\\balloon_pop_cute.wav",
+    "fileName": "balloon_pop_cute.wav",
+    "category": "garrysmod",
+    "displayName": "balloon_pop_cute.wav"
+  },
+  {
+    "path": "sound\\garrysmod\\content_downloaded.wav",
+    "fileName": "content_downloaded.wav",
+    "category": "garrysmod",
+    "displayName": "content_downloaded.wav"
+  },
+  {
+    "path": "sound\\garrysmod\\save_load1.wav",
+    "fileName": "save_load1.wav",
+    "category": "garrysmod",
+    "displayName": "save_load1.wav"
+  },
+  {
+    "path": "sound\\garrysmod\\save_load2.wav",
+    "fileName": "save_load2.wav",
+    "category": "garrysmod",
+    "displayName": "save_load2.wav"
+  },
+  {
+    "path": "sound\\garrysmod\\save_load3.wav",
+    "fileName": "save_load3.wav",
+    "category": "garrysmod",
+    "displayName": "save_load3.wav"
+  },
+  {
+    "path": "sound\\garrysmod\\save_load4.wav",
+    "fileName": "save_load4.wav",
+    "category": "garrysmod",
+    "displayName": "save_load4.wav"
+  },
+  {
+    "path": "sound\\garrysmod\\ui_click.wav",
+    "fileName": "ui_click.wav",
+    "category": "garrysmod",
+    "displayName": "ui_click.wav"
+  },
+  {
+    "path": "sound\\garrysmod\\ui_hover.wav",
+    "fileName": "ui_hover.wav",
+    "category": "garrysmod",
+    "displayName": "ui_hover.wav"
+  },
+  {
+    "path": "sound\\garrysmod\\ui_return.wav",
+    "fileName": "ui_return.wav",
+    "category": "garrysmod",
+    "displayName": "ui_return.wav"
+  },
+  {
+    "path": "sound\\phx\\eggcrack.wav",
+    "fileName": "eggcrack.wav",
+    "category": "phx",
+    "displayName": "eggcrack.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_hard.wav",
+    "fileName": "epicmetal_hard.wav",
+    "category": "phx",
+    "displayName": "epicmetal_hard.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_hard1.wav",
+    "fileName": "epicmetal_hard1.wav",
+    "category": "phx",
+    "displayName": "epicmetal_hard1.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_hard2.wav",
+    "fileName": "epicmetal_hard2.wav",
+    "category": "phx",
+    "displayName": "epicmetal_hard2.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_hard3.wav",
+    "fileName": "epicmetal_hard3.wav",
+    "category": "phx",
+    "displayName": "epicmetal_hard3.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_hard4.wav",
+    "fileName": "epicmetal_hard4.wav",
+    "category": "phx",
+    "displayName": "epicmetal_hard4.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_hard5.wav",
+    "fileName": "epicmetal_hard5.wav",
+    "category": "phx",
+    "displayName": "epicmetal_hard5.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_hard6.wav",
+    "fileName": "epicmetal_hard6.wav",
+    "category": "phx",
+    "displayName": "epicmetal_hard6.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_hard7.wav",
+    "fileName": "epicmetal_hard7.wav",
+    "category": "phx",
+    "displayName": "epicmetal_hard7.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_soft1.wav",
+    "fileName": "epicmetal_soft1.wav",
+    "category": "phx",
+    "displayName": "epicmetal_soft1.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_soft2.wav",
+    "fileName": "epicmetal_soft2.wav",
+    "category": "phx",
+    "displayName": "epicmetal_soft2.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_soft3.wav",
+    "fileName": "epicmetal_soft3.wav",
+    "category": "phx",
+    "displayName": "epicmetal_soft3.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_soft4.wav",
+    "fileName": "epicmetal_soft4.wav",
+    "category": "phx",
+    "displayName": "epicmetal_soft4.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_soft5.wav",
+    "fileName": "epicmetal_soft5.wav",
+    "category": "phx",
+    "displayName": "epicmetal_soft5.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_soft6.wav",
+    "fileName": "epicmetal_soft6.wav",
+    "category": "phx",
+    "displayName": "epicmetal_soft6.wav"
+  },
+  {
+    "path": "sound\\phx\\epicmetal_soft7.wav",
+    "fileName": "epicmetal_soft7.wav",
+    "category": "phx",
+    "displayName": "epicmetal_soft7.wav"
+  },
+  {
+    "path": "sound\\phx\\explode00.wav",
+    "fileName": "explode00.wav",
+    "category": "phx",
+    "displayName": "explode00.wav"
+  },
+  {
+    "path": "sound\\phx\\explode01.wav",
+    "fileName": "explode01.wav",
+    "category": "phx",
+    "displayName": "explode01.wav"
+  },
+  {
+    "path": "sound\\phx\\explode02.wav",
+    "fileName": "explode02.wav",
+    "category": "phx",
+    "displayName": "explode02.wav"
+  },
+  {
+    "path": "sound\\phx\\explode03.wav",
+    "fileName": "explode03.wav",
+    "category": "phx",
+    "displayName": "explode03.wav"
+  },
+  {
+    "path": "sound\\phx\\explode04.wav",
+    "fileName": "explode04.wav",
+    "category": "phx",
+    "displayName": "explode04.wav"
+  },
+  {
+    "path": "sound\\phx\\explode05.wav",
+    "fileName": "explode05.wav",
+    "category": "phx",
+    "displayName": "explode05.wav"
+  },
+  {
+    "path": "sound\\phx\\explode06.wav",
+    "fileName": "explode06.wav",
+    "category": "phx",
+    "displayName": "explode06.wav"
+  },
+  {
+    "path": "sound\\phx\\hmetal1.wav",
+    "fileName": "hmetal1.wav",
+    "category": "phx",
+    "displayName": "hmetal1.wav"
+  },
+  {
+    "path": "sound\\phx\\hmetal2.wav",
+    "fileName": "hmetal2.wav",
+    "category": "phx",
+    "displayName": "hmetal2.wav"
+  },
+  {
+    "path": "sound\\phx\\hmetal3.wav",
+    "fileName": "hmetal3.wav",
+    "category": "phx",
+    "displayName": "hmetal3.wav"
+  },
+  {
+    "path": "sound\\phx\\kaboom.wav",
+    "fileName": "kaboom.wav",
+    "category": "phx",
+    "displayName": "kaboom.wav"
+  },
+  {
+    "path": "sound\\sfx\\skidding.wav",
+    "fileName": "skidding.wav",
+    "category": "sfx",
+    "displayName": "skidding.wav"
+  },
+  {
+    "path": "sound\\thrusters\\hover00.wav",
+    "fileName": "hover00.wav",
+    "category": "thrusters",
+    "displayName": "hover00.wav"
+  },
+  {
+    "path": "sound\\thrusters\\hover01.wav",
+    "fileName": "hover01.wav",
+    "category": "thrusters",
+    "displayName": "hover01.wav"
+  },
+  {
+    "path": "sound\\thrusters\\hover02.wav",
+    "fileName": "hover02.wav",
+    "category": "thrusters",
+    "displayName": "hover02.wav"
+  },
+  {
+    "path": "sound\\thrusters\\jet00.wav",
+    "fileName": "jet00.wav",
+    "category": "thrusters",
+    "displayName": "jet00.wav"
+  },
+  {
+    "path": "sound\\thrusters\\jet01.wav",
+    "fileName": "jet01.wav",
+    "category": "thrusters",
+    "displayName": "jet01.wav"
+  },
+  {
+    "path": "sound\\thrusters\\jet02.wav",
+    "fileName": "jet02.wav",
+    "category": "thrusters",
+    "displayName": "jet02.wav"
+  },
+  {
+    "path": "sound\\thrusters\\jet03.wav",
+    "fileName": "jet03.wav",
+    "category": "thrusters",
+    "displayName": "jet03.wav"
+  },
+  {
+    "path": "sound\\thrusters\\jet04.wav",
+    "fileName": "jet04.wav",
+    "category": "thrusters",
+    "displayName": "jet04.wav"
+  },
+  {
+    "path": "sound\\thrusters\\mh1.wav",
+    "fileName": "mh1.wav",
+    "category": "thrusters",
+    "displayName": "mh1.wav"
+  },
+  {
+    "path": "sound\\thrusters\\mh2.wav",
+    "fileName": "mh2.wav",
+    "category": "thrusters",
+    "displayName": "mh2.wav"
+  },
+  {
+    "path": "sound\\thrusters\\rocket00.wav",
+    "fileName": "rocket00.wav",
+    "category": "thrusters",
+    "displayName": "rocket00.wav"
+  },
+  {
+    "path": "sound\\thrusters\\rocket01.wav",
+    "fileName": "rocket01.wav",
+    "category": "thrusters",
+    "displayName": "rocket01.wav"
+  },
+  {
+    "path": "sound\\thrusters\\rocket02.wav",
+    "fileName": "rocket02.wav",
+    "category": "thrusters",
+    "displayName": "rocket02.wav"
+  },
+  {
+    "path": "sound\\thrusters\\rocket03.wav",
+    "fileName": "rocket03.wav",
+    "category": "thrusters",
+    "displayName": "rocket03.wav"
+  },
+  {
+    "path": "sound\\thrusters\\rocket04.wav",
+    "fileName": "rocket04.wav",
+    "category": "thrusters",
+    "displayName": "rocket04.wav"
+  }
+]
