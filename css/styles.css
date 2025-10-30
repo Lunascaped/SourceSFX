@@ -921,6 +921,30 @@ midi-visualizer {
 
 
 
+.analytics-disclaimer {
+    text-align: center;
+    margin: 10px auto 20px;
+}
+
+.analytics-disclaimer p {
+    margin: 0;
+    font-size: 12px;
+    color: #888;
+    line-height: 1.4;
+}
+
+.analytics-disclaimer a {
+    color: #ff6600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.analytics-disclaimer a:hover {
+    color: #ff9447;
+    text-decoration: underline;
+}
+
+
 .loading-more {
     text-align: center;
     padding: 30px;
