@@ -23,14 +23,14 @@
     <meta name="twitter:creator" content="@Lunascaped">
     <link rel="canonical" href="https://sourcesfx.com/">
     <meta name="theme-color" content="#1a1a1a">
-    <link rel="stylesheet" href="/css/styles.css?v=2">
-	<link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
-	<link rel="shortcut icon" href="/img/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
-	<meta name="apple-mobile-web-app-title" content="SourceSFX" />
+    <link rel="stylesheet" href="/css/styles.css?v=3">
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="SourceSFX" />
     <link rel="manifest" href="/img/site.webmanifest" />
-	<script defer data-domain="sourcesfx.com" src="https://plausible.gaq9.com/js/script.file-downloads.js"></script>
+    <script defer data-domain="sourcesfx.com" src="https://plausible.gaq9.com/js/script.file-downloads.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
     <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
 </head>
@@ -47,16 +47,12 @@
                     Icon by <a href="https://youtube.com/@blob8556">Blob</a> | 
                     Mascot by <a href="https://youtube.com/@LLinkks">Linkks</a>
                 </p>
+                <div class="sourcesfx-button-wrapper">
+                    <a href="https://gaq9.com" target="_blank"><img src="/img/gaq9-static-button.png" alt="GAQ9"></a>        
+                    <a href="https://sourcesfx.com" target="_blank"><img src="/img/SourceSFX-button-web.gif" alt="SourceSounds Button"></a>
+                </div>
             </div>
         </header>
-
-        <div class="analytics-disclaimer">
-            <p>
-                This site uses a private <a href="https://plausible.io/" target="_blank" rel="noopener">Plausible</a> instance for analytics, 
-                which is open source and privacy-friendly. No cookies, no personal data collection.
-            </p>
-        </div>
-
         <div class="controls">
             <div class="game-section">
                 <label>Select Game:</label>
@@ -247,8 +243,14 @@
 
         <midi-player id="midiPlayer" sound-font style="display: none;"></midi-player>
     </div>
-
-    <script src="js/script.min.js"></script>
+    <div id="analyticsBanner" class="analytics-banner" style="display:none;">
+        <span class="analytics-banner-text">
+            This site uses a private <a href="https://plausible.io/" target="_blank" rel="noopener">Plausible</a> instance
+            for analytics, which is open source and privacy-friendly. No cookies, no personal data collection.
+        </span>
+        <button id="hideAnalyticsBanner" class="analytics-banner-btn">Don't show again</button>
+    </div>
+    <script src="js/script.min.js?v=1"></script>
 </body>
 </html>
 

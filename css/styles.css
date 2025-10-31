@@ -208,7 +208,6 @@ header h1 {
     color: #e0e0e0;
     font-size: 14px;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 .autoplay-toggle:hover .toggle-slider {
@@ -315,9 +314,13 @@ header h1 {
 }
 
 .custom-select-option.selected::before {
-    content: '▶';
-    font-size: 10px;
-    color: #ff9447;
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><polygon points="3,2 10,6 3,10" fill="%23ff9447"/></svg>') no-repeat center center;
+    background-size: 12px 12px;
 }
 
 .custom-select-option.optgroup-label {
@@ -984,4 +987,66 @@ midi-visualizer {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #ffab70;
+}
+
+.analytics-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #252525;
+    color: #ffab70;
+    border-top: 2px solid #ff9447;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    z-index: 2000;
+    font-size: 15px;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
+}
+.analytics-banner-text a {
+    color: #ff6600;
+    text-decoration: underline;
+}
+.analytics-banner-btn {
+    background: #ff9447;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+.analytics-banner-btn:hover {
+    background: #ffab70;
+}
+@media (max-width: 600px) {
+    .analytics-banner {
+        flex-direction: column;
+        font-size: 13px;
+        padding: 12px 8px;
+        gap: 10px;
+    }
+    .analytics-banner-btn {
+        width: 100%;
+    }
+}
+
+.sourcesfx-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+.sourcesfx-button-wrapper img {
+    border: none !important;
+    box-shadow: none !important;
+    background: none;
+	width: 88px;
+	height: 31px;
 }

@@ -1066,6 +1066,19 @@ async function playMidiSound(midiUrl, sound, forcePlay = false) {
     }
 }
 
+const analyticsBanner = document.getElementById('analyticsBanner');
+if (!localStorage.getItem('hideAnalyticsBanner') && analyticsBanner) {
+    analyticsBanner.style.display = 'flex';
+}
+
+const hideAnalyticsBannerBtn = document.getElementById('hideAnalyticsBanner');
+if (hideAnalyticsBannerBtn && analyticsBanner) {
+    hideAnalyticsBannerBtn.onclick = function () {
+        localStorage.setItem('hideAnalyticsBanner', '1');
+        analyticsBanner.style.display = 'none';
+    };
+}
+
 function closeMidiAudioPlayer() {
     if (midiPlayer && midiPlayer.stop) {
         midiPlayer.stop();
