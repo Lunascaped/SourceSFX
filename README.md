@@ -35,6 +35,7 @@ A webpage that lets you browse, download, and play sound effects from multiple S
 - **Day of Defeat: Source** - [sourcesounds/dods](https://github.com/sourcesounds/dods)
 
 ### Other
+- **Ricochet** - Hosted on CDN
 - **Garry's Mod** - [sourcesounds/garrysmod](https://github.com/sourcesounds/garrysmod)
 - **Zombie Panic! Source** - [sourcesounds/zps](https://github.com/sourcesounds/zps)
 

@@ -1,25 +1,26 @@
 
 const GAMES = {
-    hl2: { name: 'Half-Life 2', repo: 'sourcesounds/hl2' },
-    hl1: { name: 'Half-Life', repo: 'sourcesounds/hl1' },
-    bshift: { name: 'Half-Life: Blue Shift', repo: 'sourcesounds/bshift' },
-    episodic: { name: 'Half-Life 2: Episode One', repo: 'sourcesounds/episodic' },
-    ep2: { name: 'Half-Life 2: Episode Two', repo: 'sourcesounds/ep2' },
-    hl2dm: { name: 'Half-Life 2: Deathmatch', repo: 'sourcesounds/hl2dm' },
-    lostcoast: { name: 'Half-Life 2: Lost Coast', repo: 'sourcesounds/lostcoast' },
-    tf2: { name: 'Team Fortress 2', repo: 'sourcesounds/tf2' },
-    tfc: { name: 'Team Fortress Classic', repo: 'sourcesounds/tfc' },
-    cstrike: { name: 'Counter-Strike: Source', repo: 'sourcesounds/cstrike' },
-    csgo: { name: 'Counter-Strike: Global Offensive', repo: 'sourcesounds/csgo' },
-    czero: { name: 'Counter-Strike: Condition Zero', repo: 'sourcesounds/czero' },
-    portal: { name: 'Portal', repo: 'sourcesounds/portal' },
-    portal2: { name: 'Portal 2', repo: 'sourcesounds/portal2' },
-    left4dead: { name: 'Left 4 Dead', repo: 'sourcesounds/left4dead' },
-    left4dead2: { name: 'Left 4 Dead 2', repo: 'sourcesounds/left4dead2' },
-    dod: { name: 'Day of Defeat', repo: 'sourcesounds/dod' },
-    dods: { name: 'Day of Defeat: Source', repo: 'sourcesounds/dods' },
-    garrysmod: { name: "Garry's Mod", repo: 'sourcesounds/garrysmod' },
-    zps: { name: 'Zombie Panic! Source', repo: 'sourcesounds/zps' }
+    hl2: { name: 'Half-Life 2', repo: 'sourcesounds/hl2', host: 'github' },
+    hl1: { name: 'Half-Life', repo: 'sourcesounds/hl1', host: 'github' },
+    bshift: { name: 'Half-Life: Blue Shift', repo: 'sourcesounds/bshift', host: 'github' },
+    episodic: { name: 'Half-Life 2: Episode One', repo: 'sourcesounds/episodic', host: 'github' },
+    ep2: { name: 'Half-Life 2: Episode Two', repo: 'sourcesounds/ep2', host: 'github' },
+    hl2dm: { name: 'Half-Life 2: Deathmatch', repo: 'sourcesounds/hl2dm', host: 'github' },
+    lostcoast: { name: 'Half-Life 2: Lost Coast', repo: 'sourcesounds/lostcoast', host: 'github' },
+    tf2: { name: 'Team Fortress 2', repo: 'sourcesounds/tf2', host: 'github' },
+    tfc: { name: 'Team Fortress Classic', repo: 'sourcesounds/tfc', host: 'github' },
+    cstrike: { name: 'Counter-Strike: Source', repo: 'sourcesounds/cstrike', host: 'github' },
+    csgo: { name: 'Counter-Strike: Global Offensive', repo: 'sourcesounds/csgo', host: 'github' },
+    czero: { name: 'Counter-Strike: Condition Zero', repo: 'sourcesounds/czero', host: 'github' },
+    portal: { name: 'Portal', repo: 'sourcesounds/portal', host: 'github' },
+    portal2: { name: 'Portal 2', repo: 'sourcesounds/portal2', host: 'github' },
+    left4dead: { name: 'Left 4 Dead', repo: 'sourcesounds/left4dead', host: 'github' },
+    left4dead2: { name: 'Left 4 Dead 2', repo: 'sourcesounds/left4dead2', host: 'github' },
+    dod: { name: 'Day of Defeat', repo: 'sourcesounds/dod', host: 'github' },
+    dods: { name: 'Day of Defeat: Source', repo: 'sourcesounds/dods', host: 'github' },
+    garrysmod: { name: "Garry's Mod", repo: 'sourcesounds/garrysmod', host: 'github' },
+    zps: { name: 'Zombie Panic! Source', repo: 'sourcesounds/zps', host: 'github' },
+	ricochet: { name: 'Ricochet', repo: '', host: 'cdn' },
 };
 
 
@@ -175,6 +176,13 @@ async function loadSounds() {
         }
 
         allSounds = await response.json();
+        
+        allSounds.forEach(sound => {
+            if (!sound.category || sound.category.trim() === '' || sound.category.endsWith('.wav') || sound.category.endsWith('.mp3')) {
+                sound.category = 'uncategorized';
+            }
+        });
+        
         filteredSounds = [...allSounds];
         
 
@@ -260,7 +268,8 @@ function filterSounds() {
     
     
     filteredSounds = searchResults.filter(sound => {
-        const matchesCategory = selectedCategory === 'all' || sound.category === selectedCategory;
+        const soundCategory = sound.category || 'uncategorized';
+        const matchesCategory = selectedCategory === 'all' || soundCategory === selectedCategory;
         return matchesCategory;
     });
     
@@ -335,8 +344,9 @@ function createSoundItem(sound) {
     const div = document.createElement('div');
     div.className = 'sound-item';
 
+    const category = sound.category || 'uncategorized';
     div.innerHTML = `
-        <div class="sound-category">${sound.category}</div>
+        <div class="sound-category">${category}</div>
         <div class="sound-name">${sound.displayName}</div>
         <div class="sound-path">${sound.path}</div>
     `;
@@ -347,9 +357,18 @@ function createSoundItem(sound) {
 }
 
 
+function getAudioUrl(gameKey, game, soundPath) {
+    if (game.host === 'cdn') {
+        return `https://cdn.sourcesfx.com/${gameKey}/${soundPath}`;
+    } else {
+        return `https://raw.githubusercontent.com/${game.repo}/refs/heads/master/${soundPath}`;
+    }
+}
+
+
 async function playSound(sound, forcePlay = false) {
     const game = GAMES[currentGame];
-    const audioUrl = `https://raw.githubusercontent.com/${game.repo}/refs/heads/master/${sound.path}`;
+    const audioUrl = getAudioUrl(currentGame, game, sound.path);
 
     
     if (isMidiFile(sound.fileName)) {
