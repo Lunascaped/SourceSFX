@@ -122,6 +122,9 @@ function setupEventListeners() {
     audioPlayer.addEventListener('ended', onAudioEnded);
 
     
+    audioPlayer.addEventListener('error', onAudioError);
+
+    
     audioPlayer.addEventListener('play', () => {
         playIcon.style.display = 'none';
         pauseIcon.style.display = 'block';
@@ -414,6 +417,9 @@ async function playSound(sound, forcePlay = false) {
     stopProgressLoop();
 
     
+    delete audioPlayer.dataset.decodingAttempted;
+
+    
     fetchAudioBlob(audioUrl);
 
     audioPlayer.src = audioUrl;
@@ -652,6 +658,66 @@ function onAudioEnded() {
     
     audioPlayer.currentTime = 0;
     updateTimeDisplay(true);
+}
+
+
+async function onAudioError(e) {
+    const error = e.target.error;
+    
+    
+    if (error && error.code === MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED) {        
+        if (currentAudioUrl && !audioPlayer.dataset.decodingAttempted) {
+            
+            audioPlayer.dataset.decodingAttempted = 'true';
+            
+            try {
+                await decodeAndPlayMsAdpcm(currentAudioUrl);
+            } catch (decodeError) {
+                console.error('Failed to decode MS-ADPCM:', decodeError);
+                
+                delete audioPlayer.dataset.decodingAttempted;
+            }
+        }
+    } else {
+        console.error('Audio playback error:', error);
+    }
+}
+
+
+async function decodeAndPlayMsAdpcm(url) {
+    
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error('Failed to fetch audio file');
+    }
+    
+    const arrayBuffer = await response.arrayBuffer();
+    
+    
+    const wavBlob = msadpcmDecodeWavFile(arrayBuffer);
+    const blobUrl = URL.createObjectURL(wavBlob);
+    
+    
+    currentAudioBlob = wavBlob;
+    
+    
+    audioPlayer.src = blobUrl;
+    
+    
+    delete audioPlayer.dataset.decodingAttempted;
+    
+    
+    const shouldAutoplay = autoplayToggle.checked;
+    if (shouldAutoplay) {
+        try {
+            await audioPlayer.play();
+            startProgressLoop();
+        } catch (err) {
+            console.error('Error playing decoded audio:', err);
+        }
+    } else {
+        audioPlayer.load();
+    }
 }
 
 
