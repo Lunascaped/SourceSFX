@@ -276,6 +276,7 @@ header h1 {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     transform: translateY(-10px);
     transition: all 0.3s ease;
 }
@@ -283,6 +284,7 @@ header h1 {
 .custom-select-options.active {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
 }
 
