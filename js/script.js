@@ -1,8 +1,8 @@
 
 const GAMES = {
-    hl2: { name: 'Half-Life 2', repo: 'sourcesounds/hl2', host: 'github' },
     hl1: { name: 'Half-Life', repo: 'sourcesounds/hl1', host: 'github' },
     bshift: { name: 'Half-Life: Blue Shift', repo: 'sourcesounds/bshift', host: 'github' },
+	hl2: { name: 'Half-Life 2', repo: 'sourcesounds/hl2', host: 'github' },
     episodic: { name: 'Half-Life 2: Episode One', repo: 'sourcesounds/episodic', host: 'github' },
     ep2: { name: 'Half-Life 2: Episode Two', repo: 'sourcesounds/ep2', host: 'github' },
     hl2dm: { name: 'Half-Life 2: Deathmatch', repo: 'sourcesounds/hl2dm', host: 'github' },
@@ -24,7 +24,7 @@ const GAMES = {
 };
 
 
-let currentGame = 'hl2';
+let currentGame = 'hl1';
 let allSounds = [];
 let filteredSounds = [];
 let displayedSounds = [];
@@ -357,21 +357,44 @@ function createSoundItem(sound) {
 }
 
 
-function getAudioUrl(gameKey, game, soundPath) {
+async function getAudioUrl(gameKey, game, soundPath, isMidi = false) {
     if (game.host === 'cdn') {
         return `https://cdn.sourcesfx.com/${gameKey}/${soundPath}`;
-    } else {
-        return `https://raw.githubusercontent.com/${game.repo}/refs/heads/master/${soundPath}`;
+    }
+    
+	if (gameKey === 'hl2' && soundPath.includes('commentary')) {
+		return `https://cdn.sourcesfx.com/${gameKey}/${soundPath}`;
+	}
+	
+    const githubUrl = `https://raw.githubusercontent.com/${game.repo}/refs/heads/master/${soundPath}`;
+    
+    
+    if (isMidi) {
+        return githubUrl;
+    }
+    
+    
+    try {
+        const response = await fetch(githubUrl, { method: 'HEAD' });
+        if (response.ok) {
+            return githubUrl;
+        }
+		if (response.status === 404) {
+			return `https://cdn.sourcesfx.com/${gameKey}/${soundPath}`;
+		}
+    } catch (error) {
+        return `https://cdn.sourcesfx.com/${gameKey}/${soundPath}`;
     }
 }
 
 
 async function playSound(sound, forcePlay = false) {
     const game = GAMES[currentGame];
-    const audioUrl = getAudioUrl(currentGame, game, sound.path);
+    const isMidi = isMidiFile(sound.fileName);
+    const audioUrl = await getAudioUrl(currentGame, game, sound.path, isMidi);
 
     
-    if (isMidiFile(sound.fileName)) {
+    if (isMidi) {
         playMidiSound(audioUrl, sound, forcePlay);
         return;
     }
