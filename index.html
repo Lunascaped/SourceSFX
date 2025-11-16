@@ -23,7 +23,7 @@
     <meta name="twitter:creator" content="@Lunascaped">
     <link rel="canonical" href="https://sourcesfx.com/">
     <meta name="theme-color" content="#1a1a1a">
-    <link rel="stylesheet" href="/css/styles.css?v=4">
+    <link rel="stylesheet" href="/css/styles.css?v=5">
     <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
     <link rel="shortcut icon" href="/img/favicon.ico" />
@@ -91,23 +91,43 @@
 						<option value="ricochet">Ricochet</option>
                         <option value="garrysmod">Garry's Mod</option>
                         <option value="zps">Zombie Panic! Source</option>
+						<option value="treason">Klaus Veen's Treason</option>						
                     </optgroup>
                 </select>
             </div>
 
             <div class="search-section">
-                <input 
-                    type="text" 
-                    id="searchInput" 
-                    placeholder="Search sounds..." 
-                    class="search-input"
-                >
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search sounds or voice lines..." 
+                class="search-input"
+                aria-label="Search by filename, path, category, or voice line"
+            >
+            
+            <div class="search-options">
+                <label class="toggle-option">
+                    <input type="checkbox" id="searchCaptionsToggle" checked>
+                    <span>Search captions</span>
+                </label>
+                <label class="toggle-option">
+                    <input type="checkbox" id="displayCaptionsToggle" checked>
+                    <span>Display captions</span>
+                </label>
+            </div>
             </div>
 
             <div class="filter-section">
                 <label>Filter by Category:</label>
                 <select id="categoryFilter" class="filter-select">
                     <option value="all">All Categories</option>
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <label>Filter by Character:</label>
+                <select id="characterFilter" class="filter-select">
+                    <option value="all">All Characters</option>
                 </select>
             </div>
 
@@ -161,7 +181,7 @@
                         <div id="timeDisplay" class="time-display">0:00 / 0:00</div>
                     </div>
                 </div>
-                <audio id="audioPlayer" preload="metadata"></audio>
+                <audio id="audioPlayer" preload="metadata" crossorigin="anonymous"></audio>
                 <div class="volume-control">
                     <button id="volumeBtn" class="volume-btn" aria-label="Mute">
                         <svg id="volumeIcon" class="btn-icon" viewBox="0 0 24 24" width="20" height="20">
@@ -252,7 +272,7 @@
         <button id="hideAnalyticsBanner" class="analytics-banner-btn">Don't show again</button>
     </div>
     <script src="js/msadpcm.min.js" type="module"></script>
-    <script src="js/script.min.js?v=3"></script>
+    <script src="js/script.js?v=5"></script>
 </body>
 </html>
 

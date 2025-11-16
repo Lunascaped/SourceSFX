@@ -2,7 +2,7 @@
 
 A webpage that lets you browse, download, and play sound effects from multiple Source Engine games. Now with MIDI file support and visualization!
 
-## Supported Games (20 Total)
+## Supported Games (22 Total)
 
 ### Half-Life Series
 - **Half-Life 2** - [sourcesounds/hl2](https://github.com/sourcesounds/hl2)
@@ -36,6 +36,7 @@ A webpage that lets you browse, download, and play sound effects from multiple S
 
 ### Other
 - **Ricochet** - Hosted on CDN
+- **Klaus Veen's Treason** - Hosted on CDN
 - **Garry's Mod** - [sourcesounds/garrysmod](https://github.com/sourcesounds/garrysmod)
 - **Zombie Panic! Source** - [sourcesounds/zps](https://github.com/sourcesounds/zps)
 

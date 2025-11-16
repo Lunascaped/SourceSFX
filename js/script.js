@@ -21,6 +21,7 @@ const GAMES = {
     garrysmod: { name: "Garry's Mod", repo: 'sourcesounds/garrysmod', host: 'github' },
     zps: { name: 'Zombie Panic! Source', repo: 'sourcesounds/zps', host: 'github' },
 	ricochet: { name: 'Ricochet', repo: '', host: 'cdn' },
+	treason: { name: 'Klaus Veen\'s Treason', repo: '', host: 'cdn' },	
 };
 
 
@@ -55,6 +56,7 @@ let midiVisualizer = null;
 const gameSelect = document.getElementById('gameSelect');
 const searchInput = document.getElementById('searchInput');
 const categoryFilter = document.getElementById('categoryFilter');
+const characterFilter = document.getElementById('characterFilter');
 const soundList = document.getElementById('soundList');
 const soundCount = document.getElementById('soundCount');
 const loadingMessage = document.getElementById('loadingMessage');
@@ -76,6 +78,9 @@ const volumeSlider = document.getElementById('volumeSlider');
 const volumeBtn = document.getElementById('volumeBtn');
 const volumeIcon = document.getElementById('volumeIcon');
 const mutedIcon = document.getElementById('mutedIcon');
+let audioContext = null;
+let gainNode = null;
+let audioSource = null;
 
 
 const midiPlayerContainer = document.getElementById('midiPlayerContainer');
@@ -106,12 +111,29 @@ function setupEventListeners() {
     gameSelect.addEventListener('change', onGameChange);
     searchInput.addEventListener('input', debounce(filterSounds, 300));
     categoryFilter.addEventListener('change', filterSounds);
+    characterFilter.addEventListener('change', filterSounds);
     closePlayer.addEventListener('click', closeAudioPlayer);
     downloadBtn.addEventListener('click', downloadCurrentSound);
     playPauseBtn.addEventListener('click', togglePlayPause);
     progressBarContainer.addEventListener('pointerdown', startSeek);
     volumeSlider.addEventListener('input', onVolumeChange);
     volumeBtn.addEventListener('click', toggleMute);
+    
+    const searchCaptionsToggle = document.getElementById('searchCaptionsToggle');
+    const displayCaptionsToggle = document.getElementById('displayCaptionsToggle');
+    
+    if (searchCaptionsToggle) {
+        searchCaptionsToggle.addEventListener('change', () => {
+            initializeFuse(searchCaptionsToggle.checked);
+            filterSounds();
+        });
+    }
+    
+    if (displayCaptionsToggle) {
+        displayCaptionsToggle.addEventListener('change', () => {
+            displaySounds();
+        });
+    }
 
     
     audioPlayer.addEventListener('loadedmetadata', updateDuration);
@@ -200,6 +222,7 @@ async function loadSounds() {
         displaySounds();
         updateStats();
         populateCategories();
+        populateCharacters();
 
     } catch (error) {
         console.error('Error loading sounds:', error);
@@ -212,19 +235,26 @@ async function loadSounds() {
 
 
 
-function initializeFuse() {
+function initializeFuse(searchCaptions = true) {
+    const keys = [
+        { name: 'fileName', weight: 2 },      
+        { name: 'path', weight: 1 },          
+        { name: 'displayName', weight: 2 },
+        { name: 'category', weight: 0.5 }
+    ];
+    
+    if (searchCaptions) {
+        keys.push({ name: 'caption', weight: 4 });
+    }
+    
     const fuseOptions = {
-        keys: [
-            { name: 'fileName', weight: 2 },      
-            { name: 'path', weight: 1 },          
-            { name: 'displayName', weight: 2 },
-            { name: 'category', weight: 0.5 }
-        ],
-        threshold: 0.4,           
-        distance: 100,            
-        minMatchCharLength: 2,    
-        ignoreLocation: true,     
-        includeScore: true        
+        keys: keys,
+        threshold: 0.15,
+        distance: 500,
+        minMatchCharLength: 2,
+        includeScore: true,
+        findAllMatches: false,
+        shouldSort: true
     };
     
     fuse = new Fuse(allSounds, fuseOptions);
@@ -245,10 +275,35 @@ function populateCategories() {
     updateCustomSelect('categoryFilter');
 }
 
+function populateCharacters() {
+    const characters = [...new Set(allSounds
+        .filter(sound => sound.character)
+        .map(sound => sound.character)
+    )].sort();
+    
+    characterFilter.innerHTML = '<option value="all">All Characters</option>';
+    
+    if (characters.length > 0) {
+        characters.forEach(character => {
+            const option = document.createElement('option');
+            option.value = character;
+            option.textContent = character;
+            characterFilter.appendChild(option);
+        });
+        
+        characterFilter.parentElement.style.display = 'block';
+    } else {
+        characterFilter.parentElement.style.display = 'none';
+    }
+    
+    updateCustomSelect('characterFilter');
+}
+
 
 function filterSounds() {
     const searchTerm = searchInput.value.trim();
     const selectedCategory = categoryFilter.value;
+    const selectedCharacter = characterFilter.value;
     
     let searchResults;
     
@@ -273,7 +328,8 @@ function filterSounds() {
     filteredSounds = searchResults.filter(sound => {
         const soundCategory = sound.category || 'uncategorized';
         const matchesCategory = selectedCategory === 'all' || soundCategory === selectedCategory;
-        return matchesCategory;
+        const matchesCharacter = selectedCharacter === 'all' || sound.character === selectedCharacter;
+        return matchesCategory && matchesCharacter;
     });
     
 
@@ -348,15 +404,45 @@ function createSoundItem(sound) {
     div.className = 'sound-item';
 
     const category = sound.category || 'uncategorized';
-    div.innerHTML = `
-        <div class="sound-category">${category}</div>
+    const displayCaptions = document.getElementById('displayCaptionsToggle')?.checked ?? true;
+    
+    let categoryHtml = category;
+    if (sound.commentarySpeaker) {
+        const speaker = escapeHtml(sound.commentarySpeaker);
+        const hiddenClass = displayCaptions ? '' : ' hidden';
+        categoryHtml += `<span class="sound-commentary-speaker${hiddenClass}"> 🎙️ ${speaker}</span>`;
+    }
+    
+    if (sound.character) {
+        const escapedCharacter = escapeHtml(sound.character);
+        const hiddenClass = displayCaptions ? '' : ' hidden';
+        categoryHtml += `<span class="sound-commentary-speaker${hiddenClass}"> <svg class="character-icon" viewBox="0 0 24 24" width="14" height="14" style="vertical-align: middle; margin-right: 2px;"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>${escapedCharacter}</span>`;
+    }
+    
+    let html = `
+        <div class="sound-category">${categoryHtml}</div>
         <div class="sound-name">${sound.displayName}</div>
-        <div class="sound-path">${sound.path}</div>
     `;
+    
+    if (sound.caption && sound.caption.trim() !== '') {
+        const escapedCaption = escapeHtml(sound.caption);
+        const hiddenClass = displayCaptions ? '' : ' hidden';
+        html += `<div class="sound-caption${hiddenClass}">"${escapedCaption}"</div>`;
+    }
+    
+    html += `<div class="sound-path">${sound.path}</div>`;
+    
+    div.innerHTML = html;
 
     div.addEventListener('click', () => playSound(sound));
 
     return div;
+}
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
 }
 
 
@@ -428,6 +514,7 @@ async function playSound(sound, forcePlay = false) {
     const shouldAutoplay = autoplayToggle.checked || forcePlay;
     
     if (shouldAutoplay) {
+        initWebAudio();
         audioPlayer.play().then(() => {
             startProgressLoop(); 
         }).catch(err => {
@@ -494,6 +581,7 @@ function downloadCurrentSound() {
 
 function togglePlayPause() {
     if (audioPlayer.paused) {
+        initWebAudio();
         audioPlayer.play();
     } else {
         audioPlayer.pause();
@@ -710,6 +798,7 @@ async function decodeAndPlayMsAdpcm(url) {
     const shouldAutoplay = autoplayToggle.checked;
     if (shouldAutoplay) {
         try {
+            initWebAudio();
             await audioPlayer.play();
             startProgressLoop();
         } catch (err) {
@@ -979,10 +1068,24 @@ function initializeVolume() {
     updateVolumeIcon(volumeValue);
 }
 
+function initWebAudio() {
+    if (!audioContext) {
+        try {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            gainNode = audioContext.createGain();
+            gainNode.gain.value = audioPlayer.volume;
+            audioSource = audioContext.createMediaElementSource(audioPlayer);
+            audioSource.connect(gainNode).connect(audioContext.destination);
+        } catch (e) {
+            console.warn('Web Audio API not available:', e);
+        }
+    }
+}
+
 function onVolumeChange(e) {
     const volumeValue = parseFloat(e.target.value);
     audioPlayer.volume = volumeValue / 100;
-    
+    if (gainNode) gainNode.gain.value = volumeValue / 100;
     
     localStorage.setItem('audioVolume', volumeValue);
     
@@ -1013,6 +1116,7 @@ function toggleMute() {
         localStorage.setItem('previousVolume', volumeSlider.value);
         volumeSlider.value = 0;
         audioPlayer.volume = 0;
+        if (gainNode) gainNode.gain.value = 0;
         updateVolumeSliderStyle(0);
         updateVolumeIcon(0);
     } else {
@@ -1020,6 +1124,7 @@ function toggleMute() {
         const previousVolume = localStorage.getItem('previousVolume') || 100;
         volumeSlider.value = previousVolume;
         audioPlayer.volume = previousVolume / 100;
+        if (gainNode) gainNode.gain.value = previousVolume / 100;
         updateVolumeSliderStyle(previousVolume);
         updateVolumeIcon(previousVolume);
     }
