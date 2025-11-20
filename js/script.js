@@ -67,6 +67,8 @@ const audioPlayerContainer = document.getElementById('audioPlayerContainer');
 const nowPlaying = document.getElementById('nowPlaying');
 const downloadBtn = document.getElementById('downloadBtn');
 const closePlayer = document.getElementById('closePlayer');
+const formatMenu = document.getElementById('formatMenu');
+const enableConversionToggle = document.getElementById('enableConversionToggle');
 const playPauseBtn = document.getElementById('playPauseBtn');
 const playIcon = document.getElementById('playIcon');
 const pauseIcon = document.getElementById('pauseIcon');
@@ -105,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeVolume();
     initMidiPlayer();
     setupInfiniteScroll();
+    checkCodecSupport();
 });
 
 function setupEventListeners() {
@@ -113,11 +116,27 @@ function setupEventListeners() {
     categoryFilter.addEventListener('change', filterSounds);
     characterFilter.addEventListener('change', filterSounds);
     closePlayer.addEventListener('click', closeAudioPlayer);
-    downloadBtn.addEventListener('click', downloadCurrentSound);
+    downloadBtn.addEventListener('click', handleDownloadClick);
     playPauseBtn.addEventListener('click', togglePlayPause);
     progressBarContainer.addEventListener('pointerdown', startSeek);
     volumeSlider.addEventListener('input', onVolumeChange);
     volumeBtn.addEventListener('click', toggleMute);
+    
+    document.querySelectorAll('.format-option').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const format = button.getAttribute('data-format');
+            downloadWithFormat(format);
+        });
+    });
+    
+    document.addEventListener('click', (e) => {
+        if (formatMenu.classList.contains('active') && 
+            !formatMenu.contains(e.target) && 
+            !downloadBtn.contains(e.target)) {
+            hideFormatMenu();
+        }
+    });
     
     const searchCaptionsToggle = document.getElementById('searchCaptionsToggle');
     const displayCaptionsToggle = document.getElementById('displayCaptionsToggle');
@@ -555,27 +574,187 @@ function closeAudioPlayer() {
     playIcon.style.display = 'block';
     pauseIcon.style.display = 'none';
     playPauseBtn.setAttribute('aria-label', 'Play');
+    hideFormatMenu();
 }
 
 
-function downloadCurrentSound() {
+function showFormatMenu() {
+    formatMenu.classList.add('active');
+}
+
+function hideFormatMenu() {
+    formatMenu.classList.remove('active');
+}
+
+function handleDownloadClick(e) {
+    e.stopPropagation();
+    
     if (!currentAudioBlob || !currentAudioFileName) {
         console.error('Audio blob not ready yet');
         return;
     }
     
-    const blobUrl = URL.createObjectURL(currentAudioBlob);
+    if (enableConversionToggle.checked) {
+        const isMenuVisible = formatMenu.classList.contains('active');
+        if (isMenuVisible) {
+            hideFormatMenu();
+        } else {
+            showFormatMenu();
+        }
+    } else {
+        downloadWithFormat('original');
+    }
+}
+
+async function downloadWithFormat(format) {
+    hideFormatMenu();
     
-    const link = document.createElement('a');
-    link.href = blobUrl;
-    link.download = currentAudioFileName;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    if (!currentAudioBlob || !currentAudioFileName) {
+        console.error('Audio blob not ready yet');
+        return;
+    }
     
-    setTimeout(() => {
-        URL.revokeObjectURL(blobUrl);
-    }, 100);
+    try {
+        if (format === 'original') {
+            const blobUrl = URL.createObjectURL(currentAudioBlob);
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = currentAudioFileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            setTimeout(() => URL.revokeObjectURL(blobUrl), 100);
+            return;
+        }
+        
+        downloadBtn.classList.add('converting');
+        downloadBtn.innerHTML = `
+            <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+            </svg>
+            Converting...
+        `;
+        
+        const convertedBlob = await convertAudioFormat(currentAudioBlob, format);
+        const fileNameWithoutExt = currentAudioFileName.replace(/\.[^/.]+$/, '');
+        const newFileName = `${fileNameWithoutExt}.${format}`;
+        
+        const blobUrl = URL.createObjectURL(convertedBlob);
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = newFileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 100);
+        
+    } catch (error) {
+        console.error('Error converting audio:', error);
+        alert('Failed to convert audio. Please try downloading the original format.');
+    } finally {
+        downloadBtn.classList.remove('converting');
+        downloadBtn.innerHTML = `
+            <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+            </svg>
+            Download
+        `;
+    }
+}
+
+async function checkCodecSupport() {
+    if (!window.Mediabunny) return;
+    
+    const { canEncodeAudio } = window.Mediabunny;
+    
+    if (window.MediabunnyMp3Encoder) {
+        const { registerMp3Encoder } = window.MediabunnyMp3Encoder;
+        registerMp3Encoder();
+    }
+    
+    const mp3Supported = await canEncodeAudio('mp3');
+    const opusSupported = await canEncodeAudio('opus');
+    const vorbisSupported = await canEncodeAudio('vorbis');
+    
+    document.querySelectorAll('.format-option').forEach(button => {
+        const format = button.getAttribute('data-format');
+        let supported = true;
+        
+        if (format === 'mp3' && !mp3Supported) {
+            supported = false;
+        } else if (format === 'ogg' && !opusSupported && !vorbisSupported) {
+            supported = false;
+        }
+        
+        if (!supported) {
+            button.disabled = true;
+            button.style.opacity = '0.4';
+            button.style.cursor = 'not-allowed';
+            button.title = `${format.toUpperCase()} encoding not supported in your browser`;
+        }
+    });
+}
+
+async function convertAudioFormat(blob, targetFormat) {
+    const { Input, Output, Conversion, ALL_FORMATS, BlobSource, BufferTarget, Mp3OutputFormat, OggOutputFormat, WavOutputFormat } = window.Mediabunny;
+    
+    if (targetFormat === 'mp3' && window.MediabunnyMp3Encoder) {
+        const { registerMp3Encoder } = window.MediabunnyMp3Encoder;
+        registerMp3Encoder();
+    }
+    
+    const input = new Input({
+        formats: ALL_FORMATS,
+        source: new BlobSource(blob),
+    });
+    
+    let outputFormat;
+    let audioConfig = {};
+    
+    switch (targetFormat) {
+        case 'mp3':
+            outputFormat = new Mp3OutputFormat();
+            audioConfig = {
+                codec: 'mp3',
+                bitrate: 192000
+            };
+            break;
+        case 'ogg':
+            outputFormat = new OggOutputFormat();
+            audioConfig = {
+                codec: 'opus',
+                bitrate: 128000
+            };
+            break;
+        case 'wav':
+            outputFormat = new WavOutputFormat();
+            audioConfig = {
+                codec: 'pcm-s16'
+            };
+            break;
+        default:
+            throw new Error(`Unsupported format: ${targetFormat}`);
+    }
+    
+    const output = new Output({
+        format: outputFormat,
+        target: new BufferTarget(),
+    });
+    
+    const conversion = await Conversion.init({ 
+        input, 
+        output,
+        audio: audioConfig
+    });
+    
+    if (!conversion.isValid) {
+        const reasons = conversion.discardedTracks.map(t => t.reason).join(', ');
+        throw new Error(`Conversion failed: ${reasons}. Your browser may not support encoding to ${targetFormat.toUpperCase()}.`);
+    }
+    
+    await conversion.execute();
+    
+    return new Blob([output.target.buffer], { type: outputFormat.mimeType });
 }
 
 

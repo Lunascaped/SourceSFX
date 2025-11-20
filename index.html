@@ -32,6 +32,8 @@
     <link rel="manifest" href="/img/site.webmanifest" />
     <script defer data-domain="sourcesfx.com" src="https://plausible.gaq9.com/js/script.file-downloads.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script src="/js/mediabunny.min.cjs"></script>
+    <script src="/js/mediabunny-mp3-encoder.min.js"></script>
     <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
 </head>
 <body>
@@ -114,6 +116,10 @@
                     <input type="checkbox" id="displayCaptionsToggle" checked>
                     <span>Display captions</span>
                 </label>
+                <label class="toggle-option">
+                    <input type="checkbox" id="enableConversionToggle">
+                    <span>Convert downloads</span>
+                </label>
             </div>
             </div>
 
@@ -193,12 +199,19 @@
                     </button>
                     <input type="range" id="volumeSlider" class="volume-slider" min="0" max="100" value="100" aria-label="Volume">
                 </div>
-                <button id="downloadBtn" class="download-btn">
-                    <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18">
-                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
-                    </svg>
-                    Download
-                </button>
+                <div class="download-container">
+                    <div id="formatMenu" class="format-menu">
+                        <button class="format-option" data-format="mp3">MP3</button>
+                        <button class="format-option" data-format="ogg">OGG</button>
+                        <button class="format-option" data-format="wav">WAV</button>
+                    </div>
+                    <button id="downloadBtn" class="download-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+                        </svg>
+                        Download
+                    </button>
+                </div>
                 <button id="closePlayer" class="close-btn" aria-label="Close">
                     <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20">
                         <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
@@ -264,6 +277,7 @@
 
         <midi-player id="midiPlayer" sound-font style="display: none;"></midi-player>
     </div>
+
     <div id="analyticsBanner" class="analytics-banner" style="display:none;">
         <span class="analytics-banner-text">
             This site uses a private <a href="https://plausible.io/" target="_blank" rel="noopener">Plausible</a> instance
@@ -272,7 +286,7 @@
         <button id="hideAnalyticsBanner" class="analytics-banner-btn">Don't show again</button>
     </div>
     <script src="js/msadpcm.min.js" type="module"></script>
-    <script src="js/script.js?v=5"></script>
+    <script src="js/script.min.js?v=6"></script>
 </body>
 </html>
 
