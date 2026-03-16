@@ -610,24 +610,45 @@ header h1 {
     position: relative;
     overflow: hidden;
     border: 1px solid #3a3a3a;
+    touch-action: none;
+    padding: 10px 0;
+    margin: -10px 0;
+    background-clip: content-box;
+    border-width: 0;
+    box-sizing: content-box;
 }
 
-.progress-bar-container:hover {
+.progress-bar-container::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+    pointer-events: none;
+    transition: border-color 0.15s;
+}
+
+.progress-bar-container:hover::before {
     border-color: #ff9447;
 }
 
 .progress-bar {
 	position: absolute;
-	inset: 0;
-	height: 100%;
+	top: 10px;
+	left: 0;
+	right: 0;
+	bottom: 10px;
 	background: linear-gradient(90deg, #ff6600 0%, #ff8833 100%);
 	transform: scale3d(0, 1, 1);
 	transform-origin: left;
-	
 	will-change: transform;
 	backface-visibility: hidden;
 	-webkit-transform: translateZ(0) scale3d(0,1,1);
 	contain: paint;
+	border-radius: 4px;
   }
 
 .progress-bar.seeking {

@@ -38,6 +38,8 @@ let fuse = null;
 let rafId = null;
 let lastTimeDisplayUpdate = 0;
 
+let howl = null;
+
 
 let currentPage = 0;
 const ITEMS_PER_PAGE = 50;
@@ -80,9 +82,6 @@ const volumeSlider = document.getElementById('volumeSlider');
 const volumeBtn = document.getElementById('volumeBtn');
 const volumeIcon = document.getElementById('volumeIcon');
 const mutedIcon = document.getElementById('mutedIcon');
-let audioContext = null;
-let gainNode = null;
-let audioSource = null;
 
 
 const midiPlayerContainer = document.getElementById('midiPlayerContainer');
@@ -153,33 +152,6 @@ function setupEventListeners() {
             displaySounds();
         });
     }
-
-    
-    audioPlayer.addEventListener('loadedmetadata', updateDuration);
-
-    
-    audioPlayer.addEventListener('timeupdate', onTimeUpdateThrottled);
-
-    audioPlayer.addEventListener('ended', onAudioEnded);
-
-    
-    audioPlayer.addEventListener('error', onAudioError);
-
-    
-    audioPlayer.addEventListener('play', () => {
-        playIcon.style.display = 'none';
-        pauseIcon.style.display = 'block';
-        playPauseBtn.setAttribute('aria-label', 'Pause');
-        startProgressLoop();
-    });
-    audioPlayer.addEventListener('pause', () => {
-        playIcon.style.display = 'block';
-        pauseIcon.style.display = 'none';
-        playPauseBtn.setAttribute('aria-label', 'Play');
-        stopProgressLoop();
-        
-        updateTimeDisplay(true);
-    });
 
     
     closeMidiPlayer.addEventListener('click', closeMidiAudioPlayer);
@@ -501,48 +473,69 @@ async function playSound(sound, forcePlay = false) {
     const isMidi = isMidiFile(sound.fileName);
     const audioUrl = await getAudioUrl(currentGame, game, sound.path, isMidi);
 
-    
+
     if (isMidi) {
         playMidiSound(audioUrl, sound, forcePlay);
         return;
     }
 
-    
+
     currentAudioUrl = audioUrl;
     currentAudioFileName = sound.fileName;
 
-    
+
     closeMidiAudioPlayer();
 
-    
+
     progressBar.style.transform = 'scaleX(0)';
     timeDisplay.textContent = '0:00 / 0:00';
 
-    
     stopProgressLoop();
 
-    
-    delete audioPlayer.dataset.decodingAttempted;
+    if (howl) {
+        howl.unload();
+        howl = null;
+    }
 
-    
+
     fetchAudioBlob(audioUrl);
 
-    audioPlayer.src = audioUrl;
-    
-    
+    const savedVolume = localStorage.getItem('audioVolume');
+    const volumeValue = savedVolume !== null ? parseFloat(savedVolume) / 100 : 1;
     const shouldAutoplay = autoplayToggle.checked || forcePlay;
-    
-    if (shouldAutoplay) {
-        initWebAudio();
-        audioPlayer.play().then(() => {
-            startProgressLoop(); 
-        }).catch(err => {
-            console.error('Error playing audio:', err);
-        });
-    } else {
-        
-        audioPlayer.load();
-    }
+
+    howl = new Howl({
+        src: [audioUrl],
+        html5: false,
+        volume: volumeValue,
+        autoplay: shouldAutoplay,
+        onplay: function() {
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'block';
+            playPauseBtn.setAttribute('aria-label', 'Pause');
+            updateDuration();
+            startProgressLoop();
+        },
+        onpause: function() {
+            playIcon.style.display = 'block';
+            pauseIcon.style.display = 'none';
+            playPauseBtn.setAttribute('aria-label', 'Play');
+            stopProgressLoop();
+            updateTimeDisplay(true);
+        },
+        onend: function() {
+            onAudioEnded();
+        },
+        onload: function() {
+            updateDuration();
+        },
+        onloaderror: function(id, err) {
+            console.error('Howler load error:', err);
+            if (currentAudioUrl) {
+                decodeAndPlayMsAdpcm(currentAudioUrl);
+            }
+        }
+    });
 
     nowPlaying.textContent = `Now Playing: ${sound.displayName}`;
     audioPlayerContainer.style.display = 'block';
@@ -564,7 +557,10 @@ async function fetchAudioBlob(url) {
 
 
 function closeAudioPlayer() {
-    audioPlayer.pause();
+    if (howl) {
+        howl.unload();
+        howl = null;
+    }
     stopProgressLoop();
     audioPlayerContainer.style.display = 'none';
     currentAudioUrl = null;
@@ -759,11 +755,11 @@ async function convertAudioFormat(blob, targetFormat) {
 
 
 function togglePlayPause() {
-    if (audioPlayer.paused) {
-        initWebAudio();
-        audioPlayer.play();
+    if (!howl) return;
+    if (howl.playing()) {
+        howl.pause();
     } else {
-        audioPlayer.pause();
+        howl.play();
     }
 }
 
@@ -772,17 +768,16 @@ function togglePlayPause() {
 function startProgressLoop() {
     if (rafId) cancelAnimationFrame(rafId);
     const tick = () => {
-        
-        if (!audioPlayer.paused && !isSeeking && audioPlayer.duration) {
-            const progress = audioPlayer.currentTime / audioPlayer.duration;
-            progressBar.style.transform = `scaleX(${progress})`;
-
-            
+        if (howl && howl.playing() && !isSeeking) {
+            const seek = howl.seek() || 0;
+            const duration = howl.duration() || 0;
+            if (duration > 0) {
+                const progress = seek / duration;
+                progressBar.style.transform = `scaleX(${progress})`;
+            }
             updateTimeDisplay(false);
-
             rafId = requestAnimationFrame(tick);
         } else {
-            
             rafId = null;
         }
     };
@@ -797,28 +792,14 @@ function stopProgressLoop() {
 }
 
 
-function onTimeUpdateThrottled() {
-    updateTimeDisplay(false);
-}
-
-
-function updateProgress() {
-    if (isSeeking) return;
-    if (audioPlayer.duration) {
-        const progress = audioPlayer.currentTime / audioPlayer.duration;
-        progressBar.style.transform = `scaleX(${progress})`;
-        updateTimeDisplay(false);
-    }
-}
-
-
 function updateTimeDisplay(force = false) {
     const now = performance.now();
-    if (!force && now - lastTimeDisplayUpdate < 150) return; 
+    if (!force && now - lastTimeDisplayUpdate < 150) return;
     lastTimeDisplayUpdate = now;
 
-    const currentTime = formatTime(audioPlayer.currentTime || 0);
-    const duration = formatTime(audioPlayer.duration || 0);
+    if (!howl) return;
+    const currentTime = formatTime(howl.seek() || 0);
+    const duration = formatTime(howl.duration() || 0);
     timeDisplay.textContent = `${currentTime} / ${duration}`;
 }
 
@@ -836,33 +817,18 @@ function clamp(n, min, max) {
 function eventToPercent(clientX) {
     const rect = progressBarContainer.getBoundingClientRect();
     const x = clamp(clientX - rect.left, 0, rect.width);
-    return x / rect.width;
+    return rect.width > 0 ? x / rect.width : 0;
 }
 
 
 function seekToPercent(pct) {
     pct = clamp(pct, 0, 1);
-    
-    
-    if (!isFinite(audioPlayer.duration) || audioPlayer.readyState < 2) {
-        
-        const targetTime = pct;
-        const seekOnReady = () => {
-            if (isFinite(audioPlayer.duration)) {
-                audioPlayer.currentTime = targetTime * audioPlayer.duration;
-                progressBar.style.transform = `scaleX(${targetTime})`;
-                updateTimeDisplay(true);
-            }
-            audioPlayer.removeEventListener('loadedmetadata', seekOnReady);
-            audioPlayer.removeEventListener('canplay', seekOnReady);
-        };
-        
-        audioPlayer.addEventListener('loadedmetadata', seekOnReady);
-        audioPlayer.addEventListener('canplay', seekOnReady);
-        return;
-    }
-    
-    audioPlayer.currentTime = pct * audioPlayer.duration;
+    if (!howl) return;
+
+    const duration = howl.duration();
+    if (!duration || !isFinite(duration)) return;
+
+    howl.seek(pct * duration);
     progressBar.style.transform = `scaleX(${pct})`;
     updateTimeDisplay(true);
 }
@@ -874,15 +840,14 @@ function startSeek(e) {
     isSeeking = true;
     progressBar.classList.add('seeking');
 
-    
     stopProgressLoop();
 
     const pct = eventToPercent(e.clientX);
     seekToPercent(pct);
 
-    progressBarContainer.addEventListener('pointermove', onSeekMove);
-    progressBarContainer.addEventListener('pointerup', endSeek);
-    progressBarContainer.addEventListener('pointercancel', endSeek);
+    document.addEventListener('pointermove', onSeekMove);
+    document.addEventListener('pointerup', endSeek);
+    document.addEventListener('pointercancel', endSeek);
 }
 
 
@@ -890,9 +855,12 @@ function onSeekMove(e) {
     if (!isSeeking) return;
     const pct = eventToPercent(e.clientX);
     progressBar.style.transform = `scaleX(${pct})`;
-    if (isFinite(audioPlayer.duration)) {
-        const t = pct * audioPlayer.duration;
-        timeDisplay.textContent = `${formatTime(t)} / ${formatTime(audioPlayer.duration)}`;
+    if (howl) {
+        const duration = howl.duration();
+        if (isFinite(duration) && duration > 0) {
+            const t = pct * duration;
+            timeDisplay.textContent = `${formatTime(t)} / ${formatTime(duration)}`;
+        }
     }
 }
 
@@ -906,12 +874,11 @@ function endSeek(e) {
 
     try { progressBarContainer.releasePointerCapture(e.pointerId); } catch {}
 
-    progressBarContainer.removeEventListener('pointermove', onSeekMove);
-    progressBarContainer.removeEventListener('pointerup', endSeek);
-    progressBarContainer.removeEventListener('pointercancel', endSeek);
+    document.removeEventListener('pointermove', onSeekMove);
+    document.removeEventListener('pointerup', endSeek);
+    document.removeEventListener('pointercancel', endSeek);
 
-    
-    if (!audioPlayer.paused) startProgressLoop();
+    if (howl && howl.playing()) startProgressLoop();
 }
 
 
@@ -921,71 +888,62 @@ function onAudioEnded() {
     playPauseBtn.setAttribute('aria-label', 'Play');
     stopProgressLoop();
     progressBar.style.transform = 'scaleX(0)';
-    
-    
-    audioPlayer.currentTime = 0;
     updateTimeDisplay(true);
 }
 
 
-async function onAudioError(e) {
-    const error = e.target.error;
-    
-    
-    if (error && error.code === MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED) {        
-        if (currentAudioUrl && !audioPlayer.dataset.decodingAttempted) {
-            
-            audioPlayer.dataset.decodingAttempted = 'true';
-            
-            try {
-                await decodeAndPlayMsAdpcm(currentAudioUrl);
-            } catch (decodeError) {
-                console.error('Failed to decode MS-ADPCM:', decodeError);
-                
-                delete audioPlayer.dataset.decodingAttempted;
-            }
-        }
-    } else {
-        console.error('Audio playback error:', error);
-    }
-}
-
 
 async function decodeAndPlayMsAdpcm(url) {
-    
     const response = await fetch(url);
     if (!response.ok) {
         throw new Error('Failed to fetch audio file');
     }
-    
+
     const arrayBuffer = await response.arrayBuffer();
-    
-    
     const wavBlob = msadpcmDecodeWavFile(arrayBuffer);
     const blobUrl = URL.createObjectURL(wavBlob);
-    
-    
+
     currentAudioBlob = wavBlob;
-    
-    
-    audioPlayer.src = blobUrl;
-    
-    
-    delete audioPlayer.dataset.decodingAttempted;
-    
-    
-    const shouldAutoplay = autoplayToggle.checked;
-    if (shouldAutoplay) {
-        try {
-            initWebAudio();
-            await audioPlayer.play();
-            startProgressLoop();
-        } catch (err) {
-            console.error('Error playing decoded audio:', err);
-        }
-    } else {
-        audioPlayer.load();
+
+    if (howl) {
+        howl.unload();
+        howl = null;
     }
+
+    const savedVolume = localStorage.getItem('audioVolume');
+    const volumeValue = savedVolume !== null ? parseFloat(savedVolume) / 100 : 1;
+    const shouldAutoplay = autoplayToggle.checked;
+
+    howl = new Howl({
+        src: [blobUrl],
+        format: ['wav'],
+        html5: false,
+        volume: volumeValue,
+        autoplay: shouldAutoplay,
+        onplay: function() {
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'block';
+            playPauseBtn.setAttribute('aria-label', 'Pause');
+            updateDuration();
+            startProgressLoop();
+        },
+        onpause: function() {
+            playIcon.style.display = 'block';
+            pauseIcon.style.display = 'none';
+            playPauseBtn.setAttribute('aria-label', 'Play');
+            stopProgressLoop();
+            updateTimeDisplay(true);
+        },
+        onend: function() {
+            onAudioEnded();
+        },
+        onload: function() {
+            updateDuration();
+        },
+        onloaderror: function(id, err) {
+            console.error('Failed to decode MS-ADPCM:', err);
+        }
+    });
 }
 
 
@@ -1237,37 +1195,21 @@ function updateCustomSelect(selectId) {
 
 
 function initializeVolume() {
-    
     const savedVolume = localStorage.getItem('audioVolume');
     const volumeValue = savedVolume !== null ? parseFloat(savedVolume) : 100;
-    
+
     volumeSlider.value = volumeValue;
-    audioPlayer.volume = volumeValue / 100;
+    if (howl) howl.volume(volumeValue / 100);
     updateVolumeSliderStyle(volumeValue);
     updateVolumeIcon(volumeValue);
 }
 
-function initWebAudio() {
-    if (!audioContext) {
-        try {
-            audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            gainNode = audioContext.createGain();
-            gainNode.gain.value = audioPlayer.volume;
-            audioSource = audioContext.createMediaElementSource(audioPlayer);
-            audioSource.connect(gainNode).connect(audioContext.destination);
-        } catch (e) {
-            console.warn('Web Audio API not available:', e);
-        }
-    }
-}
-
 function onVolumeChange(e) {
     const volumeValue = parseFloat(e.target.value);
-    audioPlayer.volume = volumeValue / 100;
-    if (gainNode) gainNode.gain.value = volumeValue / 100;
-    
+    if (howl) howl.volume(volumeValue / 100);
+
     localStorage.setItem('audioVolume', volumeValue);
-    
+
     updateVolumeSliderStyle(volumeValue);
     updateVolumeIcon(volumeValue);
 }
@@ -1290,20 +1232,17 @@ function updateVolumeIcon(volumeValue) {
 }
 
 function toggleMute() {
-    if (audioPlayer.volume > 0) {
-        
+    const currentVolume = howl ? howl.volume() : parseFloat(volumeSlider.value) / 100;
+    if (currentVolume > 0) {
         localStorage.setItem('previousVolume', volumeSlider.value);
         volumeSlider.value = 0;
-        audioPlayer.volume = 0;
-        if (gainNode) gainNode.gain.value = 0;
+        if (howl) howl.volume(0);
         updateVolumeSliderStyle(0);
         updateVolumeIcon(0);
     } else {
-        
         const previousVolume = localStorage.getItem('previousVolume') || 100;
         volumeSlider.value = previousVolume;
-        audioPlayer.volume = previousVolume / 100;
-        if (gainNode) gainNode.gain.value = previousVolume / 100;
+        if (howl) howl.volume(previousVolume / 100);
         updateVolumeSliderStyle(previousVolume);
         updateVolumeIcon(previousVolume);
     }
