@@ -458,6 +458,82 @@ header h1 {
     transform: translateY(-2px);
 }
 
+.sound-item.highlighted {
+    border-color: #ffab70;
+    box-shadow: 0 0 20px rgba(255, 171, 112, 0.4);
+    animation: highlight-pulse 0.5s ease-out;
+}
+
+@keyframes highlight-pulse {
+    0% {
+        box-shadow: 0 0 0 rgba(255, 171, 112, 0);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 171, 112, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 171, 112, 0.4);
+    }
+}
+
+.sound-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.sound-share-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sound-item:hover .sound-share-btn {
+    opacity: 0.6;
+}
+
+.sound-share-btn:hover {
+    opacity: 1 !important;
+    background: rgba(255, 148, 71, 0.2);
+}
+
+.sound-share-btn .share-icon {
+    display: block;
+    color: #ff9447;
+}
+
+.sound-share-btn .check-icon {
+    display: none;
+    color: #4caf50;
+}
+
+.sound-share-btn.copied .share-icon {
+    display: none;
+}
+
+.sound-share-btn.copied .check-icon {
+    display: block;
+}
+
+.sound-share-btn.copied {
+    opacity: 1 !important;
+}
+
+@media (hover: none), (max-width: 768px) {
+    .sound-share-btn {
+        opacity: 0.6;
+    }
+}
+
 .sound-category {
     display: inline-block;
     background: #ff9447;
@@ -467,7 +543,6 @@ header h1 {
     font-size: 11px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 8px;
 }
 
 .sound-name {
@@ -593,6 +668,37 @@ header h1 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.now-playing-caption {
+    color: #a8d5ff;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 4px;
+    max-height: 40px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: #ff9447 #1c1c1c;
+}
+
+.now-playing-caption::-webkit-scrollbar {
+    height: 6px;
+}
+
+.now-playing-caption::-webkit-scrollbar-track {
+    background: #1c1c1c;
+    border-radius: 3px;
+}
+
+.now-playing-caption::-webkit-scrollbar-thumb {
+    background: #ff9447;
+    border-radius: 3px;
+}
+
+.now-playing-caption::-webkit-scrollbar-thumb:hover {
+    background: #ffab70;
 }
 
 .progress-container {

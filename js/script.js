@@ -67,6 +67,7 @@ const errorMessage = document.getElementById('errorMessage');
 const audioPlayer = document.getElementById('audioPlayer');
 const audioPlayerContainer = document.getElementById('audioPlayerContainer');
 const nowPlaying = document.getElementById('nowPlaying');
+const nowPlayingCaption = document.getElementById('nowPlayingCaption');
 const downloadBtn = document.getElementById('downloadBtn');
 const closePlayer = document.getElementById('closePlayer');
 const formatMenu = document.getElementById('formatMenu');
@@ -101,6 +102,7 @@ const midiProgressBarContainer = document.getElementById('midiProgressBarContain
 
 document.addEventListener('DOMContentLoaded', () => {
     initCustomSelects();
+    checkUrlForSharedSound();
     loadSounds();
     setupEventListeners();
     initializeVolume();
@@ -112,8 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function setupEventListeners() {
     gameSelect.addEventListener('change', onGameChange);
     searchInput.addEventListener('input', debounce(filterSounds, 300));
-    categoryFilter.addEventListener('change', filterSounds);
-    characterFilter.addEventListener('change', filterSounds);
+    categoryFilter.addEventListener('change', onCategoryChange);
+    characterFilter.addEventListener('change', onCharacterChange);
     closePlayer.addEventListener('click', closeAudioPlayer);
     downloadBtn.addEventListener('click', handleDownloadClick);
     playPauseBtn.addEventListener('click', togglePlayPause);
@@ -167,7 +169,221 @@ function onGameChange() {
     currentGame = gameSelect.value;
     closeAudioPlayer();
     closeMidiAudioPlayer();
+    clearSoundFromUrl();
     loadSounds();
+}
+
+function onCategoryChange() {
+    filterSounds();
+    updateUrlFilters();
+}
+
+function onCharacterChange() {
+    filterSounds();
+    updateUrlFilters();
+}
+
+function checkUrlForSharedSound() {
+    const params = new URLSearchParams(window.location.search);
+    const gameParam = params.get('game');
+    const categoryParam = params.get('category');
+    const characterParam = params.get('character');
+    const soundParam = params.get('sound');
+    
+    if (gameParam && GAMES[gameParam]) {
+        currentGame = gameParam;
+        gameSelect.value = gameParam;
+        updateCustomSelect('gameSelect');
+    }
+    
+    if (categoryParam) {
+        window.pendingCategory = categoryParam;
+    }
+    
+    if (characterParam) {
+        window.pendingCharacter = characterParam;
+    }
+    
+    if (soundParam) {
+        window.pendingSharedSound = normalizeSoundPath(soundParam);
+    }
+}
+
+function normalizeSoundPath(path) {
+    path = path.replace(/\\/g, '/');
+    if (!path.startsWith('sound/')) {
+        path = 'sound/' + path;
+    }
+    return path;
+}
+
+function getShortSoundPath(path) {
+    path = path.replace(/\\/g, '/');
+    if (path.startsWith('sound/')) {
+        return path.substring(6);
+    }
+    return path;
+}
+
+function playSharedSoundIfPending() {
+    if (!window.pendingSharedSound) return;
+    
+    const soundPath = window.pendingSharedSound;
+    window.pendingSharedSound = null;
+    
+    const normalizedPath = soundPath.replace(/\\/g, '/');
+    const sound = allSounds.find(s => s.path.replace(/\\/g, '/') === normalizedPath);
+    if (sound) {
+        loadSoundIntoView(sound.path);
+        playSound(sound, true);
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                scrollToSound(sound.path);
+            });
+        });
+    }
+}
+
+function loadSoundIntoView(soundPath) {
+    const normalizedPath = soundPath.replace(/\\/g, '/');
+    const soundIndex = filteredSounds.findIndex(s => s.path.replace(/\\/g, '/') === normalizedPath);
+    if (soundIndex === -1) return;
+    
+    const pageNeeded = Math.floor(soundIndex / ITEMS_PER_PAGE);
+    
+    while (currentPage < pageNeeded && hasMoreToLoad) {
+        currentPage++;
+        const startIndex = currentPage * ITEMS_PER_PAGE;
+        const endIndex = startIndex + ITEMS_PER_PAGE;
+        const soundsToDisplay = filteredSounds.slice(startIndex, endIndex);
+        
+        soundsToDisplay.forEach(sound => {
+            const soundItem = createSoundItem(sound);
+            soundList.appendChild(soundItem);
+            displayedSounds.push(sound);
+        });
+        
+        hasMoreToLoad = endIndex < filteredSounds.length;
+    }
+}
+
+function scrollToSound(soundPath) {
+    const normalizedPath = soundPath.replace(/\\/g, '/');
+    const soundItems = document.querySelectorAll('.sound-item');
+    for (const item of soundItems) {
+        const pathEl = item.querySelector('.sound-path');
+        if (pathEl && pathEl.textContent.replace(/\\/g, '/') === normalizedPath) {
+            item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            item.classList.add('highlighted');
+            setTimeout(() => item.classList.remove('highlighted'), 2000);
+            break;
+        }
+    }
+}
+
+function updateUrlForSound(sound) {
+    const url = new URL(window.location);
+    url.searchParams.set('game', currentGame);
+    const category = categoryFilter.value;
+    if (category && category !== 'all') {
+        url.searchParams.set('category', category);
+    } else {
+        url.searchParams.delete('category');
+    }
+    const character = characterFilter.value;
+    if (character && character !== 'all') {
+        url.searchParams.set('character', character);
+    } else {
+        url.searchParams.delete('character');
+    }
+    url.searchParams.set('sound', getShortSoundPath(sound.path));
+    window.history.replaceState({}, '', url);
+}
+
+function updateUrlFilters() {
+    const url = new URL(window.location);
+    const category = categoryFilter.value;
+    if (category && category !== 'all') {
+        url.searchParams.set('category', category);
+    } else {
+        url.searchParams.delete('category');
+    }
+    const character = characterFilter.value;
+    if (character && character !== 'all') {
+        url.searchParams.set('character', character);
+    } else {
+        url.searchParams.delete('character');
+    }
+    window.history.replaceState({}, '', url);
+}
+
+function clearSoundFromUrl() {
+    const url = new URL(window.location);
+    url.searchParams.delete('sound');
+    if (url.searchParams.has('game')) {
+        url.searchParams.set('game', currentGame);
+    }
+    window.history.replaceState({}, '', url);
+}
+
+function getSoundShareUrl(sound) {
+    const url = new URL(window.location.origin + window.location.pathname);
+    url.searchParams.set('game', currentGame);
+    const category = categoryFilter.value;
+    if (category && category !== 'all') {
+        url.searchParams.set('category', category);
+    }
+    const character = characterFilter.value;
+    if (character && character !== 'all') {
+        url.searchParams.set('character', character);
+    }
+    url.searchParams.set('sound', getShortSoundPath(sound.path));
+    return url.toString();
+}
+
+function applyPendingCategory() {
+    if (!window.pendingCategory) return;
+    
+    const category = window.pendingCategory;
+    window.pendingCategory = null;
+    
+    const options = Array.from(categoryFilter.options);
+    const matchingOption = options.find(opt => opt.value === category);
+    
+    if (matchingOption) {
+        categoryFilter.value = category;
+        updateCustomSelect('categoryFilter');
+    }
+}
+
+function applyPendingCharacter() {
+    if (!window.pendingCharacter) return;
+    
+    const character = window.pendingCharacter;
+    window.pendingCharacter = null;
+    
+    const options = Array.from(characterFilter.options);
+    const matchingOption = options.find(opt => opt.value === character);
+    
+    if (matchingOption) {
+        characterFilter.value = character;
+        updateCustomSelect('characterFilter');
+    }
+}
+
+async function copyShareUrl(sound, button) {
+    const url = getSoundShareUrl(sound);
+    try {
+        await navigator.clipboard.writeText(url);
+        button.classList.add('copied');
+        button.title = 'Copied!';
+        setTimeout(() => {
+            button.classList.remove('copied');
+            button.title = 'Copy share link';
+        }, 1500);
+    } catch (err) {
+        console.error('Failed to copy:', err);
+    }
 }
 
 
@@ -210,10 +426,12 @@ async function loadSounds() {
         initializeFuse();
 
         loadingMessage.style.display = 'none';
-        displaySounds();
-        updateStats();
         populateCategories();
         populateCharacters();
+        applyPendingCategory();
+        applyPendingCharacter();
+        filterSounds();
+        playSharedSoundIfPending();
 
     } catch (error) {
         console.error('Error loading sounds:', error);
@@ -411,7 +629,17 @@ function createSoundItem(sound) {
     }
     
     let html = `
-        <div class="sound-category">${categoryHtml}</div>
+        <div class="sound-header">
+            <div class="sound-category">${categoryHtml}</div>
+            <button class="sound-share-btn" title="Copy share link" aria-label="Copy share link">
+                <svg class="share-icon" viewBox="0 0 24 24" width="16" height="16">
+                    <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                </svg>
+                <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16">
+                    <path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+            </button>
+        </div>
         <div class="sound-name">${sound.displayName}</div>
     `;
     
@@ -424,6 +652,12 @@ function createSoundItem(sound) {
     html += `<div class="sound-path">${sound.path}</div>`;
     
     div.innerHTML = html;
+
+    const shareBtn = div.querySelector('.sound-share-btn');
+    shareBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        copyShareUrl(sound, shareBtn);
+    });
 
     div.addEventListener('click', () => playSound(sound));
 
@@ -473,18 +707,17 @@ async function playSound(sound, forcePlay = false) {
     const isMidi = isMidiFile(sound.fileName);
     const audioUrl = await getAudioUrl(currentGame, game, sound.path, isMidi);
 
-
     if (isMidi) {
         playMidiSound(audioUrl, sound, forcePlay);
+        updateUrlForSound(sound);
         return;
     }
 
+    closeMidiAudioPlayer();
+    updateUrlForSound(sound);
 
     currentAudioUrl = audioUrl;
     currentAudioFileName = sound.fileName;
-
-
-    closeMidiAudioPlayer();
 
 
     progressBar.style.transform = 'scaleX(0)';
@@ -538,6 +771,13 @@ async function playSound(sound, forcePlay = false) {
     });
 
     nowPlaying.textContent = `Now Playing: ${sound.displayName}`;
+    if (sound.caption && sound.caption.trim()) {
+        nowPlayingCaption.textContent = `"${sound.caption}"`;
+        nowPlayingCaption.style.display = 'block';
+    } else {
+        nowPlayingCaption.textContent = '';
+        nowPlayingCaption.style.display = 'none';
+    }
     audioPlayerContainer.style.display = 'block';
 }
 
@@ -571,6 +811,9 @@ function closeAudioPlayer() {
     pauseIcon.style.display = 'none';
     playPauseBtn.setAttribute('aria-label', 'Play');
     hideFormatMenu();
+    nowPlayingCaption.textContent = '';
+    nowPlayingCaption.style.display = 'none';
+    clearSoundFromUrl();
 }
 
 
@@ -1421,6 +1664,7 @@ function closeMidiAudioPlayer() {
     currentMidiFileName = null;
     midiTimeDisplay.textContent = '0:00 / 0:00';
     midiProgressBar.style.transform = 'scaleX(0)';
+    clearSoundFromUrl();
 }
 
 async function downloadCurrentMidi() {
