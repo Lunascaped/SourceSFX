@@ -2,11 +2,12 @@
 const GAMES = {
     hl1: { name: 'Half-Life', repo: 'sourcesounds/hl1', host: 'github' },
     bshift: { name: 'Half-Life: Blue Shift', repo: 'sourcesounds/bshift', host: 'github' },
-	hl2: { name: 'Half-Life 2', repo: 'sourcesounds/hl2', host: 'github' },
+    hl2: { name: 'Half-Life 2', repo: 'sourcesounds/hl2', host: 'github' },
     episodic: { name: 'Half-Life 2: Episode One', repo: 'sourcesounds/episodic', host: 'github' },
     ep2: { name: 'Half-Life 2: Episode Two', repo: 'sourcesounds/ep2', host: 'github' },
     hl2dm: { name: 'Half-Life 2: Deathmatch', repo: 'sourcesounds/hl2dm', host: 'github' },
     lostcoast: { name: 'Half-Life 2: Lost Coast', repo: 'sourcesounds/lostcoast', host: 'github' },
+    alyx: { name: 'Half-Life Alyx', repo: '', host: 'cdn' },
     tf2: { name: 'Team Fortress 2', repo: 'sourcesounds/tf2', host: 'github' },
     tfc: { name: 'Team Fortress Classic', repo: 'sourcesounds/tfc', host: 'github' },
     cstrike: { name: 'Counter-Strike: Source', repo: 'sourcesounds/cstrike', host: 'github' },
@@ -20,8 +21,8 @@ const GAMES = {
     dods: { name: 'Day of Defeat: Source', repo: 'sourcesounds/dods', host: 'github' },
     garrysmod: { name: "Garry's Mod", repo: 'sourcesounds/garrysmod', host: 'github' },
     zps: { name: 'Zombie Panic! Source', repo: 'sourcesounds/zps', host: 'github' },
-	ricochet: { name: 'Ricochet', repo: '', host: 'cdn' },
-	treason: { name: 'Klaus Veen\'s Treason', repo: '', host: 'cdn' },	
+    ricochet: { name: 'Ricochet', repo: '', host: 'cdn' },
+    treason: { name: 'Klaus Veen\'s Treason', repo: '', host: 'cdn' },    
 };
 
 
@@ -676,10 +677,10 @@ async function getAudioUrl(gameKey, game, soundPath, isMidi = false) {
         return `https://cdn.sourcesfx.com/${gameKey}/${soundPath}`;
     }
     
-	if (gameKey === 'hl2' && soundPath.includes('commentary')) {
-		return `https://cdn.sourcesfx.com/${gameKey}/${soundPath}`;
-	}
-	
+    if (gameKey === 'hl2' && soundPath.includes('commentary')) {
+        return `https://cdn.sourcesfx.com/${gameKey}/${soundPath}`;
+    }
+    
     const githubUrl = `https://raw.githubusercontent.com/${game.repo}/refs/heads/master/${soundPath}`;
     
     
@@ -693,9 +694,9 @@ async function getAudioUrl(gameKey, game, soundPath, isMidi = false) {
         if (response.ok) {
             return githubUrl;
         }
-		if (response.status === 404) {
-			return `https://cdn.sourcesfx.com/${gameKey}/${soundPath}`;
-		}
+        if (response.status === 404) {
+            return `https://cdn.sourcesfx.com/${gameKey}/${soundPath}`;
+        }
     } catch (error) {
         return `https://cdn.sourcesfx.com/${gameKey}/${soundPath}`;
     }

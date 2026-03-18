@@ -2,7 +2,7 @@
 
 A webpage that lets you browse, download, and play sound effects from multiple Source Engine games. Now with MIDI file support and visualization!
 
-## Supported Games (22 Total)
+## Supported Games (23 Total)
 
 ### Half-Life Series
 - **Half-Life 2** - [sourcesounds/hl2](https://github.com/sourcesounds/hl2)
@@ -12,6 +12,7 @@ A webpage that lets you browse, download, and play sound effects from multiple S
 - **Half-Life 2: Episode Two** - [sourcesounds/ep2](https://github.com/sourcesounds/ep2)
 - **Half-Life 2: Deathmatch** - [sourcesounds/hl2dm](https://github.com/sourcesounds/hl2dm)
 - **Half-Life 2: Lost Coast** - [sourcesounds/lostcoast](https://github.com/sourcesounds/lostcoast)
+- **Half-Life Alyx** - Hosted on CDN
 
 ### Team Fortress
 - **Team Fortress 2** - [sourcesounds/tf2](https://github.com/sourcesounds/tf2)
