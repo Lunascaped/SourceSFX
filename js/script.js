@@ -460,7 +460,7 @@ function initializeFuse(searchCaptions = true) {
     const fuseOptions = {
         keys: keys,
         threshold: 0.15,
-        distance: 500,
+        ignoreLocation: true,
         minMatchCharLength: 2,
         includeScore: true,
         findAllMatches: false,
